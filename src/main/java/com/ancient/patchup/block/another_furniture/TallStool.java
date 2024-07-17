@@ -46,6 +46,20 @@ public class TallStool {
     public static void registerFlammables() {
         AFRegistry.setFlammable(MAROON_TALL_STOOL, 5, 20);
         AFRegistry.setFlammable(ROSE_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(CORAL_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(GINGER_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(TAN_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(BEIGE_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(AMBER_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(OLIVE_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(FOREST_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(VERDANT_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(TEAL_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(MINT_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(AQUA_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(SLATE_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(NAVY_TALL_STOOL, 5, 20);
+        AFRegistry.setFlammable(INDIGO_TALL_STOOL, 5, 20);
     }
 
     public static void init() {}

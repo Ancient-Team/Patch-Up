@@ -25,6 +25,7 @@ public class PatchUp implements ModInitializer {
 		Terracotta_Bricks.init();
 		Tiles.init();
 		Stained_Barred_Glass.init();
+		Stained_Barred_Glass_Pane.init();
 		Trims.registerModBLocks();
 		Stool.init();
 		Stool.registerFlammable();

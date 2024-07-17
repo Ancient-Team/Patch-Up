@@ -47,20 +47,20 @@ public class Stool {
     public static void registerFlammable() {
         AFRegistry.setFlammable(MAROON_STOOL, 5, 20);
         AFRegistry.setFlammable(ROSE_STOOL, 5, 20);
-        //AFRegistry.setFlammable(CORAL_STOOL, 5, 20);
-        //AFRegistry.setFlammable(GINGER_STOOL, 5, 20);
-        //AFRegistry.setFlammable(TAN_STOOL, 5, 20);
-        //AFRegistry.setFlammable(BEIGE_STOOL, 5, 20);
-        //AFRegistry.setFlammable(AMBER_STOOL, 5, 20);
-        //AFRegistry.setFlammable(OLIVE_STOOL, 5, 20);
-        //AFRegistry.setFlammable(FOREST_STOOL, 5, 20);
-        //AFRegistry.setFlammable(VERDANT_STOOL, 5, 20);
-        //AFRegistry.setFlammable(TEAL_STOOL, 5, 20);
-        //AFRegistry.setFlammable(MINT_STOOL, 5, 20);
-        //AFRegistry.setFlammable(AQUA_STOOL, 5, 20);
-        //AFRegistry.setFlammable(SLATE_STOOL, 5, 20);
-        //AFRegistry.setFlammable(NAVY_STOOL, 5, 20);
-        //AFRegistry.setFlammable(INDIGO_STOOL, 5, 20);
+        AFRegistry.setFlammable(CORAL_STOOL, 5, 20);
+        AFRegistry.setFlammable(GINGER_STOOL, 5, 20);
+        AFRegistry.setFlammable(TAN_STOOL, 5, 20);
+        AFRegistry.setFlammable(BEIGE_STOOL, 5, 20);
+        AFRegistry.setFlammable(AMBER_STOOL, 5, 20);
+        AFRegistry.setFlammable(OLIVE_STOOL, 5, 20);
+        AFRegistry.setFlammable(FOREST_STOOL, 5, 20);
+        AFRegistry.setFlammable(VERDANT_STOOL, 5, 20);
+        AFRegistry.setFlammable(TEAL_STOOL, 5, 20);
+        AFRegistry.setFlammable(MINT_STOOL, 5, 20);
+        AFRegistry.setFlammable(AQUA_STOOL, 5, 20);
+        AFRegistry.setFlammable(SLATE_STOOL, 5, 20);
+        AFRegistry.setFlammable(NAVY_STOOL, 5, 20);
+        AFRegistry.setFlammable(INDIGO_STOOL, 5, 20);
 
     }
 

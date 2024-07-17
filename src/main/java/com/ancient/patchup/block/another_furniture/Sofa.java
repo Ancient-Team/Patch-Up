@@ -47,6 +47,20 @@ public class Sofa {
 
         AFRegistry.setFlammable(MAROON_SOFA, 5, 20);
         AFRegistry.setFlammable(ROSE_SOFA, 5, 20);
+        AFRegistry.setFlammable(CORAL_SOFA, 5, 20);
+        AFRegistry.setFlammable(GINGER_SOFA, 5, 20);
+        AFRegistry.setFlammable(TAN_SOFA, 5, 20);
+        AFRegistry.setFlammable(BEIGE_SOFA, 5, 20);
+        AFRegistry.setFlammable(AMBER_SOFA, 5, 20);
+        AFRegistry.setFlammable(OLIVE_SOFA, 5, 20);
+        AFRegistry.setFlammable(FOREST_SOFA, 5, 20);
+        AFRegistry.setFlammable(VERDANT_SOFA, 5, 20);
+        AFRegistry.setFlammable(TEAL_SOFA, 5, 20);
+        AFRegistry.setFlammable(MINT_SOFA, 5, 20);
+        AFRegistry.setFlammable(AQUA_SOFA, 5, 20);
+        AFRegistry.setFlammable(SLATE_SOFA, 5, 20);
+        AFRegistry.setFlammable(NAVY_SOFA, 5, 20);
+        AFRegistry.setFlammable(INDIGO_SOFA, 5, 20);
     }
 
     public static void init() {}

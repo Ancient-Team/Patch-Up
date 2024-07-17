@@ -41,6 +41,6 @@ public class Stained_Barred_Glass {
                new BlockItem(block, new FabricItemSettings()));
     }
     public static void init() {
-        PatchUp.LOGGER.info("Paper Lanters " + PatchUp.MOD_ID);
+        PatchUp.LOGGER.info("Stained Barred Glass " + PatchUp.MOD_ID);
     }
 }

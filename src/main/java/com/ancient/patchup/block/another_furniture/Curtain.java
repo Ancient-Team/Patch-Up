@@ -48,6 +48,20 @@ public class Curtain {
     public static void registerFlammables() {
     AFRegistry.setFlammable(MAROON_CURTAIN, 5, 20);
     AFRegistry.setFlammable(ROSE_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(CORAL_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(GINGER_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(TAN_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(BEIGE_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(AMBER_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(OLIVE_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(FOREST_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(VERDANT_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(TEAL_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(MINT_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(AQUA_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(SLATE_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(NAVY_CURTAIN, 5, 20);
+    AFRegistry.setFlammable(INDIGO_CURTAIN, 5, 20);
 
 }
     public static void init() {}

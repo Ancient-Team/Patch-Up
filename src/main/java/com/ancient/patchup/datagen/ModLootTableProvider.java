@@ -5,6 +5,8 @@ import com.ancient.patchup.block.another_furniture.Lamp;
 import com.ancient.patchup.block.another_furniture.Sofa;
 import com.ancient.patchup.block.another_furniture.Stool;
 import com.ancient.patchup.block.another_furniture.TallStool;
+import com.ancient.patchup.block.heart_and_home.Paper_Lantern;
+import com.ancient.patchup.block.heart_and_home.Shingles;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 
@@ -104,5 +106,75 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(Lamp.SLATE_LAMP.get());
         addDrop(Lamp.NAVY_LAMP.get());
         addDrop(Lamp.INDIGO_LAMP.get());
+
+        /* Paper Lantern */
+        addDrop(Paper_Lantern.MAROON_PAPER_LANTERN);
+        addDrop(Paper_Lantern.ROSE_PAPER_LANTERN);
+        addDrop(Paper_Lantern.CORAL_PAPER_LANTERN);
+        addDrop(Paper_Lantern.GINGER_PAPER_LANTERN);
+        addDrop(Paper_Lantern.TAN_PAPER_LANTERN);
+        addDrop(Paper_Lantern.BEIGE_PAPER_LANTERN);
+        addDrop(Paper_Lantern.AMBER_PAPER_LANTERN);
+        addDrop(Paper_Lantern.OLIVE_PAPER_LANTERN);
+        addDrop(Paper_Lantern.FOREST_PAPER_LANTERN);
+        addDrop(Paper_Lantern.VERDANT_PAPER_LANTERN);
+        addDrop(Paper_Lantern.TEAL_PAPER_LANTERN);
+        addDrop(Paper_Lantern.MINT_PAPER_LANTERN);
+        addDrop(Paper_Lantern.AQUA_PAPER_LANTERN);
+        addDrop(Paper_Lantern.SLATE_PAPER_LANTERN);
+        addDrop(Paper_Lantern.NAVY_PAPER_LANTERN);
+        addDrop(Paper_Lantern.INDIGO_PAPER_LANTERN);
+
+        /* Shingles */
+        addDrop(Shingles.MAROON_SHINGLES);
+        addDrop(Shingles.MAROON_SHINGLE_STAIRS);
+        addDrop(Shingles.MAROON_SHINGLE_SLAB);
+        addDrop(Shingles.ROSE_SHINGLES);
+        addDrop(Shingles.ROSE_SHINGLE_STAIRS);
+        addDrop(Shingles.ROSE_SHINGLE_SLAB);
+        addDrop(Shingles.CORAL_SHINGLES);
+        addDrop(Shingles.CORAL_SHINGLE_STAIRS);
+        addDrop(Shingles.CORAL_SHINGLE_SLAB);
+        addDrop(Shingles.GINGER_SHINGLES);
+        addDrop(Shingles.GINGER_SHINGLE_STAIRS);
+        addDrop(Shingles.GINGER_SHINGLE_SLAB);
+        addDrop(Shingles.TAN_SHINGLES);
+        addDrop(Shingles.TAN_SHINGLE_STAIRS);
+        addDrop(Shingles.TAN_SHINGLE_SLAB);
+        addDrop(Shingles.BEIGE_SHINGLES);
+        addDrop(Shingles.BEIGE_SHINGLE_STAIRS);
+        addDrop(Shingles.BEIGE_SHINGLE_SLAB);
+        addDrop(Shingles.AMBER_SHINGLES);
+        addDrop(Shingles.AMBER_SHINGLE_STAIRS);
+        addDrop(Shingles.AMBER_SHINGLE_SLAB);
+        addDrop(Shingles.OLIVE_SHINGLES);
+        addDrop(Shingles.OLIVE_SHINGLE_STAIRS);
+        addDrop(Shingles.OLIVE_SHINGLE_SLAB);
+        addDrop(Shingles.FOREST_SHINGLES);
+        addDrop(Shingles.FOREST_SHINGLE_STAIRS);
+        addDrop(Shingles.FOREST_SHINGLE_SLAB);
+        addDrop(Shingles.VERDANT_SHINGLES);
+        addDrop(Shingles.VERDANT_SHINGLE_STAIRS);
+        addDrop(Shingles.VERDANT_SHINGLE_SLAB);
+        addDrop(Shingles.TEAL_SHINGLES);
+        addDrop(Shingles.TEAL_SHINGLE_STAIRS);
+        addDrop(Shingles.TEAL_SHINGLE_SLAB);
+        addDrop(Shingles.MINT_SHINGLES);
+        addDrop(Shingles.MINT_SHINGLE_STAIRS);
+        addDrop(Shingles.MINT_SHINGLE_SLAB);
+        addDrop(Shingles.AQUA_SHINGLES);
+        addDrop(Shingles.AQUA_SHINGLE_STAIRS);
+        addDrop(Shingles.AQUA_SHINGLE_SLAB);
+        addDrop(Shingles.SLATE_SHINGLES);
+        addDrop(Shingles.SLATE_SHINGLE_STAIRS);
+        addDrop(Shingles.SLATE_SHINGLE_SLAB);
+        addDrop(Shingles.NAVY_SHINGLES);
+        addDrop(Shingles.NAVY_SHINGLE_STAIRS);
+        addDrop(Shingles.NAVY_SHINGLE_SLAB);
+        addDrop(Shingles.INDIGO_SHINGLES);
+        addDrop(Shingles.INDIGO_SHINGLE_STAIRS);
+        addDrop(Shingles.INDIGO_SHINGLE_SLAB);
+
+        /* Stained Barred Glass Pane */
     }
 }

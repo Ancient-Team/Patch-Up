@@ -90,6 +90,6 @@ public class Shingles {
     }
 
     public static void init() {
-        PatchUp.LOGGER.info("Paper Lanters " + PatchUp.MOD_ID);
+        PatchUp.LOGGER.info("Shingles " + PatchUp.MOD_ID);
     }
 }

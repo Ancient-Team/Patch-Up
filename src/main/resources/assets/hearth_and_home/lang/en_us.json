@@ -1,4 +1,32 @@
 {
-    "block.hearth_and_home.light_blue_shingles": "Sky Shingles",
-    "block.hearth_and_home.light_gray_shingles": "Ash Shingles"
+    "block.hearth_and_home.light_blue_stained_barred_glass": "Sky Stained Barred Glass",
+    "block.hearth_and_home.light_gray_stained_barred_glass": "Ash Stained Barred Glass",
+
+    "block.hearth_and_home.light_blue_stained_barred_glass_pane": "Sky Stained Barred Glass Pane",
+    "block.hearth_and_home.light_gray_stained_barred_glass_pane": "Ash Stained Barred Glass Pane",
+
+    "block.hearth_and_home.light_blue_paper_lantern": "Sky Paper Lantern",
+    "block.hearth_and_home.light_gray_paper_lantern": "Ash Paper Lantern",
+
+    "block.hearth_and_home.light_blue_terracotta_mosaic": "Sky Terracotta Mosaic",
+    "block.hearth_and_home.light_gray_terracotta_mosaic": "Ash Terracotta Mosaic",
+
+    "block.hearth_and_home.light_blue_shingles": "Sku Shingles",
+    "block.hearth_and_home.light_blue_shingle_stairs": "Sku Shingle Stairs",
+    "block.hearth_and_home.light_blue_shingle_slab": "Sky Shingle Slab",
+    "block.hearth_and_home.light_gray_shingles": "Ash Shingles",
+    "block.hearth_and_home.light_gray_shingle_stairs": "Ash Shingle Stairs",
+    "block.hearth_and_home.light_gray_shingle_slab": "Ash Shingle Slab",
+
+    "block.hearth_and_home.light_blue_terracotta_bricks": "Sky Terracotta Bricks",
+    "block.hearth_and_home.light_blue_terracotta_brick_stairs": "Sky Terracotta Brick Stairs",
+    "block.hearth_and_home.light_blue_terracotta_brick_slab": "Sky Terracotta Brick Slab",
+    "block.hearth_and_home.light_gray_terracotta_bricks": "Ash Terracotta Bricks",
+    "block.hearth_and_home.light_gray_terracotta_brick_stairs": "Ash Terracotta Brick Stairs",
+    "block.hearth_and_home.light_gray_terracotta_brick_slab": "Ash Terracotta Brick Slab",
+
+    "block.hearth_and_home.light_blue_tiles": "Sky Tiles",
+    "block.hearth_and_home.light_blue_tile_slab": "Sky Tile Slab",
+    "block.hearth_and_home.light_gray_tiles": "Ash Tiles",
+    "block.hearth_and_home.light_gray_tile_slab": "Ash Tile Slab"
 }
