@@ -3,7 +3,7 @@ package com.ancient.patchup.datagen;
 import com.ancient.patchup.block.*;
 import com.ancient.patchup.block.another_furniture.*;
 import com.ancient.patchup.block.heart_and_home.Shingles;
-import com.ancient.patchup.block.heart_and_home.Terracotta_Bricks;
+import com.ancient.patchup.block.heart_and_home.TerracottaBricks;
 import com.ancient.patchup.block.heart_and_home.Tiles;
 import com.starfish_studios.another_furniture.registry.AFBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -34,18 +34,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         Shingles.VERDANT_SHINGLES, Shingles.VERDANT_SHINGLE_STAIRS, Shingles.VERDANT_SHINGLE_SLAB, Shingles.TEAL_SHINGLES, Shingles.TEAL_SHINGLE_STAIRS, Shingles.TEAL_SHINGLE_SLAB, Shingles.MINT_SHINGLES,
                         Shingles.MINT_SHINGLE_STAIRS, Shingles.MINT_SHINGLE_SLAB, Shingles.AQUA_SHINGLES, Shingles.AQUA_SHINGLE_STAIRS, Shingles.AQUA_SHINGLE_SLAB, Shingles.SLATE_SHINGLES, Shingles.SLATE_SHINGLE_STAIRS,
                         Shingles.SLATE_SHINGLE_SLAB, Shingles.NAVY_SHINGLES, Shingles.NAVY_SHINGLE_STAIRS, Shingles.NAVY_SHINGLE_SLAB, Shingles.INDIGO_SHINGLES, Shingles.INDIGO_SHINGLE_STAIRS, Shingles.INDIGO_SHINGLE_SLAB,
-                        Terracotta_Bricks.MAROON_TERRACOTTA_BRICKS,Terracotta_Bricks.MAROON_TERRACOTTA_BRICK_STAIRS,Terracotta_Bricks.MAROON_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.ROSE_TERRACOTTA_BRICKS,
-                        Terracotta_Bricks.ROSE_TERRACOTTA_BRICK_STAIRS, Terracotta_Bricks.ROSE_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.CORAL_TERRACOTTA_BRICKS, Terracotta_Bricks.CORAL_TERRACOTTA_BRICK_STAIRS,
-                        Terracotta_Bricks.CORAL_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.GINGER_TERRACOTTA_BRICKS, Terracotta_Bricks.GINGER_TERRACOTTA_BRICK_STAIRS, Terracotta_Bricks.GINGER_TERRACOTTA_BRICK_SLAB,
-                        Terracotta_Bricks.TAN_TERRACOTTA_BRICKS, Terracotta_Bricks.TAN_TERRACOTTA_BRICK_STAIRS, Terracotta_Bricks.TAN_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.BEIGE_TERRACOTTA_BRICKS,
-                        Terracotta_Bricks.BEIGE_TERRACOTTA_BRICK_STAIRS, Terracotta_Bricks.BEIGE_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.AMBER_TERRACOTTA_BRICKS, Terracotta_Bricks.AMBER_TERRACOTTA_BRICK_STAIRS,
-                        Terracotta_Bricks.AMBER_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.OLIVE_TERRACOTTA_BRICKS, Terracotta_Bricks.OLIVE_TERRACOTTA_BRICK_STAIRS, Terracotta_Bricks.OLIVE_TERRACOTTA_BRICK_SLAB,
-                        Terracotta_Bricks.FOREST_TERRACOTTA_BRICKS, Terracotta_Bricks.FOREST_TERRACOTTA_BRICK_STAIRS, Terracotta_Bricks.FOREST_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.VERDANT_TERRACOTTA_BRICKS,
-                        Terracotta_Bricks.VERDANT_TERRACOTTA_BRICK_STAIRS, Terracotta_Bricks.VERDANT_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.TEAL_TERRACOTTA_BRICKS, Terracotta_Bricks.TEAL_TERRACOTTA_BRICK_STAIRS,
-                        Terracotta_Bricks.TEAL_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.MINT_TERRACOTTA_BRICKS, Terracotta_Bricks.MINT_TERRACOTTA_BRICK_STAIRS, Terracotta_Bricks.MINT_TERRACOTTA_BRICK_SLAB,
-                        Terracotta_Bricks.AQUA_TERRACOTTA_BRICKS, Terracotta_Bricks.AQUA_TERRACOTTA_BRICK_STAIRS, Terracotta_Bricks.AQUA_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.SLATE_TERRACOTTA_BRICKS,
-                        Terracotta_Bricks.SLATE_TERRACOTTA_BRICK_STAIRS, Terracotta_Bricks.SLATE_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.NAVY_TERRACOTTA_BRICKS, Terracotta_Bricks.NAVY_TERRACOTTA_BRICK_STAIRS,
-                        Terracotta_Bricks.NAVY_TERRACOTTA_BRICK_SLAB, Terracotta_Bricks.INDIGO_TERRACOTTA_BRICKS, Terracotta_Bricks.INDIGO_TERRACOTTA_BRICK_STAIRS, Terracotta_Bricks.INDIGO_TERRACOTTA_BRICK_SLAB,
+                        TerracottaBricks.MAROON_TERRACOTTA_BRICKS, TerracottaBricks.MAROON_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.MAROON_TERRACOTTA_BRICK_SLAB, TerracottaBricks.ROSE_TERRACOTTA_BRICKS,
+                        TerracottaBricks.ROSE_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.ROSE_TERRACOTTA_BRICK_SLAB, TerracottaBricks.CORAL_TERRACOTTA_BRICKS, TerracottaBricks.CORAL_TERRACOTTA_BRICK_STAIRS,
+                        TerracottaBricks.CORAL_TERRACOTTA_BRICK_SLAB, TerracottaBricks.GINGER_TERRACOTTA_BRICKS, TerracottaBricks.GINGER_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.GINGER_TERRACOTTA_BRICK_SLAB,
+                        TerracottaBricks.TAN_TERRACOTTA_BRICKS, TerracottaBricks.TAN_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.TAN_TERRACOTTA_BRICK_SLAB, TerracottaBricks.BEIGE_TERRACOTTA_BRICKS,
+                        TerracottaBricks.BEIGE_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.BEIGE_TERRACOTTA_BRICK_SLAB, TerracottaBricks.AMBER_TERRACOTTA_BRICKS, TerracottaBricks.AMBER_TERRACOTTA_BRICK_STAIRS,
+                        TerracottaBricks.AMBER_TERRACOTTA_BRICK_SLAB, TerracottaBricks.OLIVE_TERRACOTTA_BRICKS, TerracottaBricks.OLIVE_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.OLIVE_TERRACOTTA_BRICK_SLAB,
+                        TerracottaBricks.FOREST_TERRACOTTA_BRICKS, TerracottaBricks.FOREST_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.FOREST_TERRACOTTA_BRICK_SLAB, TerracottaBricks.VERDANT_TERRACOTTA_BRICKS,
+                        TerracottaBricks.VERDANT_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.VERDANT_TERRACOTTA_BRICK_SLAB, TerracottaBricks.TEAL_TERRACOTTA_BRICKS, TerracottaBricks.TEAL_TERRACOTTA_BRICK_STAIRS,
+                        TerracottaBricks.TEAL_TERRACOTTA_BRICK_SLAB, TerracottaBricks.MINT_TERRACOTTA_BRICKS, TerracottaBricks.MINT_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.MINT_TERRACOTTA_BRICK_SLAB,
+                        TerracottaBricks.AQUA_TERRACOTTA_BRICKS, TerracottaBricks.AQUA_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.AQUA_TERRACOTTA_BRICK_SLAB, TerracottaBricks.SLATE_TERRACOTTA_BRICKS,
+                        TerracottaBricks.SLATE_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.SLATE_TERRACOTTA_BRICK_SLAB, TerracottaBricks.NAVY_TERRACOTTA_BRICKS, TerracottaBricks.NAVY_TERRACOTTA_BRICK_STAIRS,
+                        TerracottaBricks.NAVY_TERRACOTTA_BRICK_SLAB, TerracottaBricks.INDIGO_TERRACOTTA_BRICKS, TerracottaBricks.INDIGO_TERRACOTTA_BRICK_STAIRS, TerracottaBricks.INDIGO_TERRACOTTA_BRICK_SLAB,
                         Tiles.MAROON_TILES,Tiles.MAROON_TILE_SLAB,Tiles.ROSE_TILES,Tiles.ROSE_TILE_SLAB,Tiles.CORAL_TILES,Tiles.CORAL_TILE_SLAB,Tiles.GINGER_TILES,Tiles.GINGER_TILE_SLAB,Tiles.TAN_TILES,Tiles.TAN_TILE_SLAB,
                         Tiles.BEIGE_TILES,Tiles.BEIGE_TILE_SLAB,Tiles.AMBER_TILES,Tiles.AMBER_TILE_SLAB,Tiles.OLIVE_TILES,Tiles.OLIVE_TILE_SLAB,Tiles.FOREST_TILES,Tiles.FOREST_TILE_SLAB,Tiles.VERDANT_TILES,Tiles.VERDANT_TILE_SLAB,
                         Tiles.TEAL_TILES,Tiles.TEAL_TILE_SLAB,Tiles.MINT_TILES,Tiles.MINT_TILE_SLAB,Tiles.AQUA_TILES,Tiles.AQUA_TILE_SLAB,Tiles.SLATE_TILES,Tiles.SLATE_TILE_SLAB,Tiles.NAVY_TILES,Tiles.NAVY_TILE_SLAB,Tiles.INDIGO_TILES,

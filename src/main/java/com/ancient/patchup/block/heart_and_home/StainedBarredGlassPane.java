@@ -13,7 +13,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class Stained_Barred_Glass_Pane {
+public class StainedBarredGlassPane {
 
     public static final Block MAROON_STAINED_BARRED_GLASS_PANE = registerBlock("maroon_stained_barred_glass_pane", new StainedGlassPaneBlock(DDDyes.MAROON, AbstractBlock.Settings.copy(DDBlocks.MAROON_STAINED_GLASS_PANE)));
     public static final Block ROSE_STAINED_BARRED_GLASS_PANE = registerBlock("rose_stained_barred_glass_pane", new StainedGlassPaneBlock(DDDyes.ROSE, AbstractBlock.Settings.copy(DDBlocks.ROSE_STAINED_GLASS_PANE)));

@@ -1,7 +1,6 @@
 package com.ancient.patchup.block.heart_and_home;
 
 import com.ancient.patchup.PatchUp;
-import com.starfish_studios.another_furniture.registry.AFRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -13,7 +12,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-public class Paper_Lantern {
+public class PaperLantern {
 
     public static final Block MAROON_PAPER_LANTERN = registerBlock("maroon_paper_lantern", new Block
             (AbstractBlock.Settings.copy(Blocks.RED_WOOL).strength(0.3F).luminance((state) -> 15).sounds(BlockSoundGroup.WOOL)));

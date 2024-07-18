@@ -10,7 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class Terracotta_Bricks {
+public class TerracottaBricks {
 
     public static final Block MAROON_TERRACOTTA_BRICKS = registerBlock("maroon_terracotta_bricks",  new Block(AbstractBlock.Settings.copy(DDBlocks.MAROON_TERRACOTTA)));
     public static final Block MAROON_TERRACOTTA_BRICK_STAIRS = registerBlock("maroon_terracotta_brick_stairs",  new StairsBlock(MAROON_TERRACOTTA_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(DDBlocks.MAROON_TERRACOTTA)));
