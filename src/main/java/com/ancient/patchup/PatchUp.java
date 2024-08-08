@@ -20,12 +20,11 @@ public class PatchUp implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		//ItemGroupSorting.registerGroupSorting();
 
-		PaperLantern.init();
-		Shingles.init();
-		TerracottaBricks.init();
-		Tiles.init();
-		StainedBarredGlass.init();
-		StainedBarredGlassPane.init();
+//		Paper_Lantern.init();
+//		Shingles.init();
+//		Terracotta_Bricks.init();
+//		Tiles.init();
+//		Stained_Barred_Glass.init();
 		Trims.registerModBLocks();
 		Stool.init();
 		Stool.registerFlammable();
