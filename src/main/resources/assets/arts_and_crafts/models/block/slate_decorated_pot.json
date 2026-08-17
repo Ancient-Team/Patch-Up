@@ -1,5 +1,5 @@
 {
   "textures": {
-    "particle": "minecraft:block/slate_terracotta"
+    "particle": "dye_depot:block/slate_terracotta"
   }
 }

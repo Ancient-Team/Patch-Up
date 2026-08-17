@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-17T18:45:33.1448292	Patch Up/Block Loot Tables
+// 1.21.1	2026-08-17T18:52:53.5316375	Patch Up/Block Loot Tables
 f3733620fc64b6fb1444c69d292dde3a96d8035f data\comforts\loot_table\blocks\sleeping_bag_indigo.json
 60b2ae4c800387fa6fdad8b4d8483b44fb6d31c0 data\patchup\loot_table\blocks\coral_canvas_sign.json
 9ca02402f890dbef8f188866451b1ad9b1f0ccf1 data\another_furniture\loot_table\blocks\aqua_stool.json

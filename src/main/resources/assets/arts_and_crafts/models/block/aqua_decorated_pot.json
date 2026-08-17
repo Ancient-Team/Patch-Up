@@ -1,5 +1,5 @@
 {
   "textures": {
-    "particle": "minecraft:block/aqua_terracotta"
+    "particle": "dye_depot:block/aqua_terracotta"
   }
 }
