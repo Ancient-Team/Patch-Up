@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "stools",
+  "ingredients": [
+    {
+      "item": "dye_depot:beige_dye"
+    },
+    {
+      "tag": "another_furniture:stools"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "another_furniture:beige_stool"
+  }
+}

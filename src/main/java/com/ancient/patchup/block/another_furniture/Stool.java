@@ -1,6 +1,6 @@
 package com.ancient.patchup.block.another_furniture;
 
-
+import com.ninni.dye_depot.registry.DDDyes;
 import com.starfish_studios.another_furniture.block.StoolBlock;
 import com.starfish_studios.another_furniture.registry.AFBlocks;
 import com.starfish_studios.another_furniture.registry.AFRegistry;
@@ -8,25 +8,36 @@ import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 
+import java.util.EnumMap;
+import java.util.Map;
 import java.util.function.Supplier;
 
 public class Stool {
-    public static final Supplier<Block> MAROON_STOOL = registerBlock("maroon_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> ROSE_STOOL = registerBlock("rose_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> CORAL_STOOL = registerBlock("coral_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> GINGER_STOOL = registerBlock("ginger_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> TAN_STOOL = registerBlock("tan_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> BEIGE_STOOL = registerBlock("beige_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> AMBER_STOOL = registerBlock("amber_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> OLIVE_STOOL = registerBlock("olive_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> FOREST_STOOL = registerBlock("forest_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> VERDANT_STOOL = registerBlock("verdant_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> TEAL_STOOL = registerBlock("teal_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> MINT_STOOL = registerBlock("mint_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> AQUA_STOOL = registerBlock("aqua_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> SLATE_STOOL = registerBlock("slate_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> NAVY_STOOL = registerBlock("navy_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
-    public static final Supplier<Block> INDIGO_STOOL = registerBlock("indigo_stool", () -> new StoolBlock(AFBlocks.Properties.weak_wood));
+    public static final Map<DDDyes, Supplier<Block>> STOOLS = new EnumMap<>(DDDyes.class);
+
+    private static Supplier<Block> registerStool(DDDyes dye) {
+        String name = dye.asString() + "_stool";
+        Supplier<Block> supplier = registerBlock(name, () -> new StoolBlock(AFBlocks.Properties.weak_wood));
+        STOOLS.put(dye, supplier);
+        return supplier;
+    }
+
+    public static final Supplier<Block> MAROON_STOOL = registerStool(DDDyes.MAROON);
+    public static final Supplier<Block> ROSE_STOOL = registerStool(DDDyes.ROSE);
+    public static final Supplier<Block> CORAL_STOOL = registerStool(DDDyes.CORAL);
+    public static final Supplier<Block> GINGER_STOOL = registerStool(DDDyes.GINGER);
+    public static final Supplier<Block> TAN_STOOL = registerStool(DDDyes.TAN);
+    public static final Supplier<Block> BEIGE_STOOL = registerStool(DDDyes.BEIGE);
+    public static final Supplier<Block> AMBER_STOOL = registerStool(DDDyes.AMBER);
+    public static final Supplier<Block> OLIVE_STOOL = registerStool(DDDyes.OLIVE);
+    public static final Supplier<Block> FOREST_STOOL = registerStool(DDDyes.FOREST);
+    public static final Supplier<Block> VERDANT_STOOL = registerStool(DDDyes.VERDANT);
+    public static final Supplier<Block> TEAL_STOOL = registerStool(DDDyes.TEAL);
+    public static final Supplier<Block> MINT_STOOL = registerStool(DDDyes.MINT);
+    public static final Supplier<Block> AQUA_STOOL = registerStool(DDDyes.AQUA);
+    public static final Supplier<Block> SLATE_STOOL = registerStool(DDDyes.SLATE);
+    public static final Supplier<Block> NAVY_STOOL = registerStool(DDDyes.NAVY);
+    public static final Supplier<Block> INDIGO_STOOL = registerStool(DDDyes.INDIGO);
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         Supplier<T> supplier = AFRegistry.registerBlock(name, block);
@@ -44,24 +55,18 @@ public class Stool {
         return AFRegistry.registerBlock(name, block);
     }
 
-    public static void registerFlammable() {
-        AFRegistry.setFlammable(MAROON_STOOL, 5, 20);
-        AFRegistry.setFlammable(ROSE_STOOL, 5, 20);
-        //AFRegistry.setFlammable(CORAL_STOOL, 5, 20);
-        //AFRegistry.setFlammable(GINGER_STOOL, 5, 20);
-        //AFRegistry.setFlammable(TAN_STOOL, 5, 20);
-        //AFRegistry.setFlammable(BEIGE_STOOL, 5, 20);
-        //AFRegistry.setFlammable(AMBER_STOOL, 5, 20);
-        //AFRegistry.setFlammable(OLIVE_STOOL, 5, 20);
-        //AFRegistry.setFlammable(FOREST_STOOL, 5, 20);
-        //AFRegistry.setFlammable(VERDANT_STOOL, 5, 20);
-        //AFRegistry.setFlammable(TEAL_STOOL, 5, 20);
-        //AFRegistry.setFlammable(MINT_STOOL, 5, 20);
-        //AFRegistry.setFlammable(AQUA_STOOL, 5, 20);
-        //AFRegistry.setFlammable(SLATE_STOOL, 5, 20);
-        //AFRegistry.setFlammable(NAVY_STOOL, 5, 20);
-        //AFRegistry.setFlammable(INDIGO_STOOL, 5, 20);
+    public static void registerFlammables() {
+        for (Supplier<Block> stool : STOOLS.values()) {
+            AFRegistry.setFlammable(stool, 5, 20);
+        }
+    }
 
+    /**
+     * @deprecated Use {@link #registerFlammables()} instead.
+     */
+    @Deprecated
+    public static void registerFlammable() {
+        registerFlammables();
     }
 
     public static void init() {}

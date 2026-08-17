@@ -1,15 +1,12 @@
 # About Patch Up
 More cool colored furniture and blocks! Patch Up adds various furniture, blocks in colors of [Dye Depot](https://modrinth.com/mod/dye-depot)
 
-## ⚙️ Supported mods
-
-* [Built!](https://modrinth.com/mod/built)
-
-* [Comforts](https://modrinth.com/mod/comforts)
+## ⚙️ Supported mods (1.21.1)
 
 * [Another Furniture](https://modrinth.com/mod/another-furniture)
-
-* [Hearth & Home](https://modrinth.com/mod/hearth-and-home) (Planned)
+* [Farmer's Delight](https://modrinth.com/mod/farmers-delight-refabricated)
+* [Dye Depot](https://modrinth.com/mod/dye-depot)
+* [Comforts](https://modrinth.com/mod/comforts)
 
 **Shoutout to starfish studios and ninni for creating amazing mods**
 

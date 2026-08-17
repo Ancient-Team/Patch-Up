@@ -1,0 +1,12 @@
+// 1.21.1	2026-08-17T17:16:09.6219204	Patch Up/Tags for minecraft:item
+e8b9bd792f83ee1010d7658b46a6bab116318a77 data\minecraft\tags\item\signs.json
+bce509c84af5af3185bd3985c4bac995a87ad5ab data\another_furniture\tags\item\stools.json
+911781611b09b0af8de27f7b77ff0216f28a5d41 data\another_furniture\tags\item\tall_stools.json
+21b9f7fc90c24142c827aa92f6107328fb2f4f7b data\another_furniture\tags\item\lamps.json
+ba4b1959273c518fb03cc62bfb11024f7286fb13 data\another_furniture\tags\item\sofas.json
+e8b9bd792f83ee1010d7658b46a6bab116318a77 data\farmersdelight\tags\item\canvas_signs.json
+6345b4fd3fb90f67049e17ae02e87d85341a2d45 data\comforts\tags\item\hammocks.json
+8e6a62321a24e78a794719939ff69e18b88f1cc6 data\comforts\tags\item\sleeping_bags.json
+3f4c04bc31787a8246f7bfd680480013d71ce0b3 data\minecraft\tags\item\hanging_signs.json
+be2e7a4b37cf88df539b8aeda3255b3bbc25612d data\another_furniture\tags\item\curtains.json
+3f4c04bc31787a8246f7bfd680480013d71ce0b3 data\farmersdelight\tags\item\hanging_canvas_signs.json

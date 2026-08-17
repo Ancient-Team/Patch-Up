@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.7-SNAPSHOT'
+	id 'fabric-loom' version '1.17.17'
 	id 'maven-publish'
 }
 
@@ -15,10 +15,28 @@ repositories {
 		name = "Modrinth"
 		url = "https://api.modrinth.com/maven"
 	}
+	maven {
+		name = "TheIllusiveC4"
+		url = "https://maven.theillusivec4.top/"
+	}
+	maven {
+		name = "Ladysnake"
+		url = "https://maven.ladysnake.org/releases"
+	}
 }
 
 fabricApi {
-	configureDataGeneration()
+	configureDataGeneration {
+		modId = "patchup"
+	}
+}
+
+loom {
+	runs {
+		datagen {
+			property "fabric-api.datagen.modid", "patchup"
+		}
+	}
 }
 
 dependencies {
@@ -31,10 +49,14 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// Other dependencies.
-	modImplementation "maven.modrinth:dye-depot:1.0.3-fabric"
-	modImplementation "maven.modrinth:another-furniture:3.0.1-fabric"
-	modRuntimeOnly "maven.modrinth:built:1.2.0-fabric"
-	modImplementation "maven.modrinth:hearth-and-home:1.20.1-2.0.3"
+	modImplementation "maven.modrinth:dye-depot:HrjD3oYu"
+	modImplementation "maven.modrinth:another-furniture:8xUs6Teu"
+	modImplementation "maven.modrinth:farmers-delight-refabricated:NCLOIK5z"
+	modImplementation "maven.modrinth:comforts:LUPOTXbk"
+	modImplementation "com.illusivesoulworks.spectrelib:spectrelib-fabric:0.17.2+1.21"
+	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-base:6.1.2"
+	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-entity:6.1.2"
+	modLocalRuntime "maven.modrinth:modmenu:11.0.3"
 }
 
 processResources {
@@ -46,7 +68,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
+	it.options.release = 21
 }
 
 java {
@@ -55,8 +77,8 @@ java {
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {

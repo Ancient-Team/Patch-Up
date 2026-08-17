@@ -10,7 +10,8 @@ public class PatchUpDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ModModelProvider::new);
-		pack.addProvider(ModBlockTagProvider::new);
+		var blockTagProvider = pack.addProvider(ModBlockTagProvider::new);
+		pack.addProvider((output, registries) -> new ModItemTagProvider(output, registries));
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(EnglishLangProvider::new);

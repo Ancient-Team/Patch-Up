@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "patchup:item/slate_hanging_canvas_sign"
+  }
+}

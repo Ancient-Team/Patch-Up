@@ -1,12 +1,8 @@
 package com.ancient.patchup;
 
-import com.ancient.patchup.block.*;
 import com.ancient.patchup.block.another_furniture.*;
-import com.ancient.patchup.block.heart_and_home.*;
 import com.ancient.patchup.item.ModItemGroups;
 import net.fabricmc.api.ModInitializer;
-
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,11 +14,10 @@ public class PatchUp implements ModInitializer {
 	public void onInitialize() {
 
 		ModItemGroups.registerItemGroups();
-		//ItemGroupSorting.registerGroupSorting();
 
 		if (Compats.ANOTHER_FURNITURE.isLoaded()) {
 			Stool.init();
-			Stool.registerFlammable();
+			Stool.registerFlammables();
 			TallStool.init();
 			TallStool.registerFlammables();
 			Sofa.init();
@@ -33,16 +28,12 @@ public class PatchUp implements ModInitializer {
 			Curtain.registerFlammables();
 		}
 
-		if (Compats.HEARTH_AND_HOME.isLoaded()) {
-			Paper_Lantern.init();
-			Shingles.init();
-			Terracotta_Bricks.init();
-			Tiles.init();
-			Stained_Barred_Glass.init();
+		if (Compats.FARMERS_DELIGHT.isLoaded()) {
+			com.ancient.patchup.block.farmers_delight.CanvasSigns.init();
 		}
 
-		if (Compats.BUILT.isLoaded()) {
-			Trims.registerModBLocks();
+		if (Compats.COMFORTS.isLoaded()) {
+			com.ancient.patchup.block.comforts.ComfortsItems.init();
 		}
 
 	}

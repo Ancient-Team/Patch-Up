@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "patchup:block/navy_tiles",
-    "side": "patchup:block/navy_tiles",
-    "top": "patchup:block/navy_tiles"
-  }
-}
