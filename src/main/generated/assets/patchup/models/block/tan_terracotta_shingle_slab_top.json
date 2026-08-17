@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "patchup:block/tan_terracotta_shingles",
-    "side": "patchup:block/tan_terracotta_shingles",
-    "top": "patchup:block/tan_terracotta_shingles"
-  }
-}

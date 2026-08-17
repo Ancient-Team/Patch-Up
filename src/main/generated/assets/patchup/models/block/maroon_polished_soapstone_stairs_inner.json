@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "patchup:block/maroon_polished_soapstone",
-    "side": "patchup:block/maroon_polished_soapstone",
-    "top": "patchup:block/maroon_polished_soapstone"
-  }
-}

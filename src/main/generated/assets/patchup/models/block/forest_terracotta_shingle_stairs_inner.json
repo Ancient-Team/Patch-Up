@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "patchup:block/forest_terracotta_shingles",
-    "side": "patchup:block/forest_terracotta_shingles",
-    "top": "patchup:block/forest_terracotta_shingles"
-  }
-}

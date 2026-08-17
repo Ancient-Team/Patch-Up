@@ -1,20 +1,20 @@
 {
   "values": [
-    "patchup:maroon_decorated_pot",
-    "patchup:rose_decorated_pot",
-    "patchup:coral_decorated_pot",
-    "patchup:indigo_decorated_pot",
-    "patchup:navy_decorated_pot",
-    "patchup:slate_decorated_pot",
-    "patchup:olive_decorated_pot",
-    "patchup:amber_decorated_pot",
-    "patchup:beige_decorated_pot",
-    "patchup:teal_decorated_pot",
-    "patchup:mint_decorated_pot",
-    "patchup:aqua_decorated_pot",
-    "patchup:verdant_decorated_pot",
-    "patchup:forest_decorated_pot",
-    "patchup:ginger_decorated_pot",
-    "patchup:tan_decorated_pot"
+    "arts_and_crafts:maroon_decorated_pot",
+    "arts_and_crafts:rose_decorated_pot",
+    "arts_and_crafts:coral_decorated_pot",
+    "arts_and_crafts:indigo_decorated_pot",
+    "arts_and_crafts:navy_decorated_pot",
+    "arts_and_crafts:slate_decorated_pot",
+    "arts_and_crafts:olive_decorated_pot",
+    "arts_and_crafts:amber_decorated_pot",
+    "arts_and_crafts:beige_decorated_pot",
+    "arts_and_crafts:teal_decorated_pot",
+    "arts_and_crafts:mint_decorated_pot",
+    "arts_and_crafts:aqua_decorated_pot",
+    "arts_and_crafts:verdant_decorated_pot",
+    "arts_and_crafts:forest_decorated_pot",
+    "arts_and_crafts:ginger_decorated_pot",
+    "arts_and_crafts:tan_decorated_pot"
   ]
 }

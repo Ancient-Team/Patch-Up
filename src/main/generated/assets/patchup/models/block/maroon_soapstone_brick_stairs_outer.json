@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "patchup:block/maroon_soapstone_bricks",
-    "side": "patchup:block/maroon_soapstone_bricks",
-    "top": "patchup:block/maroon_soapstone_bricks"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/wall_inventory",
-  "textures": {
-    "wall": "patchup:block/maroon_soapstone_bricks"
-  }
-}

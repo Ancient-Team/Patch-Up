@@ -1,16 +1,16 @@
-// 1.21.1	2026-08-17T18:25:24.5842997	Patch Up/Tags for minecraft:block
+// 1.21.1	2026-08-17T18:45:33.1382159	Patch Up/Tags for minecraft:block
 3f4c04bc31787a8246f7bfd680480013d71ce0b3 data\minecraft\tags\block\ceiling_hanging_signs.json
 21b9f7fc90c24142c827aa92f6107328fb2f4f7b data\another_furniture\tags\block\lamps.json
-8f12b38fc058cb95c083ca26c486c4d98f21879a data\minecraft\tags\block\walls.json
+8f7bf8a49724112c18d9a9a7880158bbe7e81970 data\minecraft\tags\block\walls.json
 67c54a50427174314278d155721cd4a5a4209daf data\minecraft\tags\block\wall_signs.json
-2d6876f0cde9e7fc0502282b73108a5c40b49f6a data\minecraft\tags\block\stairs.json
+ee9cf7d4d4bd5300ea61b179056c6d9b619b46a1 data\minecraft\tags\block\stairs.json
 e8b9bd792f83ee1010d7658b46a6bab116318a77 data\minecraft\tags\block\standing_signs.json
 be2e7a4b37cf88df539b8aeda3255b3bbc25612d data\another_furniture\tags\block\curtains.json
-acc9f62c5c272549980df74882da2ee740295e69 data\minecraft\tags\block\flower_pots.json
-bb4ae71d8a23cf3584b581b08444cebd449fc404 data\arts_and_crafts\tags\block\chalk_dust.json
+9264ab7a2abca4d8ea9c6ef091847e9711819288 data\minecraft\tags\block\flower_pots.json
+5cb873a1aa30aadc18100e9173b076c08fbda09a data\arts_and_crafts\tags\block\chalk_dust.json
 9d149939641d33beb1c6d419a2f1c135496813d5 data\minecraft\tags\block\wall_hanging_signs.json
-87c650590a6e916c3f12f217dd5d67df184522d3 data\minecraft\tags\block\mineable\pickaxe.json
-3f57382238fbd9909c4469136610dfd1ed548265 data\minecraft\tags\block\slabs.json
+0d00c850c4490ba7aa413a81b8e3384f19e85b31 data\minecraft\tags\block\mineable\pickaxe.json
+34095ab4ab871e1838dbfec2ddb6285ff6c34dac data\minecraft\tags\block\slabs.json
 ba4b1959273c518fb03cc62bfb11024f7286fb13 data\another_furniture\tags\block\sofas.json
 911781611b09b0af8de27f7b77ff0216f28a5d41 data\another_furniture\tags\block\tall_stools.json
 bce509c84af5af3185bd3985c4bac995a87ad5ab data\another_furniture\tags\block\stools.json

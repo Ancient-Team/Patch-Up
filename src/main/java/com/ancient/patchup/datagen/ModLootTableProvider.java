@@ -61,34 +61,5 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
             addDrop(entry.hammockBlock().get(), dropsWithProperty(entry.hammockBlock().get(), net.minecraft.block.BedBlock.PART, net.minecraft.block.enums.BedPart.HEAD));
             addDrop(entry.sleepingBagBlock().get(), dropsWithProperty(entry.sleepingBagBlock().get(), net.minecraft.block.BedBlock.PART, net.minecraft.block.enums.BedPart.HEAD));
         }
-
-        /* Arts & Crafts */
-        com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.init();
-        for (com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.Entry entry : com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.ENTRIES) {
-            addDrop(entry.chalk());
-            addDrop(entry.plaster());
-            addDrop(entry.flowerPot(), entry.flowerPotItem());
-            addDrop(entry.decoratedPot(), entry.decoratedPotItem());
-            addDrop(entry.mudBricks());
-            addDrop(entry.mudBrickSlab(), slabDrops(entry.mudBrickSlab()));
-            addDrop(entry.mudBrickStairs());
-            addDrop(entry.mudBrickWall());
-            addDrop(entry.terracottaShingles());
-            addDrop(entry.terracottaShingleSlab(), slabDrops(entry.terracottaShingleSlab()));
-            addDrop(entry.terracottaShingleStairs());
-            addDrop(entry.terracottaShingleWall());
-            addDrop(entry.soapstone());
-            addDrop(entry.soapstoneSlab(), slabDrops(entry.soapstoneSlab()));
-            addDrop(entry.soapstoneStairs());
-            addDrop(entry.soapstoneWall());
-            addDrop(entry.polishedSoapstone());
-            addDrop(entry.polishedSoapstoneSlab(), slabDrops(entry.polishedSoapstoneSlab()));
-            addDrop(entry.polishedSoapstoneStairs());
-            addDrop(entry.polishedSoapstoneWall());
-            addDrop(entry.soapstoneBricks());
-            addDrop(entry.soapstoneBrickSlab(), slabDrops(entry.soapstoneBrickSlab()));
-            addDrop(entry.soapstoneBrickStairs());
-            addDrop(entry.soapstoneBrickWall());
-        }
     }
 }

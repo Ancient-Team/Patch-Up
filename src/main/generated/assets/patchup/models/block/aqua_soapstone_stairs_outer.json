@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "patchup:block/aqua_soapstone",
-    "side": "patchup:block/aqua_soapstone",
-    "top": "patchup:block/aqua_soapstone"
-  }
-}

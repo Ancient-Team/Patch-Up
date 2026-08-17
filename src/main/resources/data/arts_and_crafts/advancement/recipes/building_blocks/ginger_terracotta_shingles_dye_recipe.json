@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:ginger_terracotta_shingles_dye_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "ginger_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:ginger_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "ginger_dye"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:ginger_terracotta_shingles_dye_recipe"
+    ]
+  }
+}

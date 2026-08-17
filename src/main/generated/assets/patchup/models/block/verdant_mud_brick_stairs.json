@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "patchup:block/verdant_mud_bricks",
-    "side": "patchup:block/verdant_mud_bricks",
-    "top": "patchup:block/verdant_mud_bricks"
-  }
-}

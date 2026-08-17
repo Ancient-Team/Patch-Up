@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "patchup:block/ginger_mud_bricks",
-    "side": "patchup:block/ginger_mud_bricks",
-    "top": "patchup:block/ginger_mud_bricks"
-  }
-}

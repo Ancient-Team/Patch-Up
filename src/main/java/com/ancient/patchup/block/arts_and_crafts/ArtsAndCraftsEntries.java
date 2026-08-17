@@ -1,24 +1,17 @@
 package com.ancient.patchup.block.arts_and_crafts;
 
-import com.ancient.patchup.PatchUp;
-import com.kekecreations.arts_and_crafts.common.block.ACFlowerPotBlock;
-import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
-import com.kekecreations.arts_and_crafts.common.block.PlasterBlock;
-import com.kekecreations.arts_and_crafts.common.item.ChalkStickItem;
 import com.kekecreations.arts_and_crafts.common.item.DyedDecoratedPotBlockItem;
-import com.kekecreations.arts_and_crafts.common.item.DyedFlowerPotBlockItem;
-import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.ninni.dye_depot.registry.DDDyes;
-import net.minecraft.block.*;
-import net.minecraft.item.BlockItem;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
@@ -80,121 +73,58 @@ public class ArtsAndCraftsEntries {
             int dyeId = dye.getId();
 
             // 1. Chalk & Chalk Dust & Chalk Stick
-            Block chalk = registerBlockWithItem(name + "_chalk",
-                    new Block(AbstractBlock.Settings.copy(Blocks.CALCITE).mapColor(dye.getMapColor()).sounds(BlockSoundGroup.CALCITE)));
-            Block chalkDust = registerBlockOnly(name + "_chalk_dust",
-                    new ChalkDustBlock(dyeId, AbstractBlock.Settings.copy(Blocks.REDSTONE_WIRE).mapColor(dye.getMapColor())));
-            Item chalkStick = registerItem(name + "_chalk_stick",
-                    new ChalkStickItem(dyeId, new Item.Settings()));
+            Block chalk = ACBlocks.CHALK.get(dyeId).get();
+            Block chalkDust = ACBlocks.CHALK_DUST.get(dyeId).get();
+            Item chalkStick = ACItems.CHALK_STICKS.get(dyeId).get();
 
             // 2. Paintbrush
-            Item paintbrush = registerItem(name + "_paintbrush",
-                    new PaintbrushItem(new Item.Settings().maxDamage(64)));
+            Item paintbrush = ACItems.PAINT_BRUSHES.get(color).get();
 
             // 3. Plaster
-            Block plaster = registerBlockWithItem(name + "_plaster",
-                    new PlasterBlock(color, AbstractBlock.Settings.copy(Blocks.WHITE_CONCRETE).mapColor(dye.getMapColor())));
+            Block plaster = ACBlocks.DYED_PLASTER.get(color).get();
 
             // 4. Pots
-            Block flowerPot = registerBlockOnly(name + "_flower_pot",
-                    new ACFlowerPotBlock(Blocks.AIR, color, AbstractBlock.Settings.copy(Blocks.FLOWER_POT)));
-            Item flowerPotItem = registerItem(name + "_flower_pot",
-                    new DyedFlowerPotBlockItem(flowerPot, new Item.Settings()));
+            Block flowerPot = ACBlocks.DYED_FLOWER_POTS.get(color).get();
+            Item flowerPotItem = ACItems.FLOWER_POTS.get(dyeId).get();
 
-            Block decoratedPot = registerBlockOnly(name + "_decorated_pot",
+            Block decoratedPot = Registry.register(Registries.BLOCK, Identifier.of("arts_and_crafts", name + "_decorated_pot"),
                     new DyedDecoratedPotBlock(color, AbstractBlock.Settings.copy(Blocks.DECORATED_POT)));
-            Item decoratedPotItem = registerItem(name + "_decorated_pot",
+            Item decoratedPotItem = Registry.register(Registries.ITEM, Identifier.of("arts_and_crafts", name + "_decorated_pot"),
                     new DyedDecoratedPotBlockItem(decoratedPot, new Item.Settings().maxCount(1)));
-
-            // 5. Mud Bricks
-            Block mudBricks = registerBlockWithItem(name + "_mud_bricks",
-                    new Block(AbstractBlock.Settings.copy(Blocks.MUD_BRICKS).mapColor(dye.getMapColor())));
-            Block mudBrickSlab = registerBlockWithItem(name + "_mud_brick_slab",
-                    new SlabBlock(AbstractBlock.Settings.copy(mudBricks)));
-            Block mudBrickStairs = registerBlockWithItem(name + "_mud_brick_stairs",
-                    new StairsBlock(mudBricks.getDefaultState(), AbstractBlock.Settings.copy(mudBricks)));
-            Block mudBrickWall = registerBlockWithItem(name + "_mud_brick_wall",
-                    new WallBlock(AbstractBlock.Settings.copy(mudBricks)));
-
-            // 6. Terracotta Shingles
-            Block terracottaShingles = registerBlockWithItem(name + "_terracotta_shingles",
-                    new Block(AbstractBlock.Settings.copy(Blocks.TERRACOTTA).mapColor(dye.getMapColor()).sounds(BlockSoundGroup.STONE)));
-            Block terracottaShingleSlab = registerBlockWithItem(name + "_terracotta_shingle_slab",
-                    new SlabBlock(AbstractBlock.Settings.copy(terracottaShingles)));
-            Block terracottaShingleStairs = registerBlockWithItem(name + "_terracotta_shingle_stairs",
-                    new StairsBlock(terracottaShingles.getDefaultState(), AbstractBlock.Settings.copy(terracottaShingles)));
-            Block terracottaShingleWall = registerBlockWithItem(name + "_terracotta_shingle_wall",
-                    new WallBlock(AbstractBlock.Settings.copy(terracottaShingles)));
-
-            // 7. Soapstone
-            Block soapstone = registerBlockWithItem(name + "_soapstone",
-                    new Block(AbstractBlock.Settings.copy(Blocks.STONE).mapColor(dye.getMapColor())));
-            Block soapstoneSlab = registerBlockWithItem(name + "_soapstone_slab",
-                    new SlabBlock(AbstractBlock.Settings.copy(soapstone)));
-            Block soapstoneStairs = registerBlockWithItem(name + "_soapstone_stairs",
-                    new StairsBlock(soapstone.getDefaultState(), AbstractBlock.Settings.copy(soapstone)));
-            Block soapstoneWall = registerBlockWithItem(name + "_soapstone_wall",
-                    new WallBlock(AbstractBlock.Settings.copy(soapstone)));
-
-            // 8. Polished Soapstone
-            Block polishedSoapstone = registerBlockWithItem(name + "_polished_soapstone",
-                    new Block(AbstractBlock.Settings.copy(Blocks.POLISHED_ANDESITE).mapColor(dye.getMapColor())));
-            Block polishedSoapstoneSlab = registerBlockWithItem(name + "_polished_soapstone_slab",
-                    new SlabBlock(AbstractBlock.Settings.copy(polishedSoapstone)));
-            Block polishedSoapstoneStairs = registerBlockWithItem(name + "_polished_soapstone_stairs",
-                    new StairsBlock(polishedSoapstone.getDefaultState(), AbstractBlock.Settings.copy(polishedSoapstone)));
-            Block polishedSoapstoneWall = registerBlockWithItem(name + "_polished_soapstone_wall",
-                    new WallBlock(AbstractBlock.Settings.copy(polishedSoapstone)));
-
-            // 9. Soapstone Bricks
-            Block soapstoneBricks = registerBlockWithItem(name + "_soapstone_bricks",
-                    new Block(AbstractBlock.Settings.copy(Blocks.STONE_BRICKS).mapColor(dye.getMapColor())));
-            Block soapstoneBrickSlab = registerBlockWithItem(name + "_soapstone_brick_slab",
-                    new SlabBlock(AbstractBlock.Settings.copy(soapstoneBricks)));
-            Block soapstoneBrickStairs = registerBlockWithItem(name + "_soapstone_brick_stairs",
-                    new StairsBlock(soapstoneBricks.getDefaultState(), AbstractBlock.Settings.copy(soapstoneBricks)));
-            Block soapstoneBrickWall = registerBlockWithItem(name + "_soapstone_brick_wall",
-                    new WallBlock(AbstractBlock.Settings.copy(soapstoneBricks)));
-
-            // Connect to Arts & Crafts registry lookups
-            ACBlocks.CHALK.put(dyeId, () -> chalk);
-            ACBlocks.CHALK_DUST.put(dyeId, () -> chalkDust);
-            ACItems.CHALK_STICKS.put(dyeId, () -> (ChalkStickItem) chalkStick);
-            ACItems.PAINT_BRUSHES.put(color, () -> (PaintbrushItem) paintbrush);
-            ACBlocks.DYED_PLASTER.put(color, () -> plaster);
-
-            ACBlocks.DYED_FLOWER_POTS.put(color, () -> flowerPot);
-            ACItems.FLOWER_POTS.put(dyeId, () -> (DyedFlowerPotBlockItem) flowerPotItem);
-            ACFlowerPotBlock.addPotManually(color, Blocks.AIR, flowerPot);
 
             ACBlocks.DYED_DECORATED_POTS.put(color, () -> decoratedPot);
             ACItems.DYED_DECORATED_POT_BLOCK_ITEMS.put(color, () -> (DyedDecoratedPotBlockItem) decoratedPotItem);
             ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get().addSupportedBlock(decoratedPot);
 
-            ACBlocks.DYED_MUD_BRICKS.put(color, () -> mudBricks);
-            ACBlocks.DYED_MUD_BRICK_SLAB.put(color, () -> mudBrickSlab);
-            ACBlocks.DYED_MUD_BRICK_STAIRS.put(color, () -> mudBrickStairs);
-            ACBlocks.DYED_MUD_BRICK_WALL.put(color, () -> mudBrickWall);
+            // 5. Mud Bricks
+            Block mudBricks = ACBlocks.DYED_MUD_BRICKS.get(color).get();
+            Block mudBrickSlab = ACBlocks.DYED_MUD_BRICK_SLAB.get(color).get();
+            Block mudBrickStairs = ACBlocks.DYED_MUD_BRICK_STAIRS.get(color).get();
+            Block mudBrickWall = ACBlocks.DYED_MUD_BRICK_WALL.get(color).get();
 
-            ACBlocks.DYED_TERRACOTTA_SHINGLES.put(color, () -> terracottaShingles);
-            ACBlocks.DYED_TERRACOTTA_SHINGLE_SLAB.put(color, () -> terracottaShingleSlab);
-            ACBlocks.DYED_TERRACOTTA_SHINGLE_STAIRS.put(color, () -> terracottaShingleStairs);
-            ACBlocks.DYED_TERRACOTTA_SHINGLE_WALL.put(color, () -> terracottaShingleWall);
+            // 6. Terracotta Shingles
+            Block terracottaShingles = ACBlocks.DYED_TERRACOTTA_SHINGLES.get(color).get();
+            Block terracottaShingleSlab = ACBlocks.DYED_TERRACOTTA_SHINGLE_SLAB.get(color).get();
+            Block terracottaShingleStairs = ACBlocks.DYED_TERRACOTTA_SHINGLE_STAIRS.get(color).get();
+            Block terracottaShingleWall = ACBlocks.DYED_TERRACOTTA_SHINGLE_WALL.get(color).get();
 
-            ACBlocks.DYED_SOAPSTONE.put(color, () -> soapstone);
-            ACBlocks.DYED_SOAPSTONE_SLAB.put(color, () -> soapstoneSlab);
-            ACBlocks.DYED_SOAPSTONE_STAIRS.put(color, () -> soapstoneStairs);
-            ACBlocks.DYED_SOAPSTONE_WALL.put(color, () -> soapstoneWall);
+            // 7. Soapstone
+            Block soapstone = ACBlocks.DYED_SOAPSTONE.get(color).get();
+            Block soapstoneSlab = ACBlocks.DYED_SOAPSTONE_SLAB.get(color).get();
+            Block soapstoneStairs = ACBlocks.DYED_SOAPSTONE_STAIRS.get(color).get();
+            Block soapstoneWall = ACBlocks.DYED_SOAPSTONE_WALL.get(color).get();
 
-            ACBlocks.DYED_POLISHED_SOAPSTONE.put(color, () -> polishedSoapstone);
-            ACBlocks.DYED_POLISHED_SOAPSTONE_SLAB.put(color, () -> polishedSoapstoneSlab);
-            ACBlocks.DYED_POLISHED_SOAPSTONE_STAIRS.put(color, () -> polishedSoapstoneStairs);
-            ACBlocks.DYED_POLISHED_SOAPSTONE_WALL.put(color, () -> polishedSoapstoneWall);
+            // 8. Polished Soapstone
+            Block polishedSoapstone = ACBlocks.DYED_POLISHED_SOAPSTONE.get(color).get();
+            Block polishedSoapstoneSlab = ACBlocks.DYED_POLISHED_SOAPSTONE_SLAB.get(color).get();
+            Block polishedSoapstoneStairs = ACBlocks.DYED_POLISHED_SOAPSTONE_STAIRS.get(color).get();
+            Block polishedSoapstoneWall = ACBlocks.DYED_POLISHED_SOAPSTONE_WALL.get(color).get();
 
-            ACBlocks.DYED_SOAPSTONE_BRICKS.put(color, () -> soapstoneBricks);
-            ACBlocks.DYED_SOAPSTONE_BRICK_SLAB.put(color, () -> soapstoneBrickSlab);
-            ACBlocks.DYED_SOAPSTONE_BRICK_STAIRS.put(color, () -> soapstoneBrickStairs);
-            ACBlocks.DYED_SOAPSTONE_BRICK_WALL.put(color, () -> soapstoneBrickWall);
+            // 9. Soapstone Bricks
+            Block soapstoneBricks = ACBlocks.DYED_SOAPSTONE_BRICKS.get(color).get();
+            Block soapstoneBrickSlab = ACBlocks.DYED_SOAPSTONE_BRICK_SLAB.get(color).get();
+            Block soapstoneBrickStairs = ACBlocks.DYED_SOAPSTONE_BRICK_STAIRS.get(color).get();
+            Block soapstoneBrickWall = ACBlocks.DYED_SOAPSTONE_BRICK_WALL.get(color).get();
 
             ENTRIES.add(new Entry(
                     dye, chalk, chalkDust, chalkStick, paintbrush, plaster,
@@ -206,19 +136,5 @@ public class ArtsAndCraftsEntries {
                     soapstoneBricks, soapstoneBrickSlab, soapstoneBrickStairs, soapstoneBrickWall
             ));
         }
-    }
-
-    private static <T extends Block> T registerBlockOnly(String name, T block) {
-        return Registry.register(Registries.BLOCK, Identifier.of(PatchUp.MOD_ID, name), block);
-    }
-
-    private static <T extends Block> T registerBlockWithItem(String name, T block) {
-        T registered = Registry.register(Registries.BLOCK, Identifier.of(PatchUp.MOD_ID, name), block);
-        Registry.register(Registries.ITEM, Identifier.of(PatchUp.MOD_ID, name), new BlockItem(registered, new Item.Settings()));
-        return registered;
-    }
-
-    private static <T extends Item> T registerItem(String name, T item) {
-        return Registry.register(Registries.ITEM, Identifier.of(PatchUp.MOD_ID, name), item);
     }
 }

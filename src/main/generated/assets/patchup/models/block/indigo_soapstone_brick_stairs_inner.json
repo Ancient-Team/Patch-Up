@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "patchup:block/indigo_soapstone_bricks",
-    "side": "patchup:block/indigo_soapstone_bricks",
-    "top": "patchup:block/indigo_soapstone_bricks"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "patchup:block/beige_soapstone",
-    "side": "patchup:block/beige_soapstone",
-    "top": "patchup:block/beige_soapstone"
-  }
-}

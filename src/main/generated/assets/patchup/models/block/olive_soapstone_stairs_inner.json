@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "patchup:block/olive_soapstone",
-    "side": "patchup:block/olive_soapstone",
-    "top": "patchup:block/olive_soapstone"
-  }
-}

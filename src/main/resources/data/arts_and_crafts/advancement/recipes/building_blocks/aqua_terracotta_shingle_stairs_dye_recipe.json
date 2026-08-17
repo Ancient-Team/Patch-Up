@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:aqua_terracotta_shingle_stairs_dye_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "aqua_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:aqua_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "aqua_dye"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:aqua_terracotta_shingle_stairs_dye_recipe"
+    ]
+  }
+}

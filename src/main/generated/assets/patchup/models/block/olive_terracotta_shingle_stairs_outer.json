@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "patchup:block/olive_terracotta_shingles",
-    "side": "patchup:block/olive_terracotta_shingles",
-    "top": "patchup:block/olive_terracotta_shingles"
-  }
-}

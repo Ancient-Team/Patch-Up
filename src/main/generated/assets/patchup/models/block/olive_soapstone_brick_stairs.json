@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "patchup:block/olive_soapstone_bricks",
-    "side": "patchup:block/olive_soapstone_bricks",
-    "top": "patchup:block/olive_soapstone_bricks"
-  }
-}

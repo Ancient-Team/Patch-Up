@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "patchup:block/mint_mud_bricks",
-    "side": "patchup:block/mint_mud_bricks",
-    "top": "patchup:block/mint_mud_bricks"
-  }
-}
