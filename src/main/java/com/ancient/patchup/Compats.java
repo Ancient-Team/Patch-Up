@@ -3,14 +3,14 @@ package com.ancient.patchup;
 import net.fabricmc.loader.api.FabricLoader;
 
 public enum Compats {
-    ANOTHER_FURNITURE,
-    BUILT,
-    HEARTH_AND_HOME;
+    ANOTHER_FURNITURE("another_furniture"),
+    FARMERS_DELIGHT("farmersdelight"),
+    COMFORTS("comforts");
 
-    private String id;
+    private final String id;
 
-    Compats() {
-        id = name().toLowerCase();
+    Compats(String id) {
+        this.id = id;
     }
 
     public boolean isLoaded() {

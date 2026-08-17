@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "hanging_canvas_signs",
+  "ingredients": [
+    {
+      "item": "dye_depot:maroon_dye"
+    },
+    {
+      "tag": "farmersdelight:hanging_canvas_signs"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "patchup:maroon_hanging_canvas_sign"
+  }
+}

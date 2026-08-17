@@ -5,69 +5,47 @@ import com.ancient.patchup.block.another_furniture.Lamp;
 import com.ancient.patchup.block.another_furniture.Sofa;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
+
+import java.util.function.Supplier;
 
 public class PatchUpClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
         if (Compats.ANOTHER_FURNITURE.isLoaded()) {
-
             /* Sofas */
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.MAROON_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.ROSE_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.CORAL_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.GINGER_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.TAN_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.BEIGE_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.AMBER_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.OLIVE_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.FOREST_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.VERDANT_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.TEAL_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.MINT_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.AQUA_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.SLATE_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.NAVY_SOFA.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Sofa.INDIGO_SOFA.get(), RenderLayer.getCutout());
+            for (Supplier<Block> sofa : Sofa.SOFAS.values()) {
+                BlockRenderLayerMap.INSTANCE.putBlock(sofa.get(), RenderLayer.getCutout());
+            }
 
-            /* Lamps */
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.MAROON_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.ROSE_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.CORAL_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.GINGER_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.TAN_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.BEIGE_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.AMBER_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.OLIVE_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.FOREST_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.VERDANT_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.TEAL_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.MINT_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.AQUA_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.SLATE_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.NAVY_LAMP.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Lamp.INDIGO_LAMP.get(), RenderLayer.getCutout());
+            /* Lamps & Lamp Connectors */
+            for (Supplier<Block> lamp : Lamp.LAMPS.values()) {
+                BlockRenderLayerMap.INSTANCE.putBlock(lamp.get(), RenderLayer.getCutout());
+            }
+            for (Supplier<Block> connector : Lamp.LAMP_CONNECTORS.values()) {
+                BlockRenderLayerMap.INSTANCE.putBlock(connector.get(), RenderLayer.getCutout());
+            }
 
             /* Curtains */
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.MAROON_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.ROSE_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.CORAL_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.GINGER_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.TAN_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.BEIGE_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.AMBER_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.OLIVE_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.FOREST_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.VERDANT_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.TEAL_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.MINT_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.AQUA_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.SLATE_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.NAVY_CURTAIN.get(), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(Curtain.INDIGO_CURTAIN.get(), RenderLayer.getCutout());
+            for (Supplier<Block> curtain : Curtain.CURTAINS.values()) {
+                BlockRenderLayerMap.INSTANCE.putBlock(curtain.get(), RenderLayer.getCutout());
+            }
+        }
 
+        if (Compats.FARMERS_DELIGHT.isLoaded()) {
+            for (com.ninni.dye_depot.registry.DDDyes dye : com.ninni.dye_depot.registry.DDDyes.values()) {
+                net.minecraft.util.DyeColor color = dye.get();
+                vectorwing.farmersdelight.common.registry.ModAtlases.DYED_CANVAS_SIGN_MATERIALS.put(color,
+                        new net.minecraft.client.util.SpriteIdentifier(
+                                net.minecraft.client.render.TexturedRenderLayers.SIGNS_ATLAS_TEXTURE,
+                                net.minecraft.util.Identifier.of("farmersdelight", "entity/signs/canvas_" + color.getName())));
+                vectorwing.farmersdelight.common.registry.ModAtlases.DYED_HANGING_CANVAS_SIGN_MATERIALS.put(color,
+                        new net.minecraft.client.util.SpriteIdentifier(
+                                net.minecraft.client.render.TexturedRenderLayers.SIGNS_ATLAS_TEXTURE,
+                                net.minecraft.util.Identifier.of("farmersdelight", "entity/signs/hanging/canvas_" + color.getName())));
+            }
         }
     }
 }

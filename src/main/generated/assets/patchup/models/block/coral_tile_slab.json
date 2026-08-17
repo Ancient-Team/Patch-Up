@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "patchup:block/coral_tiles",
-    "side": "patchup:block/coral_tiles",
-    "top": "patchup:block/coral_tiles"
-  }
-}

@@ -1,8 +1,11 @@
-// 1.20.1	2024-07-17T08:47:28.1560224	Patch Up/Tags for minecraft:block
-e68b331caad1a8a569ca21474acfc6d40df168b0 data\another_furniture\tags\blocks\tall_stools.json
-60a4b90f307b675536057dabb258410f7f92941e data\minecraft\tags\blocks\mineable\pickaxe.json
-cd41dfcc1de68b2d1b6ff5a5b216eb6a2af47285 data\another_furniture\tags\blocks\stools.json
-302e3fcdb7fee94c0e6a77a9a03807a20d57dbfe data\minecraft\tags\blocks\mineable\axe.json
-7ed31d628f21b58468bc0ae28f7a380a907df4f1 data\another_furniture\tags\blocks\lamps.json
-192897497487342dd458b21aaac7942e68901f29 data\another_furniture\tags\blocks\curtains.json
-59d826c73df6f60ad01c16f8d3e12f31ab07b3f6 data\another_furniture\tags\blocks\sofas.json
+// 1.21.1	2026-08-17T17:16:09.620889	Patch Up/Tags for minecraft:block
+3f4c04bc31787a8246f7bfd680480013d71ce0b3 data\minecraft\tags\block\ceiling_hanging_signs.json
+21b9f7fc90c24142c827aa92f6107328fb2f4f7b data\another_furniture\tags\block\lamps.json
+67c54a50427174314278d155721cd4a5a4209daf data\minecraft\tags\block\wall_signs.json
+e8b9bd792f83ee1010d7658b46a6bab116318a77 data\minecraft\tags\block\standing_signs.json
+be2e7a4b37cf88df539b8aeda3255b3bbc25612d data\another_furniture\tags\block\curtains.json
+ba4b1959273c518fb03cc62bfb11024f7286fb13 data\another_furniture\tags\block\sofas.json
+911781611b09b0af8de27f7b77ff0216f28a5d41 data\another_furniture\tags\block\tall_stools.json
+bce509c84af5af3185bd3985c4bac995a87ad5ab data\another_furniture\tags\block\stools.json
+9d149939641d33beb1c6d419a2f1c135496813d5 data\minecraft\tags\block\wall_hanging_signs.json
+2132aa0118915c55fa321c7b26529b2f451282e5 data\minecraft\tags\block\mineable\axe.json

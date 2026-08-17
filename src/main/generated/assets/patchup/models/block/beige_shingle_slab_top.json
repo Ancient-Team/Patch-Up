@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "patchup:block/beige_shingles",
-    "side": "patchup:block/beige_shingles",
-    "top": "patchup:block/beige_shingles"
-  }
-}

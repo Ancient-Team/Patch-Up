@@ -38,3 +38,7 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
+
+# local scripts and reference assets
+scripts/
+dye_depot_FD compat_thing/
