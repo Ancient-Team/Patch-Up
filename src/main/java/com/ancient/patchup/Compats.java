@@ -5,7 +5,8 @@ import net.fabricmc.loader.api.FabricLoader;
 public enum Compats {
     ANOTHER_FURNITURE("another_furniture"),
     FARMERS_DELIGHT("farmersdelight"),
-    COMFORTS("comforts");
+    COMFORTS("comforts"),
+    ARTS_AND_CRAFTS("arts_and_crafts");
 
     private final String id;
 

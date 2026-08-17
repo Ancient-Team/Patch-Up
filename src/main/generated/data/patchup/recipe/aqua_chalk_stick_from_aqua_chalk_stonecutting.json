@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "patchup:aqua_chalk"
+  },
+  "result": {
+    "count": 4,
+    "id": "patchup:aqua_chalk_stick"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "patchup:indigo_mud_bricks"
+  },
+  "result": {
+    "count": 2,
+    "id": "patchup:indigo_mud_brick_slab"
+  }
+}

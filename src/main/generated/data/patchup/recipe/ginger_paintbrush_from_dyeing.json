@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "group": "paintbrushes",
+  "ingredients": [
+    {
+      "item": "dye_depot:ginger_dye"
+    },
+    {
+      "tag": "arts_and_crafts:paintbrushes"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "patchup:ginger_paintbrush"
+  }
+}

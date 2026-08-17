@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "patchup:block/verdant_plaster",
+      "x": 270
+    },
+    "facing=east": {
+      "model": "patchup:block/verdant_plaster",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "patchup:block/verdant_plaster",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "patchup:block/verdant_plaster"
+    },
+    "facing=up": {
+      "model": "patchup:block/verdant_plaster",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "patchup:block/verdant_plaster",
+      "y": 90
+    }
+  }
+}

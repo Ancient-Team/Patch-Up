@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side",
+  "textures": {
+    "wall": "patchup:block/olive_soapstone_bricks"
+  }
+}

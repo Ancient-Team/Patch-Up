@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "patchup:block/maroon_soapstone",
+    "side": "patchup:block/maroon_soapstone",
+    "top": "patchup:block/maroon_soapstone"
+  }
+}

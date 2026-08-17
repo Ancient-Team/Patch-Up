@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "patchup:olive_polished_soapstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "patchup:olive_soapstone_bricks"
+  }
+}

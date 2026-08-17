@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "plaster",
+  "ingredients": [
+    {
+      "item": "dye_depot:tan_dye"
+    },
+    {
+      "item": "arts_and_crafts:plaster"
+    },
+    {
+      "item": "arts_and_crafts:plaster"
+    },
+    {
+      "item": "arts_and_crafts:plaster"
+    },
+    {
+      "item": "arts_and_crafts:plaster"
+    },
+    {
+      "item": "arts_and_crafts:plaster"
+    },
+    {
+      "item": "arts_and_crafts:plaster"
+    },
+    {
+      "item": "arts_and_crafts:plaster"
+    },
+    {
+      "item": "arts_and_crafts:plaster"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "id": "patchup:tan_plaster"
+  }
+}

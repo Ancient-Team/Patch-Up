@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "patchup:block/coral_soapstone_slab"
+    },
+    "type=double": {
+      "model": "patchup:block/coral_soapstone"
+    },
+    "type=top": {
+      "model": "patchup:block/coral_soapstone_slab_top"
+    }
+  }
+}

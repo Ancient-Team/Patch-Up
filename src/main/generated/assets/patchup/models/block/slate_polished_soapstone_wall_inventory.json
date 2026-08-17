@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "patchup:block/slate_polished_soapstone"
+  }
+}

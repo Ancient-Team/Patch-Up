@@ -1,0 +1,7 @@
+{
+  "parent": "arts_and_crafts:block/chalk_dust",
+  "textures": {
+    "dust": "patchup:block/amber_diagonal_line_right",
+    "particle": "patchup:block/amber_diagonal_line_right"
+  }
+}

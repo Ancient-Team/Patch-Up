@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "patchup:slate_mud_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "patchup:slate_mud_brick_stairs"
+  }
+}

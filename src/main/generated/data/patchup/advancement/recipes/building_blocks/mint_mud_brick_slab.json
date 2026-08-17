@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mint_mud_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "patchup:mint_mud_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "patchup:mint_mud_brick_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mint_mud_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "patchup:mint_mud_brick_slab"
+    ]
+  }
+}

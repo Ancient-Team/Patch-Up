@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "patchup:block/slate_soapstone_slab"
+    },
+    "type=double": {
+      "model": "patchup:block/slate_soapstone"
+    },
+    "type=top": {
+      "model": "patchup:block/slate_soapstone_slab_top"
+    }
+  }
+}

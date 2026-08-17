@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "mud_bricks",
+  "ingredients": [
+    {
+      "item": "dye_depot:mint_dye"
+    },
+    {
+      "item": "minecraft:mud_bricks"
+    },
+    {
+      "item": "minecraft:mud_bricks"
+    },
+    {
+      "item": "minecraft:mud_bricks"
+    },
+    {
+      "item": "minecraft:mud_bricks"
+    },
+    {
+      "item": "minecraft:mud_bricks"
+    },
+    {
+      "item": "minecraft:mud_bricks"
+    },
+    {
+      "item": "minecraft:mud_bricks"
+    },
+    {
+      "item": "minecraft:mud_bricks"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "id": "patchup:mint_mud_bricks"
+  }
+}

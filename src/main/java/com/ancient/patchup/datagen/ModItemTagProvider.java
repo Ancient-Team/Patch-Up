@@ -77,5 +77,23 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
             hammocks.add(entry.hammockItem().get());
             sleepingBags.add(entry.sleepingBagItem().get());
         }
+
+        /* Arts & Crafts */
+        com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.init();
+        var itemSlabs = this.getOrCreateTagBuilder(ItemTags.SLABS);
+        var itemStairs = this.getOrCreateTagBuilder(ItemTags.STAIRS);
+        var itemWalls = this.getOrCreateTagBuilder(ItemTags.WALLS);
+        var chalkSticks = this.getOrCreateTagBuilder(com.kekecreations.arts_and_crafts.core.init.ACTags.ItemTags.CHALK_STICKS);
+        var paintbrushes = this.getOrCreateTagBuilder(com.kekecreations.arts_and_crafts.core.init.ACTags.ItemTags.PAINTBRUSHES);
+        var decoratedPots = this.getOrCreateTagBuilder(com.kekecreations.arts_and_crafts.core.init.ACTags.ItemTags.DECORATED_POTS);
+
+        for (com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.Entry entry : com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.ENTRIES) {
+            itemSlabs.add(entry.mudBrickSlab().asItem(), entry.terracottaShingleSlab().asItem(), entry.soapstoneSlab().asItem(), entry.polishedSoapstoneSlab().asItem(), entry.soapstoneBrickSlab().asItem());
+            itemStairs.add(entry.mudBrickStairs().asItem(), entry.terracottaShingleStairs().asItem(), entry.soapstoneStairs().asItem(), entry.polishedSoapstoneStairs().asItem(), entry.soapstoneBrickStairs().asItem());
+            itemWalls.add(entry.mudBrickWall().asItem(), entry.terracottaShingleWall().asItem(), entry.soapstoneWall().asItem(), entry.polishedSoapstoneWall().asItem(), entry.soapstoneBrickWall().asItem());
+            chalkSticks.add(entry.chalkStick());
+            paintbrushes.add(entry.paintbrush());
+            decoratedPots.add(entry.decoratedPotItem());
+        }
     }
 }

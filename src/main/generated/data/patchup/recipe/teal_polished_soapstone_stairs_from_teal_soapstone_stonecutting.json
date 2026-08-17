@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "patchup:teal_soapstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "patchup:teal_polished_soapstone_stairs"
+  }
+}

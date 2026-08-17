@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "patchup:indigo_chalk"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "patchup:indigo_chalk_stick"
+  }
+}

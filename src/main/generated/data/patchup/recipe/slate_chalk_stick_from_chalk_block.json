@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "patchup:slate_chalk"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "patchup:slate_chalk_stick"
+  }
+}

@@ -9,6 +9,7 @@ import com.starfish_studios.another_furniture.registry.AFItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -154,6 +155,153 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .group("hanging_canvas_signs")
                     .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
                     .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.hangingSignItem()) + "_from_dyeing"));
+        }
+
+        /* Arts & Crafts Recipes */
+        com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.init();
+        for (com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.Entry entry : com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.ENTRIES) {
+            Item dyeItem = DDItems.DYES.getOrThrow(entry.dye().get());
+
+            // 1. Chalk Block <-> Chalk Stick
+            ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, entry.chalk(), 1)
+                    .pattern("##")
+                    .pattern("##")
+                    .input('#', entry.chalkStick())
+                    .criterion(RecipeProvider.hasItem(entry.chalkStick()), RecipeProvider.conditionsFromItem(entry.chalkStick()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.chalk())));
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, entry.chalkStick(), 4)
+                    .input(entry.chalk())
+                    .criterion(RecipeProvider.hasItem(entry.chalk()), RecipeProvider.conditionsFromItem(entry.chalk()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.chalkStick()) + "_from_chalk_block"));
+
+            offerStonecuttingRecipe(exporter, RecipeCategory.MISC, entry.chalkStick(), entry.chalk(), 4);
+
+            // 2. Paintbrush
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, entry.paintbrush(), 1)
+                    .input(dyeItem)
+                    .input(com.kekecreations.arts_and_crafts.core.init.ACTags.ItemTags.PAINTBRUSHES)
+                    .group("paintbrushes")
+                    .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.paintbrush()) + "_from_dyeing"));
+
+            // 3. Plaster
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, entry.plaster(), 8)
+                    .input(dyeItem)
+                    .input(com.kekecreations.arts_and_crafts.core.registry.ACBlocks.PLASTER.get(), 8)
+                    .group("plaster")
+                    .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.plaster()) + "_from_dyeing"));
+
+            // 4. Pots
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, entry.flowerPotItem(), 1)
+                    .input(dyeItem)
+                    .input(Items.FLOWER_POT)
+                    .group("flower_pots")
+                    .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.flowerPotItem()) + "_from_dyeing"));
+
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, entry.decoratedPotItem(), 1)
+                    .input(dyeItem)
+                    .input(Items.DECORATED_POT)
+                    .group("decorated_pots")
+                    .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.decoratedPotItem()) + "_from_dyeing"));
+
+            // 5. Mud Bricks Family
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, entry.mudBricks(), 8)
+                    .input(dyeItem)
+                    .input(Blocks.MUD_BRICKS, 8)
+                    .group("mud_bricks")
+                    .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.mudBricks()) + "_from_dyeing"));
+
+            createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, entry.mudBrickSlab(), net.minecraft.recipe.Ingredient.ofItems(entry.mudBricks()))
+                    .criterion(RecipeProvider.hasItem(entry.mudBricks()), RecipeProvider.conditionsFromItem(entry.mudBricks()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.mudBrickSlab())));
+            createStairsRecipe(entry.mudBrickStairs(), net.minecraft.recipe.Ingredient.ofItems(entry.mudBricks()))
+                    .criterion(RecipeProvider.hasItem(entry.mudBricks()), RecipeProvider.conditionsFromItem(entry.mudBricks()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.mudBrickStairs())));
+            offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.mudBrickWall(), entry.mudBricks());
+
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.mudBrickSlab(), entry.mudBricks(), 2);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.mudBrickStairs(), entry.mudBricks(), 1);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.mudBrickWall(), entry.mudBricks(), 1);
+
+            // 6. Terracotta Shingles Family
+            createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, entry.terracottaShingleSlab(), net.minecraft.recipe.Ingredient.ofItems(entry.terracottaShingles()))
+                    .criterion(RecipeProvider.hasItem(entry.terracottaShingles()), RecipeProvider.conditionsFromItem(entry.terracottaShingles()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.terracottaShingleSlab())));
+            createStairsRecipe(entry.terracottaShingleStairs(), net.minecraft.recipe.Ingredient.ofItems(entry.terracottaShingles()))
+                    .criterion(RecipeProvider.hasItem(entry.terracottaShingles()), RecipeProvider.conditionsFromItem(entry.terracottaShingles()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.terracottaShingleStairs())));
+            offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.terracottaShingleWall(), entry.terracottaShingles());
+
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.terracottaShingleSlab(), entry.terracottaShingles(), 2);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.terracottaShingleStairs(), entry.terracottaShingles(), 1);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.terracottaShingleWall(), entry.terracottaShingles(), 1);
+
+            // 7. Soapstone Family
+            createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, entry.soapstoneSlab(), net.minecraft.recipe.Ingredient.ofItems(entry.soapstone()))
+                    .criterion(RecipeProvider.hasItem(entry.soapstone()), RecipeProvider.conditionsFromItem(entry.soapstone()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.soapstoneSlab())));
+            createStairsRecipe(entry.soapstoneStairs(), net.minecraft.recipe.Ingredient.ofItems(entry.soapstone()))
+                    .criterion(RecipeProvider.hasItem(entry.soapstone()), RecipeProvider.conditionsFromItem(entry.soapstone()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.soapstoneStairs())));
+            offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneWall(), entry.soapstone());
+
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneSlab(), entry.soapstone(), 2);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneStairs(), entry.soapstone(), 1);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneWall(), entry.soapstone(), 1);
+
+            // Polished Soapstone
+            ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, entry.polishedSoapstone(), 4)
+                    .pattern("##")
+                    .pattern("##")
+                    .input('#', entry.soapstone())
+                    .criterion(RecipeProvider.hasItem(entry.soapstone()), RecipeProvider.conditionsFromItem(entry.soapstone()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.polishedSoapstone())));
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.polishedSoapstone(), entry.soapstone(), 1);
+
+            createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, entry.polishedSoapstoneSlab(), net.minecraft.recipe.Ingredient.ofItems(entry.polishedSoapstone()))
+                    .criterion(RecipeProvider.hasItem(entry.polishedSoapstone()), RecipeProvider.conditionsFromItem(entry.polishedSoapstone()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.polishedSoapstoneSlab())));
+            createStairsRecipe(entry.polishedSoapstoneStairs(), net.minecraft.recipe.Ingredient.ofItems(entry.polishedSoapstone()))
+                    .criterion(RecipeProvider.hasItem(entry.polishedSoapstone()), RecipeProvider.conditionsFromItem(entry.polishedSoapstone()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.polishedSoapstoneStairs())));
+            offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.polishedSoapstoneWall(), entry.polishedSoapstone());
+
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.polishedSoapstoneSlab(), entry.polishedSoapstone(), 2);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.polishedSoapstoneStairs(), entry.polishedSoapstone(), 1);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.polishedSoapstoneWall(), entry.polishedSoapstone(), 1);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.polishedSoapstoneSlab(), entry.soapstone(), 2);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.polishedSoapstoneStairs(), entry.soapstone(), 1);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.polishedSoapstoneWall(), entry.soapstone(), 1);
+
+            // Soapstone Bricks
+            ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, entry.soapstoneBricks(), 4)
+                    .pattern("##")
+                    .pattern("##")
+                    .input('#', entry.polishedSoapstone())
+                    .criterion(RecipeProvider.hasItem(entry.polishedSoapstone()), RecipeProvider.conditionsFromItem(entry.polishedSoapstone()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.soapstoneBricks())));
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneBricks(), entry.polishedSoapstone(), 1);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneBricks(), entry.soapstone(), 1);
+
+            createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, entry.soapstoneBrickSlab(), net.minecraft.recipe.Ingredient.ofItems(entry.soapstoneBricks()))
+                    .criterion(RecipeProvider.hasItem(entry.soapstoneBricks()), RecipeProvider.conditionsFromItem(entry.soapstoneBricks()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.soapstoneBrickSlab())));
+            createStairsRecipe(entry.soapstoneBrickStairs(), net.minecraft.recipe.Ingredient.ofItems(entry.soapstoneBricks()))
+                    .criterion(RecipeProvider.hasItem(entry.soapstoneBricks()), RecipeProvider.conditionsFromItem(entry.soapstoneBricks()))
+                    .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.soapstoneBrickStairs())));
+            offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneBrickWall(), entry.soapstoneBricks());
+
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneBrickSlab(), entry.soapstoneBricks(), 2);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneBrickStairs(), entry.soapstoneBricks(), 1);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneBrickWall(), entry.soapstoneBricks(), 1);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneBrickSlab(), entry.soapstone(), 2);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneBrickStairs(), entry.soapstone(), 1);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, entry.soapstoneBrickWall(), entry.soapstone(), 1);
         }
     }
 }

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "patchup:slate_polished_soapstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "patchup:slate_polished_soapstone_wall"
+  }
+}

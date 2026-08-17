@@ -36,5 +36,8 @@ public class PatchUp implements ModInitializer {
 			com.ancient.patchup.block.comforts.ComfortsItems.init();
 		}
 
+		if (Compats.ARTS_AND_CRAFTS.isLoaded()) {
+			com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.init();
+		}
 	}
 }

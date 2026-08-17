@@ -42,5 +42,38 @@ public class EnglishLangProvider extends FabricLanguageProvider {
             translationBuilder.add(entry.standingSign(), color + " Canvas Sign");
             translationBuilder.add(entry.ceilingHangingSign(), color + " Hanging Canvas Sign");
         }
+
+        /* Arts & Crafts */
+        com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.init();
+        for (com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.Entry entry : com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.ENTRIES) {
+            String color = formatColorName(entry.dye().asString());
+            translationBuilder.add(entry.chalk(), color + " Chalk");
+            translationBuilder.add(entry.chalkDust(), color + " Chalk Dust");
+            translationBuilder.add(entry.chalkStick(), color + " Chalk Stick");
+            translationBuilder.add(entry.paintbrush(), color + " Paintbrush");
+            translationBuilder.add(entry.plaster(), color + " Plaster");
+            translationBuilder.add(entry.flowerPot(), color + " Flower Pot");
+            translationBuilder.add(entry.decoratedPot(), color + " Decorated Pot");
+            translationBuilder.add(entry.mudBricks(), color + " Mud Bricks");
+            translationBuilder.add(entry.mudBrickSlab(), color + " Mud Brick Slab");
+            translationBuilder.add(entry.mudBrickStairs(), color + " Mud Brick Stairs");
+            translationBuilder.add(entry.mudBrickWall(), color + " Mud Brick Wall");
+            translationBuilder.add(entry.terracottaShingles(), color + " Terracotta Shingles");
+            translationBuilder.add(entry.terracottaShingleSlab(), color + " Terracotta Shingle Slab");
+            translationBuilder.add(entry.terracottaShingleStairs(), color + " Terracotta Shingle Stairs");
+            translationBuilder.add(entry.terracottaShingleWall(), color + " Terracotta Shingle Wall");
+            translationBuilder.add(entry.soapstone(), color + " Soapstone");
+            translationBuilder.add(entry.soapstoneSlab(), color + " Soapstone Slab");
+            translationBuilder.add(entry.soapstoneStairs(), color + " Soapstone Stairs");
+            translationBuilder.add(entry.soapstoneWall(), color + " Soapstone Wall");
+            translationBuilder.add(entry.polishedSoapstone(), color + " Polished Soapstone");
+            translationBuilder.add(entry.polishedSoapstoneSlab(), color + " Polished Soapstone Slab");
+            translationBuilder.add(entry.polishedSoapstoneStairs(), color + " Polished Soapstone Stairs");
+            translationBuilder.add(entry.polishedSoapstoneWall(), color + " Polished Soapstone Wall");
+            translationBuilder.add(entry.soapstoneBricks(), color + " Soapstone Bricks");
+            translationBuilder.add(entry.soapstoneBrickSlab(), color + " Soapstone Brick Slab");
+            translationBuilder.add(entry.soapstoneBrickStairs(), color + " Soapstone Brick Stairs");
+            translationBuilder.add(entry.soapstoneBrickWall(), color + " Soapstone Brick Wall");
+        }
     }
 }

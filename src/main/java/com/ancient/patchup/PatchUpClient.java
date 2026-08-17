@@ -47,5 +47,16 @@ public class PatchUpClient implements ClientModInitializer {
                                 net.minecraft.util.Identifier.of("farmersdelight", "entity/signs/hanging/canvas_" + color.getName())));
             }
         }
+
+        if (Compats.ARTS_AND_CRAFTS.isLoaded()) {
+            com.kekecreations.arts_and_crafts.client.renderer.bewlr.ArtsAndCraftsBEWLR bewlr =
+                    new com.kekecreations.arts_and_crafts.client.renderer.bewlr.ArtsAndCraftsBEWLR();
+            for (com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.Entry entry : com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.ENTRIES) {
+                BlockRenderLayerMap.INSTANCE.putBlock(entry.flowerPot(), RenderLayer.getCutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(entry.chalkDust(), RenderLayer.getCutout());
+                net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry.INSTANCE.register(
+                        entry.decoratedPotItem(), bewlr::render);
+            }
+        }
     }
 }

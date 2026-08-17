@@ -1,0 +1,7 @@
+{
+  "parent": "arts_and_crafts:block/chalk_dust",
+  "textures": {
+    "dust": "patchup:block/verdant_circle",
+    "particle": "patchup:block/verdant_circle"
+  }
+}

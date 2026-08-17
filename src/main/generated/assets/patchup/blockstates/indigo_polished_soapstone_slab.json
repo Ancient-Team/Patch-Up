@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "patchup:block/indigo_polished_soapstone_slab"
+    },
+    "type=double": {
+      "model": "patchup:block/indigo_polished_soapstone"
+    },
+    "type=top": {
+      "model": "patchup:block/indigo_polished_soapstone_slab_top"
+    }
+  }
+}

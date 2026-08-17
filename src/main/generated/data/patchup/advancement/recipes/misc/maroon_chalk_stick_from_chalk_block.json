@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_maroon_chalk": {
+      "conditions": {
+        "items": [
+          {
+            "items": "patchup:maroon_chalk"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "patchup:maroon_chalk_stick_from_chalk_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_maroon_chalk"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "patchup:maroon_chalk_stick_from_chalk_block"
+    ]
+  }
+}

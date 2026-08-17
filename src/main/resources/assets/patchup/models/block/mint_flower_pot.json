@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/flower_pot",
+  "textures": {
+    "flowerpot": "patchup:block/mint_flower_pot",
+    "particle": "patchup:block/mint_flower_pot"
+  }
+}

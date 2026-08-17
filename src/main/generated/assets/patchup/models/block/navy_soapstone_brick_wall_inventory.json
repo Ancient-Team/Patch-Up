@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "patchup:block/navy_soapstone_bricks"
+  }
+}

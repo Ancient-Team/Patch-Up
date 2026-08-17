@@ -60,6 +60,37 @@ public class ModItemGroups {
                             }
                         }
 
+                        if (Compats.ARTS_AND_CRAFTS.isLoaded()) {
+                            for (com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.Entry entry : com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.ENTRIES) {
+                                entries.add(entry.chalk());
+                                entries.add(entry.chalkStick());
+                                entries.add(entry.paintbrush());
+                                entries.add(entry.plaster());
+                                entries.add(entry.flowerPotItem());
+                                entries.add(entry.decoratedPotItem());
+                                entries.add(entry.mudBricks());
+                                entries.add(entry.mudBrickSlab());
+                                entries.add(entry.mudBrickStairs());
+                                entries.add(entry.mudBrickWall());
+                                entries.add(entry.terracottaShingles());
+                                entries.add(entry.terracottaShingleSlab());
+                                entries.add(entry.terracottaShingleStairs());
+                                entries.add(entry.terracottaShingleWall());
+                                entries.add(entry.soapstone());
+                                entries.add(entry.soapstoneSlab());
+                                entries.add(entry.soapstoneStairs());
+                                entries.add(entry.soapstoneWall());
+                                entries.add(entry.polishedSoapstone());
+                                entries.add(entry.polishedSoapstoneSlab());
+                                entries.add(entry.polishedSoapstoneStairs());
+                                entries.add(entry.polishedSoapstoneWall());
+                                entries.add(entry.soapstoneBricks());
+                                entries.add(entry.soapstoneBrickSlab());
+                                entries.add(entry.soapstoneBrickStairs());
+                                entries.add(entry.soapstoneBrickWall());
+                            }
+                        }
+
                     }).build());
 
 

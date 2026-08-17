@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "decorated_pots",
+  "ingredients": [
+    {
+      "item": "dye_depot:coral_dye"
+    },
+    {
+      "item": "minecraft:decorated_pot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "patchup:coral_decorated_pot"
+  }
+}

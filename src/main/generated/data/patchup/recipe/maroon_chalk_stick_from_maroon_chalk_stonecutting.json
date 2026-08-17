@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "patchup:maroon_chalk"
+  },
+  "result": {
+    "count": 4,
+    "id": "patchup:maroon_chalk_stick"
+  }
+}

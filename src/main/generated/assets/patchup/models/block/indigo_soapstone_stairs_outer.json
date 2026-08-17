@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "patchup:block/indigo_soapstone",
+    "side": "patchup:block/indigo_soapstone",
+    "top": "patchup:block/indigo_soapstone"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "patchup:amber_chalk"
+  },
+  "result": {
+    "count": 4,
+    "id": "patchup:amber_chalk_stick"
+  }
+}

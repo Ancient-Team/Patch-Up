@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "patchup:navy_terracotta_shingles"
+  },
+  "result": {
+    "count": 1,
+    "id": "patchup:navy_terracotta_shingle_wall"
+  }
+}

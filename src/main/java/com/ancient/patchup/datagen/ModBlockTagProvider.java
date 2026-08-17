@@ -71,5 +71,31 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         for (com.ancient.patchup.block.comforts.ComfortsItems.ComfortsEntry entry : com.ancient.patchup.block.comforts.ComfortsItems.ENTRIES) {
             axeMineable.add(entry.hammockBlock().get(), entry.sleepingBagBlock().get());
         }
+
+        /* Arts & Crafts */
+        com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.init();
+        var pickaxeMineable = this.getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE);
+        var slabs = this.getOrCreateTagBuilder(BlockTags.SLABS);
+        var stairs = this.getOrCreateTagBuilder(BlockTags.STAIRS);
+        var walls = this.getOrCreateTagBuilder(BlockTags.WALLS);
+        var flowerPots = this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS);
+        var chalkDustTag = this.getOrCreateTagBuilder(com.kekecreations.arts_and_crafts.core.init.ACTags.BlockTags.CHALK_DUST);
+
+        for (com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.Entry entry : com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.ENTRIES) {
+            pickaxeMineable.add(
+                    entry.chalk(), entry.plaster(), entry.flowerPot(), entry.decoratedPot(),
+                    entry.mudBricks(), entry.mudBrickSlab(), entry.mudBrickStairs(), entry.mudBrickWall(),
+                    entry.terracottaShingles(), entry.terracottaShingleSlab(), entry.terracottaShingleStairs(), entry.terracottaShingleWall(),
+                    entry.soapstone(), entry.soapstoneSlab(), entry.soapstoneStairs(), entry.soapstoneWall(),
+                    entry.polishedSoapstone(), entry.polishedSoapstoneSlab(), entry.polishedSoapstoneStairs(), entry.polishedSoapstoneWall(),
+                    entry.soapstoneBricks(), entry.soapstoneBrickSlab(), entry.soapstoneBrickStairs(), entry.soapstoneBrickWall()
+            );
+
+            slabs.add(entry.mudBrickSlab(), entry.terracottaShingleSlab(), entry.soapstoneSlab(), entry.polishedSoapstoneSlab(), entry.soapstoneBrickSlab());
+            stairs.add(entry.mudBrickStairs(), entry.terracottaShingleStairs(), entry.soapstoneStairs(), entry.polishedSoapstoneStairs(), entry.soapstoneBrickStairs());
+            walls.add(entry.mudBrickWall(), entry.terracottaShingleWall(), entry.soapstoneWall(), entry.polishedSoapstoneWall(), entry.soapstoneBrickWall());
+            flowerPots.add(entry.flowerPot());
+            chalkDustTag.add(entry.chalkDust());
+        }
     }
 }

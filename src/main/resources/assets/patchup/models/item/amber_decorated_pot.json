@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/decorated_pot",
+  "textures": {
+    "particle": "patchup:item/amber_decorated_pot_side"
+  }
+}

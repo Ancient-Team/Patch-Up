@@ -7,8 +7,9 @@ More cool colored furniture and blocks! Patch Up adds various furniture, blocks 
 * [Farmer's Delight](https://modrinth.com/mod/farmers-delight-refabricated)
 * [Dye Depot](https://modrinth.com/mod/dye-depot)
 * [Comforts](https://modrinth.com/mod/comforts)
+* [Arts & Crafts](https://modrinth.com/mod/artsandcrafts)
 
-**Shoutout to starfish studios and ninni for creating amazing mods**
+**Shoutout to starfish studios, ninni, and kekecreations for creating amazing mods**
 
 ## 📝 Frequently Asked Questions
 
