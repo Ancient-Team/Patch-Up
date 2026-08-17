@@ -49,13 +49,13 @@ public class PatchUpClient implements ClientModInitializer {
         }
 
         if (Compats.ARTS_AND_CRAFTS.isLoaded()) {
-            com.kekecreations.arts_and_crafts.client.renderer.bewlr.ArtsAndCraftsBEWLR bewlr =
-                    new com.kekecreations.arts_and_crafts.client.renderer.bewlr.ArtsAndCraftsBEWLR();
+            com.ancient.patchup.block.arts_and_crafts.PatchUpDecoratedPotItemRenderer potRenderer =
+                    new com.ancient.patchup.block.arts_and_crafts.PatchUpDecoratedPotItemRenderer();
             for (com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.Entry entry : com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.ENTRIES) {
                 BlockRenderLayerMap.INSTANCE.putBlock(entry.flowerPot(), RenderLayer.getCutout());
                 BlockRenderLayerMap.INSTANCE.putBlock(entry.chalkDust(), RenderLayer.getCutout());
                 net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry.INSTANCE.register(
-                        entry.decoratedPotItem(), bewlr::render);
+                        entry.decoratedPotItem(), potRenderer);
             }
         }
     }

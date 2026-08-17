@@ -1,0 +1,33 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:jinxedlib_paletted_permutations",
+      "sources": [
+        {
+          "type": "minecraft:directory",
+          "prefix": "entity/decorated_pot/",
+          "source": "entity/decorated_pot"
+        }
+      ],
+      "palette_key": "arts_and_crafts:color_palettes/decorated_pot/decorated_pot_palette",
+      "permutations": {
+        "maroon": "patchup:color_palettes/decorated_pot/maroon_decorated_pot_palette",
+        "rose": "patchup:color_palettes/decorated_pot/rose_decorated_pot_palette",
+        "coral": "patchup:color_palettes/decorated_pot/coral_decorated_pot_palette",
+        "ginger": "patchup:color_palettes/decorated_pot/ginger_decorated_pot_palette",
+        "tan": "patchup:color_palettes/decorated_pot/tan_decorated_pot_palette",
+        "beige": "patchup:color_palettes/decorated_pot/beige_decorated_pot_palette",
+        "amber": "patchup:color_palettes/decorated_pot/amber_decorated_pot_palette",
+        "olive": "patchup:color_palettes/decorated_pot/olive_decorated_pot_palette",
+        "forest": "patchup:color_palettes/decorated_pot/forest_decorated_pot_palette",
+        "verdant": "patchup:color_palettes/decorated_pot/verdant_decorated_pot_palette",
+        "teal": "patchup:color_palettes/decorated_pot/teal_decorated_pot_palette",
+        "mint": "patchup:color_palettes/decorated_pot/mint_decorated_pot_palette",
+        "aqua": "patchup:color_palettes/decorated_pot/aqua_decorated_pot_palette",
+        "slate": "patchup:color_palettes/decorated_pot/slate_decorated_pot_palette",
+        "navy": "patchup:color_palettes/decorated_pot/navy_decorated_pot_palette",
+        "indigo": "patchup:color_palettes/decorated_pot/indigo_decorated_pot_palette"
+      }
+    }
+  ]
+}
