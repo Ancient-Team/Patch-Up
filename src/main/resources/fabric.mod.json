@@ -39,6 +39,7 @@
 	"suggests": {
 		"another_furniture": "*",
 		"farmersdelight": "*",
-		"comforts": "*"
+		"comforts": "*",
+		"arts_and_crafts": "*"
 	}
 }
