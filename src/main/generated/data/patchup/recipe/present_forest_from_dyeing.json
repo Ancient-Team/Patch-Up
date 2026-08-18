@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "presents",
+  "ingredients": [
+    {
+      "item": "dye_depot:forest_dye"
+    },
+    {
+      "tag": "supplementaries:presents"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "supplementaries:present_forest"
+  }
+}

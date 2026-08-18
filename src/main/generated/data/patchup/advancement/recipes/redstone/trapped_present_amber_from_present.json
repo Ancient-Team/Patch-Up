@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_present_amber": {
+      "conditions": {
+        "items": [
+          {
+            "items": "supplementaries:present_amber"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "patchup:trapped_present_amber_from_present"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_present_amber"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "patchup:trapped_present_amber_from_present"
+    ]
+  }
+}

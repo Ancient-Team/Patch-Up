@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "trapped_presents",
+  "ingredients": [
+    {
+      "item": "dye_depot:verdant_dye"
+    },
+    {
+      "tag": "supplementaries:trapped_presents"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "supplementaries:trapped_present_verdant"
+  }
+}

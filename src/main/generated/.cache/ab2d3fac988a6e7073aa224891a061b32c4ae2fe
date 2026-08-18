@@ -1,18 +1,28 @@
-// 1.21.1	2026-08-17T18:54:01.8010608	Patch Up/Tags for minecraft:item
-8f7bf8a49724112c18d9a9a7880158bbe7e81970 data\minecraft\tags\item\walls.json
+// 1.21.1	2026-08-18T21:37:53.3091774	Patch Up/Tags for minecraft:item
+7fea4952eaf55e27fc20d5ac42a87a4bb2137cd9 data\supplementaries\tags\item\flags.json
 fac37bdfa0b5b147fe1f03e4551ffcbb6925dcc2 data\arts_and_crafts\tags\item\chalk_sticks.json
+47185514edf514ddaab143fcf3ccbbd72ed9d10f data\supplementaries\tags\item\candle_holders.json
+5eacd53c2e66e253a84c1add0c331ad585390fed data\amendments\tags\item\ceiling_banners.json
+5eacd53c2e66e253a84c1add0c331ad585390fed data\minecraft\tags\item\banners.json
+3f4c04bc31787a8246f7bfd680480013d71ce0b3 data\farmersdelight\tags\item\hanging_canvas_signs.json
+2af15bc3348035a96b1b24ceb647471ec73ddffc data\arts_and_crafts\tags\item\paintbrushes.json
+7cd2ea0a97e43be82431237a0be9bab7cca0de84 data\arts_and_crafts\tags\item\decorated_pots.json
+21b9f7fc90c24142c827aa92f6107328fb2f4f7b data\another_furniture\tags\item\lamps.json
+be2e7a4b37cf88df539b8aeda3255b3bbc25612d data\another_furniture\tags\item\curtains.json
+8f7bf8a49724112c18d9a9a7880158bbe7e81970 data\minecraft\tags\item\walls.json
+a9445a73d068135803ae7602b729bfbfb385d5ba data\supplementaries\tags\item\trapped_presents.json
+282f010f57f3b5bdab37ddf7400e1a1f5491c8ea data\suppsquared\tags\item\golden_candle_holders.json
+0c97295313ae1ad5e314191cd4a42a0389d009cb data\supplementaries\tags\item\awnings.json
+63e14643df7309664a7f1b5c0595cf2f6ecc91f6 data\supplementaries\tags\item\sacks.json
 bce509c84af5af3185bd3985c4bac995a87ad5ab data\another_furniture\tags\item\stools.json
 ba4b1959273c518fb03cc62bfb11024f7286fb13 data\another_furniture\tags\item\sofas.json
 e8b9bd792f83ee1010d7658b46a6bab116318a77 data\farmersdelight\tags\item\canvas_signs.json
 8e6a62321a24e78a794719939ff69e18b88f1cc6 data\comforts\tags\item\sleeping_bags.json
 3f4c04bc31787a8246f7bfd680480013d71ce0b3 data\minecraft\tags\item\hanging_signs.json
-3f4c04bc31787a8246f7bfd680480013d71ce0b3 data\farmersdelight\tags\item\hanging_canvas_signs.json
-2af15bc3348035a96b1b24ceb647471ec73ddffc data\arts_and_crafts\tags\item\paintbrushes.json
+bc247b50042cfce3bdff75c995a18d28cb246c44 data\supplementaries\tags\item\presents.json
+188509f6c0af76e089752bb1ed8a3a0a0e593717 data\supplementaries\tags\item\buntings.json
 e8b9bd792f83ee1010d7658b46a6bab116318a77 data\minecraft\tags\item\signs.json
 34095ab4ab871e1838dbfec2ddb6285ff6c34dac data\minecraft\tags\item\slabs.json
-7cd2ea0a97e43be82431237a0be9bab7cca0de84 data\arts_and_crafts\tags\item\decorated_pots.json
 911781611b09b0af8de27f7b77ff0216f28a5d41 data\another_furniture\tags\item\tall_stools.json
 ee9cf7d4d4bd5300ea61b179056c6d9b619b46a1 data\minecraft\tags\item\stairs.json
-21b9f7fc90c24142c827aa92f6107328fb2f4f7b data\another_furniture\tags\item\lamps.json
 6345b4fd3fb90f67049e17ae02e87d85341a2d45 data\comforts\tags\item\hammocks.json
-be2e7a4b37cf88df539b8aeda3255b3bbc25612d data\another_furniture\tags\item\curtains.json

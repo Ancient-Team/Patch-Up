@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "supplementaries:block/buntings/indigo_ceiling",
+      "y": 90
+    },
+    "axis=z": {
+      "model": "supplementaries:block/buntings/indigo_ceiling"
+    }
+  }
+}

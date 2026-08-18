@@ -6,8 +6,11 @@ import com.starfish_studios.another_furniture.registry.AFBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
@@ -96,6 +99,75 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             walls.add(entry.mudBrickWall(), entry.terracottaShingleWall(), entry.soapstoneWall(), entry.polishedSoapstoneWall(), entry.soapstoneBrickWall());
             flowerPots.add(entry.flowerPot());
             chalkDustTag.add(entry.chalkDust());
+        }
+
+        /* Supplementaries */
+        com.ancient.patchup.block.supplementaries.SupplementariesEntries.init();
+        var suppFlags = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("supplementaries", "flags")));
+        var suppPresents = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("supplementaries", "presents")));
+        var suppTrappedPresents = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("supplementaries", "trapped_presents")));
+        var suppAwnings = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("supplementaries", "awnings")));
+        var suppCandleHolders = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("supplementaries", "candle_holders")));
+        var suppBuntings = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("supplementaries", "buntings")));
+
+        for (com.ancient.patchup.block.supplementaries.SupplementariesEntries.Entry entry : com.ancient.patchup.block.supplementaries.SupplementariesEntries.ENTRIES) {
+            if (entry.flag() != null) {
+                suppFlags.add(entry.flag().get());
+                axeMineable.add(entry.flag().get());
+            }
+            if (entry.present() != null) {
+                suppPresents.add(entry.present().get());
+                axeMineable.add(entry.present().get());
+            }
+            if (entry.trappedPresent() != null) {
+                suppTrappedPresents.add(entry.trappedPresent().get());
+                axeMineable.add(entry.trappedPresent().get());
+            }
+            if (entry.awning() != null) {
+                suppAwnings.add(entry.awning().get());
+                axeMineable.add(entry.awning().get());
+            }
+            if (entry.candleHolder() != null) {
+                suppCandleHolders.add(entry.candleHolder().get());
+                pickaxeMineable.add(entry.candleHolder().get());
+            }
+            if (entry.bunting() != null) {
+                suppBuntings.add(entry.bunting().get());
+                axeMineable.add(entry.bunting().get());
+            }
+            if (entry.buntingWall() != null) {
+                suppBuntings.add(entry.buntingWall().get());
+                axeMineable.add(entry.buntingWall().get());
+            }
+        }
+
+        /* SuppSquared */
+        com.ancient.patchup.block.suppsquared.SuppSquaredEntries.init();
+        var suppSacks = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("supplementaries", "sacks")));
+        var suppGoldCandleHolders = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("suppsquared", "golden_candle_holders")));
+
+        for (com.ancient.patchup.block.suppsquared.SuppSquaredEntries.Entry entry : com.ancient.patchup.block.suppsquared.SuppSquaredEntries.ENTRIES) {
+            if (entry.sack() != null) {
+                suppSacks.add(entry.sack().get());
+                axeMineable.add(entry.sack().get());
+            }
+            if (entry.goldenCandleHolder() != null) {
+                suppGoldCandleHolders.add(entry.goldenCandleHolder().get());
+                pickaxeMineable.add(entry.goldenCandleHolder().get());
+            }
+        }
+
+        /* Amendments */
+        com.ancient.patchup.block.amendments.AmendmentsEntries.init();
+        var amCeilingBanners = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("amendments", "ceiling_banners")));
+        var banners = this.getOrCreateTagBuilder(BlockTags.BANNERS);
+
+        for (com.ancient.patchup.block.amendments.AmendmentsEntries.Entry entry : com.ancient.patchup.block.amendments.AmendmentsEntries.ENTRIES) {
+            if (entry.ceilingBanner() != null) {
+                amCeilingBanners.add(entry.ceilingBanner().get());
+                banners.add(entry.ceilingBanner().get());
+                axeMineable.add(entry.ceilingBanner().get());
+            }
         }
     }
 }

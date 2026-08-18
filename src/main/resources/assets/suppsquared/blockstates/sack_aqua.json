@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "suppsquaaqua:block/sacks/aqua_closed"
+    },
+    "open=true": {
+      "model": "suppsquaaqua:block/sacks/aqua_open"
+    }
+  }
+}

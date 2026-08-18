@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "suppsquaginger:block/sacks/ginger_closed"
+    },
+    "open=true": {
+      "model": "suppsquaginger:block/sacks/ginger_open"
+    }
+  }
+}

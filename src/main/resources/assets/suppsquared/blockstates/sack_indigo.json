@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "suppsquaindigo:block/sacks/indigo_closed"
+    },
+    "open=true": {
+      "model": "suppsquaindigo:block/sacks/indigo_open"
+    }
+  }
+}

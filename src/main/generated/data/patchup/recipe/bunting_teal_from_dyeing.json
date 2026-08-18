@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "buntings",
+  "ingredients": [
+    {
+      "item": "dye_depot:teal_dye"
+    },
+    {
+      "tag": "supplementaries:buntings"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "supplementaries:bunting_teal"
+  }
+}

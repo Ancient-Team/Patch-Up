@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "suppsquaverdant:block/sacks/verdant_closed"
+    },
+    "open=true": {
+      "model": "suppsquaverdant:block/sacks/verdant_open"
+    }
+  }
+}

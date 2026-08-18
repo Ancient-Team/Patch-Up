@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_present_verdant": {
+      "conditions": {
+        "items": [
+          {
+            "items": "supplementaries:present_verdant"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "patchup:trapped_present_verdant_from_present"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_present_verdant"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "patchup:trapped_present_verdant_from_present"
+    ]
+  }
+}

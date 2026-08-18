@@ -12,9 +12,6 @@ public class PatchUp implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
-		ModItemGroups.registerItemGroups();
-
 		if (Compats.ANOTHER_FURNITURE.isLoaded()) {
 			Stool.init();
 			Stool.registerFlammables();
@@ -39,5 +36,19 @@ public class PatchUp implements ModInitializer {
 		if (Compats.ARTS_AND_CRAFTS.isLoaded()) {
 			com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.init();
 		}
+
+		if (Compats.SUPPLEMENTARIES.isLoaded()) {
+			com.ancient.patchup.block.supplementaries.SupplementariesEntries.init();
+		}
+
+		if (Compats.SUPP_SQUARED.isLoaded()) {
+			com.ancient.patchup.block.suppsquared.SuppSquaredEntries.init();
+		}
+
+		if (Compats.AMENDMENTS.isLoaded()) {
+			com.ancient.patchup.block.amendments.AmendmentsEntries.init();
+		}
+
+		ModItemGroups.registerItemGroups();
 	}
 }

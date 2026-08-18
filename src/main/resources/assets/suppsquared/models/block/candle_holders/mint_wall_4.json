@@ -1,0 +1,9 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "suppsquared:block/candle_holders/wall_4",
+  "textures": {
+    "1": "suppsquared:block/candle_holder",
+    "particle": "suppsquared:block/candle_holder",
+    "all": "dye_depot:block/mint_candle"
+  }
+}

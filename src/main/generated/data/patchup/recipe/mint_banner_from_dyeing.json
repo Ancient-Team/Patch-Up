@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ceiling_banners",
+  "ingredients": [
+    {
+      "item": "dye_depot:mint_dye"
+    },
+    {
+      "tag": "amendments:ceiling_banners"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dye_depot:mint_banner"
+  }
+}

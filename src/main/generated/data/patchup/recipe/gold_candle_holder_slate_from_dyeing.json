@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "golden_candle_holders",
+  "ingredients": [
+    {
+      "item": "dye_depot:slate_dye"
+    },
+    {
+      "tag": "suppsquared:golden_candle_holders"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "suppsquared:gold_candle_holder_slate"
+  }
+}

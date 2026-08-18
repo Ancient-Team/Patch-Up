@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_present_indigo": {
+      "conditions": {
+        "items": [
+          {
+            "items": "supplementaries:present_indigo"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "patchup:trapped_present_indigo_from_present"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_present_indigo"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "patchup:trapped_present_indigo_from_present"
+    ]
+  }
+}

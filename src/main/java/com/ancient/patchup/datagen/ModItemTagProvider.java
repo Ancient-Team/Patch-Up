@@ -95,5 +95,45 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
             paintbrushes.add(entry.paintbrush());
             decoratedPots.add(entry.decoratedPotItem());
         }
+
+        /* Supplementaries */
+        com.ancient.patchup.block.supplementaries.SupplementariesEntries.init();
+        var suppFlags = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("supplementaries", "flags")));
+        var suppPresents = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("supplementaries", "presents")));
+        var suppTrappedPresents = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("supplementaries", "trapped_presents")));
+        var suppAwnings = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("supplementaries", "awnings")));
+        var suppCandleHolders = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("supplementaries", "candle_holders")));
+        var suppBuntings = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("supplementaries", "buntings")));
+
+        for (com.ancient.patchup.block.supplementaries.SupplementariesEntries.Entry entry : com.ancient.patchup.block.supplementaries.SupplementariesEntries.ENTRIES) {
+            if (entry.flag() != null) suppFlags.add(entry.flag().get().asItem());
+            if (entry.present() != null) suppPresents.add(entry.present().get().asItem());
+            if (entry.trappedPresent() != null) suppTrappedPresents.add(entry.trappedPresent().get().asItem());
+            if (entry.awning() != null) suppAwnings.add(entry.awning().get().asItem());
+            if (entry.candleHolder() != null) suppCandleHolders.add(entry.candleHolder().get().asItem());
+            if (entry.buntingItem() != null) suppBuntings.add(entry.buntingItem().get());
+        }
+
+        /* SuppSquared */
+        com.ancient.patchup.block.suppsquared.SuppSquaredEntries.init();
+        var suppSacks = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("supplementaries", "sacks")));
+        var suppGoldCandleHolders = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("suppsquared", "golden_candle_holders")));
+
+        for (com.ancient.patchup.block.suppsquared.SuppSquaredEntries.Entry entry : com.ancient.patchup.block.suppsquared.SuppSquaredEntries.ENTRIES) {
+            if (entry.sackItem() != null) suppSacks.add(entry.sackItem().get());
+            if (entry.goldenCandleHolder() != null) suppGoldCandleHolders.add(entry.goldenCandleHolder().get().asItem());
+        }
+
+        /* Amendments */
+        com.ancient.patchup.block.amendments.AmendmentsEntries.init();
+        var amCeilingBanners = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("amendments", "ceiling_banners")));
+        var banners = this.getOrCreateTagBuilder(ItemTags.BANNERS);
+
+        for (com.ancient.patchup.block.amendments.AmendmentsEntries.Entry entry : com.ancient.patchup.block.amendments.AmendmentsEntries.ENTRIES) {
+            if (entry.ceilingBanner() != null) {
+                amCeilingBanners.add(entry.ceilingBanner().get().asItem());
+                banners.add(entry.ceilingBanner().get().asItem());
+            }
+        }
     }
 }

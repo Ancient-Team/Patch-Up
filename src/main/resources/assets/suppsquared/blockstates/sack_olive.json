@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "suppsquaolive:block/sacks/olive_closed"
+    },
+    "open=true": {
+      "model": "suppsquaolive:block/sacks/olive_open"
+    }
+  }
+}

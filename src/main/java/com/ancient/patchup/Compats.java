@@ -6,7 +6,10 @@ public enum Compats {
     ANOTHER_FURNITURE("another_furniture"),
     FARMERS_DELIGHT("farmersdelight"),
     COMFORTS("comforts"),
-    ARTS_AND_CRAFTS("arts_and_crafts");
+    ARTS_AND_CRAFTS("arts_and_crafts"),
+    SUPPLEMENTARIES("supplementaries"),
+    SUPP_SQUARED("suppsquared"),
+    AMENDMENTS("amendments");
 
     private final String id;
 

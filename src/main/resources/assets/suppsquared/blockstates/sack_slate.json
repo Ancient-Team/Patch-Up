@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "suppsquaslate:block/sacks/slate_closed"
+    },
+    "open=true": {
+      "model": "suppsquaslate:block/sacks/slate_open"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_present_navy": {
+      "conditions": {
+        "items": [
+          {
+            "items": "supplementaries:present_navy"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "patchup:trapped_present_navy_from_present"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_present_navy"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "patchup:trapped_present_navy_from_present"
+    ]
+  }
+}

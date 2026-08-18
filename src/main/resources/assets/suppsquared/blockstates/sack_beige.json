@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "suppsquabeige:block/sacks/beige_closed"
+    },
+    "open=true": {
+      "model": "suppsquabeige:block/sacks/beige_open"
+    }
+  }
+}

@@ -60,6 +60,10 @@ dependencies {
 	modImplementation "com.illusivesoulworks.spectrelib:spectrelib-fabric:0.17.2+1.21"
 	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-base:6.1.2"
 	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-entity:6.1.2"
+	modImplementation "maven.modrinth:moonlight:76cdJwLO"
+	modImplementation "maven.modrinth:supplementaries:ZeSGn7hN"
+	modImplementation "maven.modrinth:supplementaries-squared:wNDokve9"
+	modImplementation "maven.modrinth:amendments:7ASmn54d"
 	modLocalRuntime "maven.modrinth:modmenu:11.0.3"
 }
 

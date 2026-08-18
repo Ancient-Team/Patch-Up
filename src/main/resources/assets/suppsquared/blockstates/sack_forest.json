@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "suppsquaforest:block/sacks/forest_closed"
+    },
+    "open=true": {
+      "model": "suppsquaforest:block/sacks/forest_open"
+    }
+  }
+}
