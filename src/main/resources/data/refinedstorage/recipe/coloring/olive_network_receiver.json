@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/olive"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:network_receivers"
+  },
+  "result": "refinedstorage:olive_network_receiver",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

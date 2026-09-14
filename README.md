@@ -8,6 +8,11 @@ More cool colored furniture and blocks! Patch Up adds various furniture, blocks 
 * [Dye Depot](https://modrinth.com/mod/dye-depot)
 * [Comforts](https://modrinth.com/mod/comforts)
 * [Arts & Crafts](https://modrinth.com/mod/artsandcrafts)
+* [Sleep Tight](https://modrinth.com/mod/sleep-tight)
+* [Snowy Spirit](https://modrinth.com/mod/snowy-spirit)
+* [Supplementaries](https://modrinth.com/mod/supplementaries)
+* [Amendments](https://modrinth.com/mod/amendments)
+* [Refined Storage](https://modrinth.com/mod/refined-storage)
 
 **Shoutout to starfish studios, ninni, and kekecreations for creating amazing mods**
 

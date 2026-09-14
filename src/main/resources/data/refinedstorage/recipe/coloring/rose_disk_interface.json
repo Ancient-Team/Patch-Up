@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/rose"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:disk_interfaces"
+  },
+  "result": "refinedstorage:rose_disk_interface",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

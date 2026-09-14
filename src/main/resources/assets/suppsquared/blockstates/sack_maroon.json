@@ -1,10 +1,10 @@
 {
   "variants": {
     "open=false": {
-      "model": "suppsquamaroon:block/sacks/maroon_closed"
+      "model": "suppsquared:block/sacks/maroon_closed"
     },
     "open=true": {
-      "model": "suppsquamaroon:block/sacks/maroon_open"
+      "model": "suppsquared:block/sacks/maroon_open"
     }
   }
 }

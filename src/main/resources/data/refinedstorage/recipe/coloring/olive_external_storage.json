@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/olive"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:external_storages"
+  },
+  "result": "refinedstorage:olive_external_storage",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

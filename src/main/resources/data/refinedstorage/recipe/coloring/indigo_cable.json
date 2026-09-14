@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/indigo"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:cables"
+  },
+  "result": "refinedstorage:indigo_cable",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

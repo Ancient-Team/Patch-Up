@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/amber"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:relays"
+  },
+  "result": "refinedstorage:amber_relay",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

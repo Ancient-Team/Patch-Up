@@ -1,20 +1,68 @@
 {
   "values": [
-    "suppsquared:sack_maroon",
-    "suppsquared:sack_rose",
-    "suppsquared:sack_coral",
-    "suppsquared:sack_indigo",
-    "suppsquared:sack_navy",
-    "suppsquared:sack_slate",
-    "suppsquared:sack_olive",
-    "suppsquared:sack_amber",
-    "suppsquared:sack_beige",
-    "suppsquared:sack_teal",
-    "suppsquared:sack_mint",
-    "suppsquared:sack_aqua",
-    "suppsquared:sack_verdant",
-    "suppsquared:sack_forest",
-    "suppsquared:sack_ginger",
-    "suppsquared:sack_tan"
+    {
+      "id": "suppsquared:sack_maroon",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_rose",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_coral",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_indigo",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_navy",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_slate",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_olive",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_amber",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_beige",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_teal",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_mint",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_aqua",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_verdant",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_forest",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_ginger",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_tan",
+      "required": false
+    }
   ]
 }

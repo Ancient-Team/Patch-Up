@@ -1,0 +1,7 @@
+{
+  "suppsquared.configuration.features": "Features",
+  "suppsquared.configuration.features.plaques": "Plaques",
+  "suppsquared.configuration.features.plaques.description": "Enable plaques",
+  "suppsquared.configuration.features.lanterns": "Lanterns",
+  "suppsquared.configuration.features.lanterns.description": "Enable lanterns"
+}

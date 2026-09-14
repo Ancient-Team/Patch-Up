@@ -38,3 +38,4 @@ public class PatchUpDecoratedPotItemRenderer implements BuiltinItemRenderer {
         }
     }
 }
+

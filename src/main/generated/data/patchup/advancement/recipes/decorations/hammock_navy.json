@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_navy_carpet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dye_depot:navy_carpet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "patchup:hammock_navy"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_navy_carpet"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "patchup:hammock_navy"
+    ]
+  }
+}

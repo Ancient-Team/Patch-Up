@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/verdant"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:external_storages"
+  },
+  "result": "refinedstorage:verdant_external_storage",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

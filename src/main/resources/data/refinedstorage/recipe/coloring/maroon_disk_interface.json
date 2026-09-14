@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/maroon"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:disk_interfaces"
+  },
+  "result": "refinedstorage:maroon_disk_interface",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

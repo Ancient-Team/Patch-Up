@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/slate"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:external_storages"
+  },
+  "result": "refinedstorage:slate_external_storage",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

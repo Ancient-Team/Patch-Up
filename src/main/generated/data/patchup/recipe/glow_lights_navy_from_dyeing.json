@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "glow_lights",
+  "ingredients": [
+    {
+      "item": "dye_depot:navy_dye"
+    },
+    {
+      "tag": "snowyspirit:glow_lights"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "snowyspirit:glow_lights_navy"
+  }
+}

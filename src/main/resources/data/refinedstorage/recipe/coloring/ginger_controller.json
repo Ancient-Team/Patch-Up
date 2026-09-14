@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/ginger"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:controllers"
+  },
+  "result": "refinedstorage:ginger_controller",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

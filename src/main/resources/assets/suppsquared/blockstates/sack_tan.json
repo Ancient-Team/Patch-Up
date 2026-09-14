@@ -1,10 +1,10 @@
 {
   "variants": {
     "open=false": {
-      "model": "suppsquatan:block/sacks/tan_closed"
+      "model": "suppsquared:block/sacks/tan_closed"
     },
     "open=true": {
-      "model": "suppsquatan:block/sacks/tan_open"
+      "model": "suppsquared:block/sacks/tan_open"
     }
   }
 }

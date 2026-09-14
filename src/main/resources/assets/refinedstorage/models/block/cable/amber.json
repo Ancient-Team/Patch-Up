@@ -1,0 +1,4 @@
+{
+  "color": "amber",
+  "loader": "refinedstorage:cable"
+}

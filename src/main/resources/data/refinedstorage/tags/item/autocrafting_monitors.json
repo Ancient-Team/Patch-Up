@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "refinedstorage:maroon_autocrafting_monitor",
+    "refinedstorage:rose_autocrafting_monitor",
+    "refinedstorage:coral_autocrafting_monitor",
+    "refinedstorage:indigo_autocrafting_monitor",
+    "refinedstorage:navy_autocrafting_monitor",
+    "refinedstorage:slate_autocrafting_monitor",
+    "refinedstorage:olive_autocrafting_monitor",
+    "refinedstorage:amber_autocrafting_monitor",
+    "refinedstorage:beige_autocrafting_monitor",
+    "refinedstorage:teal_autocrafting_monitor",
+    "refinedstorage:mint_autocrafting_monitor",
+    "refinedstorage:aqua_autocrafting_monitor",
+    "refinedstorage:verdant_autocrafting_monitor",
+    "refinedstorage:forest_autocrafting_monitor",
+    "refinedstorage:ginger_autocrafting_monitor",
+    "refinedstorage:tan_autocrafting_monitor"
+  ]
+}

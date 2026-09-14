@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "refinedstorage:maroon_disk_interface",
+    "refinedstorage:rose_disk_interface",
+    "refinedstorage:coral_disk_interface",
+    "refinedstorage:indigo_disk_interface",
+    "refinedstorage:navy_disk_interface",
+    "refinedstorage:slate_disk_interface",
+    "refinedstorage:olive_disk_interface",
+    "refinedstorage:amber_disk_interface",
+    "refinedstorage:beige_disk_interface",
+    "refinedstorage:teal_disk_interface",
+    "refinedstorage:mint_disk_interface",
+    "refinedstorage:aqua_disk_interface",
+    "refinedstorage:verdant_disk_interface",
+    "refinedstorage:forest_disk_interface",
+    "refinedstorage:ginger_disk_interface",
+    "refinedstorage:tan_disk_interface"
+  ]
+}

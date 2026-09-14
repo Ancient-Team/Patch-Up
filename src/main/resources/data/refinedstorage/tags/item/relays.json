@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "refinedstorage:maroon_relay",
+    "refinedstorage:rose_relay",
+    "refinedstorage:coral_relay",
+    "refinedstorage:indigo_relay",
+    "refinedstorage:navy_relay",
+    "refinedstorage:slate_relay",
+    "refinedstorage:olive_relay",
+    "refinedstorage:amber_relay",
+    "refinedstorage:beige_relay",
+    "refinedstorage:teal_relay",
+    "refinedstorage:mint_relay",
+    "refinedstorage:aqua_relay",
+    "refinedstorage:verdant_relay",
+    "refinedstorage:forest_relay",
+    "refinedstorage:ginger_relay",
+    "refinedstorage:tan_relay"
+  ]
+}

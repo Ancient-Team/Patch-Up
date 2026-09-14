@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/coral"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:wireless_transmitters"
+  },
+  "result": "refinedstorage:coral_wireless_transmitter",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

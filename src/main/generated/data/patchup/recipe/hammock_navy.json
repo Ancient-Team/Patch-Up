@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "hammock",
+  "key": {
+    "#": {
+      "item": "minecraft:string"
+    },
+    "C": {
+      "item": "dye_depot:navy_carpet"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "sleep_tight:hammock_navy"
+  }
+}

@@ -7,6 +7,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
@@ -25,6 +27,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         super(output, completableFuture);
     }
 
+    private void addOptional(FabricTagBuilder builder, ItemConvertible... items) {
+        for (ItemConvertible item : items) {
+            if (item != null && item.asItem() != net.minecraft.item.Items.AIR) {
+                builder.addOptional(Registries.ITEM.getId(item.asItem()));
+            }
+        }
+    }
+
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         /* Another Furniture */
@@ -35,23 +45,23 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         var curtains = this.getOrCreateTagBuilder(AFItemTags.CURTAINS);
 
         for (Supplier<Block> stool : Stool.STOOLS.values()) {
-            stools.add(stool.get().asItem());
+            addOptional(stools, stool.get());
         }
 
         for (Supplier<Block> tallStool : TallStool.TALL_STOOLS.values()) {
-            tallStools.add(tallStool.get().asItem());
+            addOptional(tallStools, tallStool.get());
         }
 
         for (Supplier<Block> sofa : Sofa.SOFAS.values()) {
-            sofas.add(sofa.get().asItem());
+            addOptional(sofas, sofa.get());
         }
 
         for (Supplier<Block> lamp : Lamp.LAMPS.values()) {
-            lamps.add(lamp.get().asItem());
+            addOptional(lamps, lamp.get());
         }
 
         for (Supplier<Block> curtain : Curtain.CURTAINS.values()) {
-            curtains.add(curtain.get().asItem());
+            addOptional(curtains, curtain.get());
         }
 
         /* Farmer's Delight Canvas Signs */
@@ -62,10 +72,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         var fdHangingCanvasSigns = this.getOrCreateTagBuilder(FD_HANGING_CANVAS_SIGNS);
 
         for (CanvasSigns.CanvasSignEntry entry : CanvasSigns.ENTRIES) {
-            signs.add(entry.signItem());
-            hangingSigns.add(entry.hangingSignItem());
-            fdCanvasSigns.add(entry.signItem());
-            fdHangingCanvasSigns.add(entry.hangingSignItem());
+            addOptional(signs, entry.signItem());
+            addOptional(hangingSigns, entry.hangingSignItem());
+            addOptional(fdCanvasSigns, entry.signItem());
+            addOptional(fdHangingCanvasSigns, entry.hangingSignItem());
         }
 
         /* Comforts */
@@ -74,8 +84,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         var sleepingBags = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("comforts", "sleeping_bags")));
 
         for (com.ancient.patchup.block.comforts.ComfortsItems.ComfortsEntry entry : com.ancient.patchup.block.comforts.ComfortsItems.ENTRIES) {
-            hammocks.add(entry.hammockItem().get());
-            sleepingBags.add(entry.sleepingBagItem().get());
+            addOptional(hammocks, entry.hammockItem().get());
+            addOptional(sleepingBags, entry.sleepingBagItem().get());
         }
 
         /* Arts & Crafts */
@@ -88,12 +98,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         var decoratedPots = this.getOrCreateTagBuilder(com.kekecreations.arts_and_crafts.core.init.ACTags.ItemTags.DECORATED_POTS);
 
         for (com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.Entry entry : com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.ENTRIES) {
-            itemSlabs.add(entry.mudBrickSlab().asItem(), entry.terracottaShingleSlab().asItem(), entry.soapstoneSlab().asItem(), entry.polishedSoapstoneSlab().asItem(), entry.soapstoneBrickSlab().asItem());
-            itemStairs.add(entry.mudBrickStairs().asItem(), entry.terracottaShingleStairs().asItem(), entry.soapstoneStairs().asItem(), entry.polishedSoapstoneStairs().asItem(), entry.soapstoneBrickStairs().asItem());
-            itemWalls.add(entry.mudBrickWall().asItem(), entry.terracottaShingleWall().asItem(), entry.soapstoneWall().asItem(), entry.polishedSoapstoneWall().asItem(), entry.soapstoneBrickWall().asItem());
-            chalkSticks.add(entry.chalkStick());
-            paintbrushes.add(entry.paintbrush());
-            decoratedPots.add(entry.decoratedPotItem());
+            addOptional(itemSlabs, entry.mudBrickSlab(), entry.terracottaShingleSlab(), entry.soapstoneSlab(), entry.polishedSoapstoneSlab(), entry.soapstoneBrickSlab());
+            addOptional(itemStairs, entry.mudBrickStairs(), entry.terracottaShingleStairs(), entry.soapstoneStairs(), entry.polishedSoapstoneStairs(), entry.soapstoneBrickStairs());
+            addOptional(itemWalls, entry.mudBrickWall(), entry.terracottaShingleWall(), entry.soapstoneWall(), entry.polishedSoapstoneWall(), entry.soapstoneBrickWall());
+            addOptional(chalkSticks, entry.chalkStick());
+            addOptional(paintbrushes, entry.paintbrush());
+            addOptional(decoratedPots, entry.decoratedPotItem());
         }
 
         /* Supplementaries */
@@ -106,12 +116,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         var suppBuntings = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("supplementaries", "buntings")));
 
         for (com.ancient.patchup.block.supplementaries.SupplementariesEntries.Entry entry : com.ancient.patchup.block.supplementaries.SupplementariesEntries.ENTRIES) {
-            if (entry.flag() != null) suppFlags.add(entry.flag().get().asItem());
-            if (entry.present() != null) suppPresents.add(entry.present().get().asItem());
-            if (entry.trappedPresent() != null) suppTrappedPresents.add(entry.trappedPresent().get().asItem());
-            if (entry.awning() != null) suppAwnings.add(entry.awning().get().asItem());
-            if (entry.candleHolder() != null) suppCandleHolders.add(entry.candleHolder().get().asItem());
-            if (entry.buntingItem() != null) suppBuntings.add(entry.buntingItem().get());
+            if (entry.flag() != null) addOptional(suppFlags, entry.flag().get());
+            if (entry.present() != null) addOptional(suppPresents, entry.present().get());
+            if (entry.trappedPresent() != null) addOptional(suppTrappedPresents, entry.trappedPresent().get());
+            if (entry.awning() != null) addOptional(suppAwnings, entry.awning().get());
+            if (entry.candleHolder() != null) addOptional(suppCandleHolders, entry.candleHolder().get());
+            if (entry.buntingItem() != null) addOptional(suppBuntings, entry.buntingItem().get());
         }
 
         /* SuppSquared */
@@ -120,8 +130,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         var suppGoldCandleHolders = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("suppsquared", "golden_candle_holders")));
 
         for (com.ancient.patchup.block.suppsquared.SuppSquaredEntries.Entry entry : com.ancient.patchup.block.suppsquared.SuppSquaredEntries.ENTRIES) {
-            if (entry.sackItem() != null) suppSacks.add(entry.sackItem().get());
-            if (entry.goldenCandleHolder() != null) suppGoldCandleHolders.add(entry.goldenCandleHolder().get().asItem());
+            if (entry.sackItem() != null) addOptional(suppSacks, entry.sackItem().get());
+            if (entry.goldenCandleHolder() != null) addOptional(suppGoldCandleHolders, entry.goldenCandleHolder().get());
         }
 
         /* Amendments */
@@ -131,9 +141,40 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         for (com.ancient.patchup.block.amendments.AmendmentsEntries.Entry entry : com.ancient.patchup.block.amendments.AmendmentsEntries.ENTRIES) {
             if (entry.ceilingBanner() != null) {
-                amCeilingBanners.add(entry.ceilingBanner().get().asItem());
-                banners.add(entry.ceilingBanner().get().asItem());
+                addOptional(amCeilingBanners, entry.ceilingBanner().get());
+                addOptional(banners, entry.ceilingBanner().get());
+            }
+        }
+
+        /* Sleep Tight */
+        if (com.ancient.patchup.Compats.SLEEP_TIGHT.isLoaded()) {
+            com.ancient.patchup.block.sleep_tight.SleepTightEntries.init();
+            var sleepTightHammocks = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("sleep_tight", "hammocks")));
+
+            for (com.ancient.patchup.block.sleep_tight.SleepTightEntries.Entry entry : com.ancient.patchup.block.sleep_tight.SleepTightEntries.ENTRIES) {
+                if (entry.hammock() != null) {
+                    addOptional(sleepTightHammocks, entry.hammock().get());
+                }
+            }
+        }
+
+        /* Snowy Spirit */
+        if (com.ancient.patchup.Compats.SNOWY_SPIRIT.isLoaded()) {
+            com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.init();
+            var snowyGlowLightsItems = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("snowyspirit", "glow_lights")));
+            var snowyGumdropsItems = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("snowyspirit", "gumdrops")));
+            var itemButtons = this.getOrCreateTagBuilder(ItemTags.BUTTONS);
+
+            for (com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.Entry entry : com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.ENTRIES) {
+                if (entry.glowLightsItem() != null) {
+                    addOptional(snowyGlowLightsItems, entry.glowLightsItem().get());
+                }
+                if (entry.gumdrop() != null) {
+                    addOptional(snowyGumdropsItems, entry.gumdrop().get());
+                    addOptional(itemButtons, entry.gumdrop().get());
+                }
             }
         }
     }
 }
+

@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/navy"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:autocrafter_managers"
+  },
+  "result": "refinedstorage:navy_autocrafter_manager",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

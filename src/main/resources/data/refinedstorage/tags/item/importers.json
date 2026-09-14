@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "refinedstorage:maroon_importer",
+    "refinedstorage:rose_importer",
+    "refinedstorage:coral_importer",
+    "refinedstorage:indigo_importer",
+    "refinedstorage:navy_importer",
+    "refinedstorage:slate_importer",
+    "refinedstorage:olive_importer",
+    "refinedstorage:amber_importer",
+    "refinedstorage:beige_importer",
+    "refinedstorage:teal_importer",
+    "refinedstorage:mint_importer",
+    "refinedstorage:aqua_importer",
+    "refinedstorage:verdant_importer",
+    "refinedstorage:forest_importer",
+    "refinedstorage:ginger_importer",
+    "refinedstorage:tan_importer"
+  ]
+}

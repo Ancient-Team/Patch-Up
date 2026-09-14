@@ -1,0 +1,17 @@
+{
+  "parent": "refinedstorage:block/emissive_sides_cutout",
+  "textures": {
+    "cutout_east": "refinedstorage:block/security_manager/cutouts/right/coral",
+    "cutout_north": "refinedstorage:block/security_manager/cutouts/front/coral",
+    "cutout_south": "refinedstorage:block/security_manager/cutouts/back/coral",
+    "cutout_up": "refinedstorage:block/security_manager/cutouts/top/coral",
+    "cutout_west": "refinedstorage:block/security_manager/cutouts/left/coral",
+    "down": "refinedstorage:block/bottom",
+    "east": "refinedstorage:block/security_manager/right",
+    "north": "refinedstorage:block/security_manager/front",
+    "particle": "refinedstorage:block/security_manager/back",
+    "south": "refinedstorage:block/security_manager/back",
+    "up": "refinedstorage:block/security_manager/top",
+    "west": "refinedstorage:block/security_manager/left"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "refinedstorage:maroon_constructor",
+    "refinedstorage:rose_constructor",
+    "refinedstorage:coral_constructor",
+    "refinedstorage:indigo_constructor",
+    "refinedstorage:navy_constructor",
+    "refinedstorage:slate_constructor",
+    "refinedstorage:olive_constructor",
+    "refinedstorage:amber_constructor",
+    "refinedstorage:beige_constructor",
+    "refinedstorage:teal_constructor",
+    "refinedstorage:mint_constructor",
+    "refinedstorage:aqua_constructor",
+    "refinedstorage:verdant_constructor",
+    "refinedstorage:forest_constructor",
+    "refinedstorage:ginger_constructor",
+    "refinedstorage:tan_constructor"
+  ]
+}

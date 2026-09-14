@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/coral"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:autocrafters"
+  },
+  "result": "refinedstorage:coral_autocrafter",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

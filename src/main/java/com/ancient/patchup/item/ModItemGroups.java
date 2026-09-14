@@ -9,6 +9,9 @@ import com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries;
 import com.ancient.patchup.block.supplementaries.SupplementariesEntries;
 import com.ancient.patchup.block.suppsquared.SuppSquaredEntries;
 import com.ancient.patchup.block.amendments.AmendmentsEntries;
+import com.ancient.patchup.block.sleep_tight.SleepTightEntries;
+import com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries;
+import com.ancient.patchup.block.refined_storage.RefinedStorageEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
@@ -29,6 +32,9 @@ public class ModItemGroups {
     public static ItemGroup SUPPLEMENTARIES_GROUP;
     public static ItemGroup SUPP_SQUARED_GROUP;
     public static ItemGroup AMENDMENTS_GROUP;
+    public static ItemGroup SLEEP_TIGHT_GROUP;
+    public static ItemGroup SNOWY_SPIRIT_GROUP;
+    public static ItemGroup REFINED_STORAGE_GROUP;
 
     public static void registerItemGroups() {
         PatchUp.LOGGER.info("Registering Item Groups for " + PatchUp.MOD_ID);
@@ -171,6 +177,53 @@ public class ModItemGroups {
                             .entries((displayContext, entries) -> {
                                 for (AmendmentsEntries.Entry entry : AmendmentsEntries.ENTRIES) {
                                     if (entry.ceilingBanner() != null) entries.add(entry.ceilingBanner().get());
+                                }
+                            }).build());
+        }
+
+        if (Compats.SLEEP_TIGHT.isLoaded()) {
+            SleepTightEntries.init();
+            SLEEP_TIGHT_GROUP = Registry.register(Registries.ITEM_GROUP,
+                    Identifier.of(PatchUp.MOD_ID, "sleep_tight"),
+                    FabricItemGroup.builder()
+                            .displayName(Text.translatable("itemgroup.patchup.sleep_tight"))
+                            .icon(() -> new ItemStack(SleepTightEntries.ENTRIES.get(0).hammock().get()))
+                            .entries((displayContext, entries) -> {
+                                for (SleepTightEntries.Entry entry : SleepTightEntries.ENTRIES) {
+                                    if (entry.hammock() != null) entries.add(entry.hammock().get());
+                                }
+                            }).build());
+        }
+
+        if (Compats.SNOWY_SPIRIT.isLoaded()) {
+            SnowySpiritEntries.init();
+            SNOWY_SPIRIT_GROUP = Registry.register(Registries.ITEM_GROUP,
+                    Identifier.of(PatchUp.MOD_ID, "snowy_spirit"),
+                    FabricItemGroup.builder()
+                            .displayName(Text.translatable("itemgroup.patchup.snowy_spirit"))
+                            .icon(() -> new ItemStack(SnowySpiritEntries.ENTRIES.get(0).glowLightsItem().get()))
+                            .entries((displayContext, entries) -> {
+                                for (SnowySpiritEntries.Entry entry : SnowySpiritEntries.ENTRIES) {
+                                    if (entry.glowLightsItem() != null) entries.add(entry.glowLightsItem().get());
+                                    if (entry.gumdrop() != null) entries.add(entry.gumdrop().get());
+                                }
+                            }).build());
+        }
+
+        if (Compats.REFINED_STORAGE.isLoaded()) {
+            RefinedStorageEntries.init();
+            REFINED_STORAGE_GROUP = Registry.register(Registries.ITEM_GROUP,
+                    Identifier.of(PatchUp.MOD_ID, "refined_storage"),
+                    FabricItemGroup.builder()
+                            .displayName(Text.translatable("itemgroup.patchup.refined_storage"))
+                            .icon(() -> new ItemStack(RefinedStorageEntries.ENTRIES.get(0).controller().get()))
+                            .entries((displayContext, entries) -> {
+                                for (RefinedStorageEntries.Entry entry : RefinedStorageEntries.ENTRIES) {
+                                    for (Supplier<? extends Block> blockSupplier : entry.getAllBlocks()) {
+                                        if (blockSupplier != null && blockSupplier.get() != null) {
+                                            entries.add(blockSupplier.get());
+                                        }
+                                    }
                                 }
                             }).build());
         }

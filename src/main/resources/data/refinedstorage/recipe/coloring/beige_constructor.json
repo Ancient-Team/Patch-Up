@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/beige"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:constructors"
+  },
+  "result": "refinedstorage:beige_constructor",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

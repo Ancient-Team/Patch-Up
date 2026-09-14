@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "refinedstorage:maroon_security_manager",
+    "refinedstorage:rose_security_manager",
+    "refinedstorage:coral_security_manager",
+    "refinedstorage:indigo_security_manager",
+    "refinedstorage:navy_security_manager",
+    "refinedstorage:slate_security_manager",
+    "refinedstorage:olive_security_manager",
+    "refinedstorage:amber_security_manager",
+    "refinedstorage:beige_security_manager",
+    "refinedstorage:teal_security_manager",
+    "refinedstorage:mint_security_manager",
+    "refinedstorage:aqua_security_manager",
+    "refinedstorage:verdant_security_manager",
+    "refinedstorage:forest_security_manager",
+    "refinedstorage:ginger_security_manager",
+    "refinedstorage:tan_security_manager"
+  ]
+}

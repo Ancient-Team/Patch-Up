@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/coral"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:security_managers"
+  },
+  "result": "refinedstorage:coral_security_manager",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

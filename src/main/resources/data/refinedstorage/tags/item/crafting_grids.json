@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "refinedstorage:maroon_crafting_grid",
+    "refinedstorage:rose_crafting_grid",
+    "refinedstorage:coral_crafting_grid",
+    "refinedstorage:indigo_crafting_grid",
+    "refinedstorage:navy_crafting_grid",
+    "refinedstorage:slate_crafting_grid",
+    "refinedstorage:olive_crafting_grid",
+    "refinedstorage:amber_crafting_grid",
+    "refinedstorage:beige_crafting_grid",
+    "refinedstorage:teal_crafting_grid",
+    "refinedstorage:mint_crafting_grid",
+    "refinedstorage:aqua_crafting_grid",
+    "refinedstorage:verdant_crafting_grid",
+    "refinedstorage:forest_crafting_grid",
+    "refinedstorage:ginger_crafting_grid",
+    "refinedstorage:tan_crafting_grid"
+  ]
+}

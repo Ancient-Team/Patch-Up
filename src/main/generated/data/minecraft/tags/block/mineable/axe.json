@@ -1,292 +1,1220 @@
 {
   "values": [
-    "another_furniture:maroon_stool",
-    "another_furniture:rose_stool",
-    "another_furniture:coral_stool",
-    "another_furniture:indigo_stool",
-    "another_furniture:navy_stool",
-    "another_furniture:slate_stool",
-    "another_furniture:olive_stool",
-    "another_furniture:amber_stool",
-    "another_furniture:beige_stool",
-    "another_furniture:teal_stool",
-    "another_furniture:mint_stool",
-    "another_furniture:aqua_stool",
-    "another_furniture:verdant_stool",
-    "another_furniture:forest_stool",
-    "another_furniture:ginger_stool",
-    "another_furniture:tan_stool",
-    "another_furniture:maroon_tall_stool",
-    "another_furniture:rose_tall_stool",
-    "another_furniture:coral_tall_stool",
-    "another_furniture:indigo_tall_stool",
-    "another_furniture:navy_tall_stool",
-    "another_furniture:slate_tall_stool",
-    "another_furniture:olive_tall_stool",
-    "another_furniture:amber_tall_stool",
-    "another_furniture:beige_tall_stool",
-    "another_furniture:teal_tall_stool",
-    "another_furniture:mint_tall_stool",
-    "another_furniture:aqua_tall_stool",
-    "another_furniture:verdant_tall_stool",
-    "another_furniture:forest_tall_stool",
-    "another_furniture:ginger_tall_stool",
-    "another_furniture:tan_tall_stool",
-    "another_furniture:maroon_sofa",
-    "another_furniture:rose_sofa",
-    "another_furniture:coral_sofa",
-    "another_furniture:indigo_sofa",
-    "another_furniture:navy_sofa",
-    "another_furniture:slate_sofa",
-    "another_furniture:olive_sofa",
-    "another_furniture:amber_sofa",
-    "another_furniture:beige_sofa",
-    "another_furniture:teal_sofa",
-    "another_furniture:mint_sofa",
-    "another_furniture:aqua_sofa",
-    "another_furniture:verdant_sofa",
-    "another_furniture:forest_sofa",
-    "another_furniture:ginger_sofa",
-    "another_furniture:tan_sofa",
-    "another_furniture:maroon_lamp",
-    "another_furniture:rose_lamp",
-    "another_furniture:coral_lamp",
-    "another_furniture:indigo_lamp",
-    "another_furniture:navy_lamp",
-    "another_furniture:slate_lamp",
-    "another_furniture:olive_lamp",
-    "another_furniture:amber_lamp",
-    "another_furniture:beige_lamp",
-    "another_furniture:teal_lamp",
-    "another_furniture:mint_lamp",
-    "another_furniture:aqua_lamp",
-    "another_furniture:verdant_lamp",
-    "another_furniture:forest_lamp",
-    "another_furniture:ginger_lamp",
-    "another_furniture:tan_lamp",
-    "patchup:maroon_canvas_sign",
-    "patchup:maroon_canvas_wall_sign",
-    "patchup:maroon_hanging_canvas_sign",
-    "patchup:maroon_wall_hanging_canvas_sign",
-    "patchup:rose_canvas_sign",
-    "patchup:rose_canvas_wall_sign",
-    "patchup:rose_hanging_canvas_sign",
-    "patchup:rose_wall_hanging_canvas_sign",
-    "patchup:coral_canvas_sign",
-    "patchup:coral_canvas_wall_sign",
-    "patchup:coral_hanging_canvas_sign",
-    "patchup:coral_wall_hanging_canvas_sign",
-    "patchup:indigo_canvas_sign",
-    "patchup:indigo_canvas_wall_sign",
-    "patchup:indigo_hanging_canvas_sign",
-    "patchup:indigo_wall_hanging_canvas_sign",
-    "patchup:navy_canvas_sign",
-    "patchup:navy_canvas_wall_sign",
-    "patchup:navy_hanging_canvas_sign",
-    "patchup:navy_wall_hanging_canvas_sign",
-    "patchup:slate_canvas_sign",
-    "patchup:slate_canvas_wall_sign",
-    "patchup:slate_hanging_canvas_sign",
-    "patchup:slate_wall_hanging_canvas_sign",
-    "patchup:olive_canvas_sign",
-    "patchup:olive_canvas_wall_sign",
-    "patchup:olive_hanging_canvas_sign",
-    "patchup:olive_wall_hanging_canvas_sign",
-    "patchup:amber_canvas_sign",
-    "patchup:amber_canvas_wall_sign",
-    "patchup:amber_hanging_canvas_sign",
-    "patchup:amber_wall_hanging_canvas_sign",
-    "patchup:beige_canvas_sign",
-    "patchup:beige_canvas_wall_sign",
-    "patchup:beige_hanging_canvas_sign",
-    "patchup:beige_wall_hanging_canvas_sign",
-    "patchup:teal_canvas_sign",
-    "patchup:teal_canvas_wall_sign",
-    "patchup:teal_hanging_canvas_sign",
-    "patchup:teal_wall_hanging_canvas_sign",
-    "patchup:mint_canvas_sign",
-    "patchup:mint_canvas_wall_sign",
-    "patchup:mint_hanging_canvas_sign",
-    "patchup:mint_wall_hanging_canvas_sign",
-    "patchup:aqua_canvas_sign",
-    "patchup:aqua_canvas_wall_sign",
-    "patchup:aqua_hanging_canvas_sign",
-    "patchup:aqua_wall_hanging_canvas_sign",
-    "patchup:verdant_canvas_sign",
-    "patchup:verdant_canvas_wall_sign",
-    "patchup:verdant_hanging_canvas_sign",
-    "patchup:verdant_wall_hanging_canvas_sign",
-    "patchup:forest_canvas_sign",
-    "patchup:forest_canvas_wall_sign",
-    "patchup:forest_hanging_canvas_sign",
-    "patchup:forest_wall_hanging_canvas_sign",
-    "patchup:ginger_canvas_sign",
-    "patchup:ginger_canvas_wall_sign",
-    "patchup:ginger_hanging_canvas_sign",
-    "patchup:ginger_wall_hanging_canvas_sign",
-    "patchup:tan_canvas_sign",
-    "patchup:tan_canvas_wall_sign",
-    "patchup:tan_hanging_canvas_sign",
-    "patchup:tan_wall_hanging_canvas_sign",
-    "comforts:hammock_maroon",
-    "comforts:sleeping_bag_maroon",
-    "comforts:hammock_rose",
-    "comforts:sleeping_bag_rose",
-    "comforts:hammock_coral",
-    "comforts:sleeping_bag_coral",
-    "comforts:hammock_indigo",
-    "comforts:sleeping_bag_indigo",
-    "comforts:hammock_navy",
-    "comforts:sleeping_bag_navy",
-    "comforts:hammock_slate",
-    "comforts:sleeping_bag_slate",
-    "comforts:hammock_olive",
-    "comforts:sleeping_bag_olive",
-    "comforts:hammock_amber",
-    "comforts:sleeping_bag_amber",
-    "comforts:hammock_beige",
-    "comforts:sleeping_bag_beige",
-    "comforts:hammock_teal",
-    "comforts:sleeping_bag_teal",
-    "comforts:hammock_mint",
-    "comforts:sleeping_bag_mint",
-    "comforts:hammock_aqua",
-    "comforts:sleeping_bag_aqua",
-    "comforts:hammock_verdant",
-    "comforts:sleeping_bag_verdant",
-    "comforts:hammock_forest",
-    "comforts:sleeping_bag_forest",
-    "comforts:hammock_ginger",
-    "comforts:sleeping_bag_ginger",
-    "comforts:hammock_tan",
-    "comforts:sleeping_bag_tan",
-    "supplementaries:flag_maroon",
-    "supplementaries:present_maroon",
-    "supplementaries:trapped_present_maroon",
-    "supplementaries:awning_maroon",
-    "supplementaries:bunting_maroon",
-    "supplementaries:bunting_wall_maroon",
-    "supplementaries:flag_rose",
-    "supplementaries:present_rose",
-    "supplementaries:trapped_present_rose",
-    "supplementaries:awning_rose",
-    "supplementaries:bunting_rose",
-    "supplementaries:bunting_wall_rose",
-    "supplementaries:flag_coral",
-    "supplementaries:present_coral",
-    "supplementaries:trapped_present_coral",
-    "supplementaries:awning_coral",
-    "supplementaries:bunting_coral",
-    "supplementaries:bunting_wall_coral",
-    "supplementaries:flag_indigo",
-    "supplementaries:present_indigo",
-    "supplementaries:trapped_present_indigo",
-    "supplementaries:awning_indigo",
-    "supplementaries:bunting_indigo",
-    "supplementaries:bunting_wall_indigo",
-    "supplementaries:flag_navy",
-    "supplementaries:present_navy",
-    "supplementaries:trapped_present_navy",
-    "supplementaries:awning_navy",
-    "supplementaries:bunting_navy",
-    "supplementaries:bunting_wall_navy",
-    "supplementaries:flag_slate",
-    "supplementaries:present_slate",
-    "supplementaries:trapped_present_slate",
-    "supplementaries:awning_slate",
-    "supplementaries:bunting_slate",
-    "supplementaries:bunting_wall_slate",
-    "supplementaries:flag_olive",
-    "supplementaries:present_olive",
-    "supplementaries:trapped_present_olive",
-    "supplementaries:awning_olive",
-    "supplementaries:bunting_olive",
-    "supplementaries:bunting_wall_olive",
-    "supplementaries:flag_amber",
-    "supplementaries:present_amber",
-    "supplementaries:trapped_present_amber",
-    "supplementaries:awning_amber",
-    "supplementaries:bunting_amber",
-    "supplementaries:bunting_wall_amber",
-    "supplementaries:flag_beige",
-    "supplementaries:present_beige",
-    "supplementaries:trapped_present_beige",
-    "supplementaries:awning_beige",
-    "supplementaries:bunting_beige",
-    "supplementaries:bunting_wall_beige",
-    "supplementaries:flag_teal",
-    "supplementaries:present_teal",
-    "supplementaries:trapped_present_teal",
-    "supplementaries:awning_teal",
-    "supplementaries:bunting_teal",
-    "supplementaries:bunting_wall_teal",
-    "supplementaries:flag_mint",
-    "supplementaries:present_mint",
-    "supplementaries:trapped_present_mint",
-    "supplementaries:awning_mint",
-    "supplementaries:bunting_mint",
-    "supplementaries:bunting_wall_mint",
-    "supplementaries:flag_aqua",
-    "supplementaries:present_aqua",
-    "supplementaries:trapped_present_aqua",
-    "supplementaries:awning_aqua",
-    "supplementaries:bunting_aqua",
-    "supplementaries:bunting_wall_aqua",
-    "supplementaries:flag_verdant",
-    "supplementaries:present_verdant",
-    "supplementaries:trapped_present_verdant",
-    "supplementaries:awning_verdant",
-    "supplementaries:bunting_verdant",
-    "supplementaries:bunting_wall_verdant",
-    "supplementaries:flag_forest",
-    "supplementaries:present_forest",
-    "supplementaries:trapped_present_forest",
-    "supplementaries:awning_forest",
-    "supplementaries:bunting_forest",
-    "supplementaries:bunting_wall_forest",
-    "supplementaries:flag_ginger",
-    "supplementaries:present_ginger",
-    "supplementaries:trapped_present_ginger",
-    "supplementaries:awning_ginger",
-    "supplementaries:bunting_ginger",
-    "supplementaries:bunting_wall_ginger",
-    "supplementaries:flag_tan",
-    "supplementaries:present_tan",
-    "supplementaries:trapped_present_tan",
-    "supplementaries:awning_tan",
-    "supplementaries:bunting_tan",
-    "supplementaries:bunting_wall_tan",
-    "suppsquared:sack_maroon",
-    "suppsquared:sack_rose",
-    "suppsquared:sack_coral",
-    "suppsquared:sack_indigo",
-    "suppsquared:sack_navy",
-    "suppsquared:sack_slate",
-    "suppsquared:sack_olive",
-    "suppsquared:sack_amber",
-    "suppsquared:sack_beige",
-    "suppsquared:sack_teal",
-    "suppsquared:sack_mint",
-    "suppsquared:sack_aqua",
-    "suppsquared:sack_verdant",
-    "suppsquared:sack_forest",
-    "suppsquared:sack_ginger",
-    "suppsquared:sack_tan",
-    "amendments:ceiling_banner_maroon",
-    "amendments:ceiling_banner_rose",
-    "amendments:ceiling_banner_coral",
-    "amendments:ceiling_banner_indigo",
-    "amendments:ceiling_banner_navy",
-    "amendments:ceiling_banner_slate",
-    "amendments:ceiling_banner_olive",
-    "amendments:ceiling_banner_amber",
-    "amendments:ceiling_banner_beige",
-    "amendments:ceiling_banner_teal",
-    "amendments:ceiling_banner_mint",
-    "amendments:ceiling_banner_aqua",
-    "amendments:ceiling_banner_verdant",
-    "amendments:ceiling_banner_forest",
-    "amendments:ceiling_banner_ginger",
-    "amendments:ceiling_banner_tan"
+    {
+      "id": "another_furniture:maroon_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:rose_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:coral_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:indigo_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:navy_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:slate_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:olive_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:amber_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:beige_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:teal_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:mint_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:aqua_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:verdant_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:forest_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:ginger_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:tan_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:maroon_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:rose_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:coral_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:indigo_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:navy_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:slate_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:olive_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:amber_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:beige_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:teal_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:mint_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:aqua_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:verdant_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:forest_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:ginger_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:tan_tall_stool",
+      "required": false
+    },
+    {
+      "id": "another_furniture:maroon_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:rose_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:coral_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:indigo_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:navy_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:slate_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:olive_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:amber_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:beige_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:teal_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:mint_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:aqua_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:verdant_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:forest_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:ginger_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:tan_sofa",
+      "required": false
+    },
+    {
+      "id": "another_furniture:maroon_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:rose_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:coral_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:indigo_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:navy_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:slate_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:olive_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:amber_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:beige_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:teal_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:mint_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:aqua_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:verdant_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:forest_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:ginger_lamp",
+      "required": false
+    },
+    {
+      "id": "another_furniture:tan_lamp",
+      "required": false
+    },
+    {
+      "id": "patchup:maroon_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:maroon_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:maroon_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:maroon_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:rose_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:rose_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:rose_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:rose_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:coral_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:coral_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:coral_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:coral_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:indigo_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:indigo_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:indigo_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:indigo_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:navy_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:navy_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:navy_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:navy_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:slate_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:slate_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:slate_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:slate_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:olive_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:olive_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:olive_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:olive_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:amber_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:amber_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:amber_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:amber_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:beige_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:beige_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:beige_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:beige_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:teal_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:teal_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:teal_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:teal_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:mint_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:mint_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:mint_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:mint_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:aqua_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:aqua_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:aqua_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:aqua_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:verdant_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:verdant_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:verdant_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:verdant_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:forest_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:forest_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:forest_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:forest_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:ginger_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:ginger_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:ginger_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:ginger_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:tan_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:tan_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:tan_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "patchup:tan_wall_hanging_canvas_sign",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_maroon",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_maroon",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_rose",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_rose",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_coral",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_coral",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_indigo",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_indigo",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_navy",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_navy",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_slate",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_slate",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_olive",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_olive",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_amber",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_amber",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_beige",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_beige",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_teal",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_teal",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_mint",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_mint",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_aqua",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_aqua",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_verdant",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_verdant",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_forest",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_forest",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_ginger",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_ginger",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_tan",
+      "required": false
+    },
+    {
+      "id": "comforts:sleeping_bag_tan",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_maroon",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_maroon",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_maroon",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_maroon",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_maroon",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_maroon",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_rose",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_rose",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_rose",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_rose",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_rose",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_rose",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_coral",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_coral",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_coral",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_coral",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_coral",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_coral",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_indigo",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_indigo",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_indigo",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_indigo",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_indigo",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_indigo",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_navy",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_navy",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_navy",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_navy",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_navy",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_navy",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_slate",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_slate",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_slate",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_slate",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_slate",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_slate",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_olive",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_olive",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_olive",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_olive",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_olive",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_olive",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_amber",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_amber",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_amber",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_amber",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_amber",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_amber",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_beige",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_beige",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_beige",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_beige",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_beige",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_beige",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_teal",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_teal",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_teal",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_teal",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_teal",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_teal",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_mint",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_mint",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_mint",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_mint",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_mint",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_mint",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_aqua",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_aqua",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_aqua",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_aqua",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_aqua",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_aqua",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_verdant",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_verdant",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_verdant",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_verdant",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_verdant",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_verdant",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_forest",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_forest",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_forest",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_forest",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_forest",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_forest",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_ginger",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_ginger",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_ginger",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_ginger",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_ginger",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_ginger",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flag_tan",
+      "required": false
+    },
+    {
+      "id": "supplementaries:present_tan",
+      "required": false
+    },
+    {
+      "id": "supplementaries:trapped_present_tan",
+      "required": false
+    },
+    {
+      "id": "supplementaries:awning_tan",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_tan",
+      "required": false
+    },
+    {
+      "id": "supplementaries:bunting_wall_tan",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_maroon",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_rose",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_coral",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_indigo",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_navy",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_slate",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_olive",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_amber",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_beige",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_teal",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_mint",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_aqua",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_verdant",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_forest",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_ginger",
+      "required": false
+    },
+    {
+      "id": "suppsquared:sack_tan",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_maroon",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_rose",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_coral",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_indigo",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_navy",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_slate",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_olive",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_amber",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_beige",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_teal",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_mint",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_aqua",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_verdant",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_forest",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_ginger",
+      "required": false
+    },
+    {
+      "id": "amendments:ceiling_banner_tan",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_maroon",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_rose",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_coral",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_indigo",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_navy",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_slate",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_olive",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_amber",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_beige",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_teal",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_mint",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_aqua",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_verdant",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_forest",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_ginger",
+      "required": false
+    },
+    {
+      "id": "sleep_tight:hammock_tan",
+      "required": false
+    }
   ]
 }

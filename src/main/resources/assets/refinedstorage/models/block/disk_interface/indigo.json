@@ -1,0 +1,4 @@
+{
+  "color": "indigo",
+  "loader": "refinedstorage:disk_interface"
+}

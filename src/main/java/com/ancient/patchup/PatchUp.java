@@ -12,6 +12,8 @@ public class PatchUp implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		com.ancient.patchup.condition.NeoFabricModLoadedCondition.init();
+
 		if (Compats.ANOTHER_FURNITURE.isLoaded()) {
 			Stool.init();
 			Stool.registerFlammables();
@@ -47,6 +49,18 @@ public class PatchUp implements ModInitializer {
 
 		if (Compats.AMENDMENTS.isLoaded()) {
 			com.ancient.patchup.block.amendments.AmendmentsEntries.init();
+		}
+
+		if (Compats.SLEEP_TIGHT.isLoaded()) {
+			com.ancient.patchup.block.sleep_tight.SleepTightEntries.init();
+		}
+
+		if (Compats.SNOWY_SPIRIT.isLoaded()) {
+			com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.init();
+		}
+
+		if (Compats.REFINED_STORAGE.isLoaded()) {
+			com.ancient.patchup.block.refined_storage.RefinedStorageEntries.init();
 		}
 
 		ModItemGroups.registerItemGroups();

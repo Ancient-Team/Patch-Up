@@ -9,7 +9,10 @@ public enum Compats {
     ARTS_AND_CRAFTS("arts_and_crafts"),
     SUPPLEMENTARIES("supplementaries"),
     SUPP_SQUARED("suppsquared"),
-    AMENDMENTS("amendments");
+    AMENDMENTS("amendments"),
+    SLEEP_TIGHT("sleep_tight"),
+    SNOWY_SPIRIT("snowyspirit"),
+    REFINED_STORAGE("refinedstorage");
 
     private final String id;
 

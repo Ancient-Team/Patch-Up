@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/beige"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:pattern_grids"
+  },
+  "result": "refinedstorage:beige_pattern_grid",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

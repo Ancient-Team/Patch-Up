@@ -2,8 +2,14 @@
 	"required": true,
 	"package": "com.ancient.patchup.mixin",
 	"compatibilityLevel": "JAVA_17",
+	"plugin": "com.ancient.patchup.mixin.PatchUpMixinPlugin",
 	"mixins": [
-		"PatchUpMixin"
+		"PatchUpMixin",
+		"AttachmentChangeMixin"
+	],
+	"client": [
+		"BillboardParticleAccessor",
+		"GlowLightParticleMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

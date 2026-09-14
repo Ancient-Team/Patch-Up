@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "refinedstorage:maroon_wireless_transmitter",
+    "refinedstorage:rose_wireless_transmitter",
+    "refinedstorage:coral_wireless_transmitter",
+    "refinedstorage:indigo_wireless_transmitter",
+    "refinedstorage:navy_wireless_transmitter",
+    "refinedstorage:slate_wireless_transmitter",
+    "refinedstorage:olive_wireless_transmitter",
+    "refinedstorage:amber_wireless_transmitter",
+    "refinedstorage:beige_wireless_transmitter",
+    "refinedstorage:teal_wireless_transmitter",
+    "refinedstorage:mint_wireless_transmitter",
+    "refinedstorage:aqua_wireless_transmitter",
+    "refinedstorage:verdant_wireless_transmitter",
+    "refinedstorage:forest_wireless_transmitter",
+    "refinedstorage:ginger_wireless_transmitter",
+    "refinedstorage:tan_wireless_transmitter"
+  ]
+}

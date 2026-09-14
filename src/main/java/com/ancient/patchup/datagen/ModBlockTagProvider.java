@@ -6,6 +6,7 @@ import com.starfish_studios.another_furniture.registry.AFBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
+import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
@@ -20,6 +21,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         super(output, registriesFuture);
     }
 
+    private void addOptional(FabricTagBuilder builder, Block... blocks) {
+        for (Block block : blocks) {
+            if (block != null && block != net.minecraft.block.Blocks.AIR) {
+                builder.addOptional(Registries.BLOCK.getId(block));
+            }
+        }
+    }
+
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         /* Another Furniture */
@@ -31,27 +40,27 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         var curtains = this.getOrCreateTagBuilder(AFBlockTags.CURTAINS);
 
         for (Supplier<Block> stool : Stool.STOOLS.values()) {
-            stools.add(stool.get());
-            axeMineable.add(stool.get());
+            addOptional(stools, stool.get());
+            addOptional(axeMineable, stool.get());
         }
 
         for (Supplier<Block> tallStool : TallStool.TALL_STOOLS.values()) {
-            tallStools.add(tallStool.get());
-            axeMineable.add(tallStool.get());
+            addOptional(tallStools, tallStool.get());
+            addOptional(axeMineable, tallStool.get());
         }
 
         for (Supplier<Block> sofa : Sofa.SOFAS.values()) {
-            sofas.add(sofa.get());
-            axeMineable.add(sofa.get());
+            addOptional(sofas, sofa.get());
+            addOptional(axeMineable, sofa.get());
         }
 
         for (Supplier<Block> lamp : Lamp.LAMPS.values()) {
-            lamps.add(lamp.get());
-            axeMineable.add(lamp.get());
+            addOptional(lamps, lamp.get());
+            addOptional(axeMineable, lamp.get());
         }
 
         for (Supplier<Block> curtain : Curtain.CURTAINS.values()) {
-            curtains.add(curtain.get());
+            addOptional(curtains, curtain.get());
         }
 
         /* Farmer's Delight Canvas Signs */
@@ -62,17 +71,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         var wallHangingSigns = this.getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS);
 
         for (CanvasSigns.CanvasSignEntry entry : CanvasSigns.ENTRIES) {
-            standingSigns.add(entry.standingSign());
-            wallSigns.add(entry.wallSign());
-            ceilingHangingSigns.add(entry.ceilingHangingSign());
-            wallHangingSigns.add(entry.wallHangingSign());
-            axeMineable.add(entry.standingSign(), entry.wallSign(), entry.ceilingHangingSign(), entry.wallHangingSign());
+            addOptional(standingSigns, entry.standingSign());
+            addOptional(wallSigns, entry.wallSign());
+            addOptional(ceilingHangingSigns, entry.ceilingHangingSign());
+            addOptional(wallHangingSigns, entry.wallHangingSign());
+            addOptional(axeMineable, entry.standingSign(), entry.wallSign(), entry.ceilingHangingSign(), entry.wallHangingSign());
         }
 
         /* Comforts */
         com.ancient.patchup.block.comforts.ComfortsItems.init();
         for (com.ancient.patchup.block.comforts.ComfortsItems.ComfortsEntry entry : com.ancient.patchup.block.comforts.ComfortsItems.ENTRIES) {
-            axeMineable.add(entry.hammockBlock().get(), entry.sleepingBagBlock().get());
+            addOptional(axeMineable, entry.hammockBlock().get(), entry.sleepingBagBlock().get());
         }
 
         /* Arts & Crafts */
@@ -85,7 +94,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         var chalkDustTag = this.getOrCreateTagBuilder(com.kekecreations.arts_and_crafts.core.init.ACTags.BlockTags.CHALK_DUST);
 
         for (com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.Entry entry : com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries.ENTRIES) {
-            pickaxeMineable.add(
+            addOptional(pickaxeMineable,
                     entry.chalk(), entry.plaster(), entry.flowerPot(), entry.decoratedPot(),
                     entry.mudBricks(), entry.mudBrickSlab(), entry.mudBrickStairs(), entry.mudBrickWall(),
                     entry.terracottaShingles(), entry.terracottaShingleSlab(), entry.terracottaShingleStairs(), entry.terracottaShingleWall(),
@@ -94,11 +103,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     entry.soapstoneBricks(), entry.soapstoneBrickSlab(), entry.soapstoneBrickStairs(), entry.soapstoneBrickWall()
             );
 
-            slabs.add(entry.mudBrickSlab(), entry.terracottaShingleSlab(), entry.soapstoneSlab(), entry.polishedSoapstoneSlab(), entry.soapstoneBrickSlab());
-            stairs.add(entry.mudBrickStairs(), entry.terracottaShingleStairs(), entry.soapstoneStairs(), entry.polishedSoapstoneStairs(), entry.soapstoneBrickStairs());
-            walls.add(entry.mudBrickWall(), entry.terracottaShingleWall(), entry.soapstoneWall(), entry.polishedSoapstoneWall(), entry.soapstoneBrickWall());
-            flowerPots.add(entry.flowerPot());
-            chalkDustTag.add(entry.chalkDust());
+            addOptional(slabs, entry.mudBrickSlab(), entry.terracottaShingleSlab(), entry.soapstoneSlab(), entry.polishedSoapstoneSlab(), entry.soapstoneBrickSlab());
+            addOptional(stairs, entry.mudBrickStairs(), entry.terracottaShingleStairs(), entry.soapstoneStairs(), entry.polishedSoapstoneStairs(), entry.soapstoneBrickStairs());
+            addOptional(walls, entry.mudBrickWall(), entry.terracottaShingleWall(), entry.soapstoneWall(), entry.polishedSoapstoneWall(), entry.soapstoneBrickWall());
+            addOptional(flowerPots, entry.flowerPot());
+            addOptional(chalkDustTag, entry.chalkDust());
         }
 
         /* Supplementaries */
@@ -112,32 +121,32 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         for (com.ancient.patchup.block.supplementaries.SupplementariesEntries.Entry entry : com.ancient.patchup.block.supplementaries.SupplementariesEntries.ENTRIES) {
             if (entry.flag() != null) {
-                suppFlags.add(entry.flag().get());
-                axeMineable.add(entry.flag().get());
+                addOptional(suppFlags, entry.flag().get());
+                addOptional(axeMineable, entry.flag().get());
             }
             if (entry.present() != null) {
-                suppPresents.add(entry.present().get());
-                axeMineable.add(entry.present().get());
+                addOptional(suppPresents, entry.present().get());
+                addOptional(axeMineable, entry.present().get());
             }
             if (entry.trappedPresent() != null) {
-                suppTrappedPresents.add(entry.trappedPresent().get());
-                axeMineable.add(entry.trappedPresent().get());
+                addOptional(suppTrappedPresents, entry.trappedPresent().get());
+                addOptional(axeMineable, entry.trappedPresent().get());
             }
             if (entry.awning() != null) {
-                suppAwnings.add(entry.awning().get());
-                axeMineable.add(entry.awning().get());
+                addOptional(suppAwnings, entry.awning().get());
+                addOptional(axeMineable, entry.awning().get());
             }
             if (entry.candleHolder() != null) {
-                suppCandleHolders.add(entry.candleHolder().get());
-                pickaxeMineable.add(entry.candleHolder().get());
+                addOptional(suppCandleHolders, entry.candleHolder().get());
+                addOptional(pickaxeMineable, entry.candleHolder().get());
             }
             if (entry.bunting() != null) {
-                suppBuntings.add(entry.bunting().get());
-                axeMineable.add(entry.bunting().get());
+                addOptional(suppBuntings, entry.bunting().get());
+                addOptional(axeMineable, entry.bunting().get());
             }
             if (entry.buntingWall() != null) {
-                suppBuntings.add(entry.buntingWall().get());
-                axeMineable.add(entry.buntingWall().get());
+                addOptional(suppBuntings, entry.buntingWall().get());
+                addOptional(axeMineable, entry.buntingWall().get());
             }
         }
 
@@ -148,12 +157,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         for (com.ancient.patchup.block.suppsquared.SuppSquaredEntries.Entry entry : com.ancient.patchup.block.suppsquared.SuppSquaredEntries.ENTRIES) {
             if (entry.sack() != null) {
-                suppSacks.add(entry.sack().get());
-                axeMineable.add(entry.sack().get());
+                addOptional(suppSacks, entry.sack().get());
+                addOptional(axeMineable, entry.sack().get());
             }
             if (entry.goldenCandleHolder() != null) {
-                suppGoldCandleHolders.add(entry.goldenCandleHolder().get());
-                pickaxeMineable.add(entry.goldenCandleHolder().get());
+                addOptional(suppGoldCandleHolders, entry.goldenCandleHolder().get());
+                addOptional(pickaxeMineable, entry.goldenCandleHolder().get());
             }
         }
 
@@ -164,9 +173,40 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         for (com.ancient.patchup.block.amendments.AmendmentsEntries.Entry entry : com.ancient.patchup.block.amendments.AmendmentsEntries.ENTRIES) {
             if (entry.ceilingBanner() != null) {
-                amCeilingBanners.add(entry.ceilingBanner().get());
-                banners.add(entry.ceilingBanner().get());
-                axeMineable.add(entry.ceilingBanner().get());
+                addOptional(amCeilingBanners, entry.ceilingBanner().get());
+                addOptional(banners, entry.ceilingBanner().get());
+                addOptional(axeMineable, entry.ceilingBanner().get());
+            }
+        }
+
+        /* Sleep Tight */
+        if (com.ancient.patchup.Compats.SLEEP_TIGHT.isLoaded()) {
+            com.ancient.patchup.block.sleep_tight.SleepTightEntries.init();
+            var sleepTightHammocks = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("sleep_tight", "hammocks")));
+
+            for (com.ancient.patchup.block.sleep_tight.SleepTightEntries.Entry entry : com.ancient.patchup.block.sleep_tight.SleepTightEntries.ENTRIES) {
+                if (entry.hammock() != null) {
+                    addOptional(sleepTightHammocks, entry.hammock().get());
+                    addOptional(axeMineable, entry.hammock().get());
+                }
+            }
+        }
+
+        /* Snowy Spirit */
+        if (com.ancient.patchup.Compats.SNOWY_SPIRIT.isLoaded()) {
+            com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.init();
+            var snowyGlowLights = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("snowyspirit", "glow_lights")));
+            var snowyGumdrops = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("snowyspirit", "gumdrops")));
+            var buttons = this.getOrCreateTagBuilder(BlockTags.BUTTONS);
+
+            for (com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.Entry entry : com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.ENTRIES) {
+                if (entry.glowLightsBlock() != null) {
+                    addOptional(snowyGlowLights, entry.glowLightsBlock().get());
+                }
+                if (entry.gumdrop() != null) {
+                    addOptional(snowyGumdrops, entry.gumdrop().get());
+                    addOptional(buttons, entry.gumdrop().get());
+                }
             }
         }
     }

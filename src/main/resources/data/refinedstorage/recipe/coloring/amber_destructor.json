@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/amber"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:destructors"
+  },
+  "result": "refinedstorage:amber_destructor",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

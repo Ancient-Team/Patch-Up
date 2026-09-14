@@ -1,20 +1,68 @@
 {
   "values": [
-    "comforts:hammock_maroon",
-    "comforts:hammock_rose",
-    "comforts:hammock_coral",
-    "comforts:hammock_indigo",
-    "comforts:hammock_navy",
-    "comforts:hammock_slate",
-    "comforts:hammock_olive",
-    "comforts:hammock_amber",
-    "comforts:hammock_beige",
-    "comforts:hammock_teal",
-    "comforts:hammock_mint",
-    "comforts:hammock_aqua",
-    "comforts:hammock_verdant",
-    "comforts:hammock_forest",
-    "comforts:hammock_ginger",
-    "comforts:hammock_tan"
+    {
+      "id": "comforts:hammock_maroon",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_rose",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_coral",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_indigo",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_navy",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_slate",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_olive",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_amber",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_beige",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_teal",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_mint",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_aqua",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_verdant",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_forest",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_ginger",
+      "required": false
+    },
+    {
+      "id": "comforts:hammock_tan",
+      "required": false
+    }
   ]
 }

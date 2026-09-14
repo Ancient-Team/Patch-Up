@@ -1,10 +1,10 @@
 {
   "variants": {
     "open=false": {
-      "model": "suppsquaamber:block/sacks/amber_closed"
+      "model": "suppsquared:block/sacks/amber_closed"
     },
     "open=true": {
-      "model": "suppsquaamber:block/sacks/amber_open"
+      "model": "suppsquared:block/sacks/amber_open"
     }
   }
 }

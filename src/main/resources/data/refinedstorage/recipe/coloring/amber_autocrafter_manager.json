@@ -1,0 +1,18 @@
+{
+  "type": "refinedstorage:recoloring",
+  "dye": {
+    "tag": "c:dyes/amber"
+  },
+  "ingredient": {
+    "tag": "refinedstorage:autocrafter_managers"
+  },
+  "result": "refinedstorage:amber_autocrafter_manager",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
+}

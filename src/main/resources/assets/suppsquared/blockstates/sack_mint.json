@@ -1,10 +1,10 @@
 {
   "variants": {
     "open=false": {
-      "model": "suppsquamint:block/sacks/mint_closed"
+      "model": "suppsquared:block/sacks/mint_closed"
     },
     "open=true": {
-      "model": "suppsquamint:block/sacks/mint_open"
+      "model": "suppsquared:block/sacks/mint_open"
     }
   }
 }

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "refinedstorage:maroon_detector",
+    "refinedstorage:rose_detector",
+    "refinedstorage:coral_detector",
+    "refinedstorage:indigo_detector",
+    "refinedstorage:navy_detector",
+    "refinedstorage:slate_detector",
+    "refinedstorage:olive_detector",
+    "refinedstorage:amber_detector",
+    "refinedstorage:beige_detector",
+    "refinedstorage:teal_detector",
+    "refinedstorage:mint_detector",
+    "refinedstorage:aqua_detector",
+    "refinedstorage:verdant_detector",
+    "refinedstorage:forest_detector",
+    "refinedstorage:ginger_detector",
+    "refinedstorage:tan_detector"
+  ]
+}

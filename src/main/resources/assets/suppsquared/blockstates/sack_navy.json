@@ -1,10 +1,10 @@
 {
   "variants": {
     "open=false": {
-      "model": "suppsquanavy:block/sacks/navy_closed"
+      "model": "suppsquared:block/sacks/navy_closed"
     },
     "open=true": {
-      "model": "suppsquanavy:block/sacks/navy_open"
+      "model": "suppsquared:block/sacks/navy_open"
     }
   }
 }

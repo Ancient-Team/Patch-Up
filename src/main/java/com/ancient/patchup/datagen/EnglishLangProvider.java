@@ -1,6 +1,5 @@
 package com.ancient.patchup.datagen;
 
-import com.ancient.patchup.block.another_furniture.*;
 import com.ancient.patchup.block.farmers_delight.CanvasSigns;
 import com.ninni.dye_depot.registry.DDDyes;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -40,6 +39,9 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("itemgroup.patchup.supplementaries", "Patch Up: Supplementaries");
         translationBuilder.add("itemgroup.patchup.suppsquared", "Patch Up: Supplementaries Squared");
         translationBuilder.add("itemgroup.patchup.amendments", "Patch Up: Amendments");
+        translationBuilder.add("itemgroup.patchup.sleep_tight", "Patch Up: Sleep Tight");
+        translationBuilder.add("itemgroup.patchup.snowy_spirit", "Patch Up: Snowy Spirit");
+        translationBuilder.add("itemgroup.patchup.refined_storage", "Patch Up: Refined Storage");
 
         /* Farmer's Delight Canvas Signs */
         CanvasSigns.init();
@@ -107,6 +109,20 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         for (com.ancient.patchup.block.amendments.AmendmentsEntries.Entry entry : com.ancient.patchup.block.amendments.AmendmentsEntries.ENTRIES) {
             String color = formatColorName(entry.dye().asString());
             if (entry.ceilingBanner() != null) translationBuilder.add(entry.ceilingBanner().get(), color + " Ceiling Banner");
+        }
+
+        /* Sleep Tight */
+        for (DDDyes dye : DDDyes.values()) {
+            String color = formatColorName(dye.asString());
+            translationBuilder.add("block.sleep_tight.hammock_" + dye.asString(), color + " Hammock");
+        }
+
+        /* Snowy Spirit */
+        com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.init();
+        for (com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.Entry entry : com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.ENTRIES) {
+            String color = formatColorName(entry.dye().asString());
+            if (entry.glowLightsBlock() != null) translationBuilder.add(entry.glowLightsBlock().get(), color + " Glow Lights");
+            if (entry.gumdrop() != null) translationBuilder.add(entry.gumdrop().get(), color + " Gumdrop");
         }
     }
 }

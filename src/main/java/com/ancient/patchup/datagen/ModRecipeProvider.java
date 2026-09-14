@@ -9,7 +9,6 @@ import com.starfish_studios.another_furniture.registry.AFItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -285,6 +284,88 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("ceiling_banners")
                         .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
                         .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.ceilingBanner().get()) + "_from_dyeing"));
+            }
+        }
+
+        /* Sleep Tight Recipes */
+        if (com.ancient.patchup.Compats.SLEEP_TIGHT.isLoaded()) {
+            com.ancient.patchup.block.sleep_tight.SleepTightEntries.init();
+            TagKey<Item> sleepTightHammocks = TagKey.of(RegistryKeys.ITEM, Identifier.of("sleep_tight", "hammocks"));
+
+            for (com.ancient.patchup.block.sleep_tight.SleepTightEntries.Entry entry : com.ancient.patchup.block.sleep_tight.SleepTightEntries.ENTRIES) {
+                Item dyeItem = DDItems.DYES.getOrThrow(entry.dye().get());
+                Block carpetBlock = DDBlocks.CARPETS.getOrThrow(entry.dye().get());
+
+                if (entry.hammock() != null && entry.hammock().get() != net.minecraft.block.Blocks.AIR) {
+                    /* Hammock Crafting */
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, entry.hammock().get(), 1)
+                            .pattern("CCC")
+                            .pattern("###")
+                            .input('C', carpetBlock)
+                            .input('#', Items.STRING)
+                            .group("hammock")
+                            .criterion(RecipeProvider.hasItem(carpetBlock), RecipeProvider.conditionsFromItem(carpetBlock))
+                            .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.hammock().get())));
+
+                    /* Hammock Dyeing */
+                    ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, entry.hammock().get(), 1)
+                            .input(dyeItem)
+                            .input(sleepTightHammocks)
+                            .group("hammock")
+                            .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
+                            .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.hammock().get()) + "_from_dyeing"));
+                }
+            }
+        }
+
+        /* Snowy Spirit Recipes */
+        if (com.ancient.patchup.Compats.SNOWY_SPIRIT.isLoaded()) {
+            com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.init();
+            TagKey<Item> snowyGlowLightsTag = TagKey.of(RegistryKeys.ITEM, Identifier.of("snowyspirit", "glow_lights"));
+            TagKey<Item> snowyGumdropsTag = TagKey.of(RegistryKeys.ITEM, Identifier.of("snowyspirit", "gumdrops"));
+
+            for (com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.Entry entry : com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.ENTRIES) {
+                Item dyeItem = DDItems.DYES.getOrThrow(entry.dye().get());
+
+                /* Glow Lights Crafting */
+                if (entry.glowLightsItem() != null && entry.glowLightsItem().get() != Items.AIR) {
+                    ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, entry.glowLightsItem().get(), 1)
+                            .input(Items.GLOWSTONE_DUST)
+                            .input(dyeItem)
+                            .input(Items.AMETHYST_SHARD)
+                            .input(Items.STRING)
+                            .group("glow_lights")
+                            .criterion(RecipeProvider.hasItem(Items.GLOWSTONE_DUST), RecipeProvider.conditionsFromItem(Items.GLOWSTONE_DUST))
+                            .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
+                            .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.glowLightsItem().get())));
+
+                    /* Glow Lights Dyeing */
+                    ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, entry.glowLightsItem().get(), 1)
+                            .input(dyeItem)
+                            .input(snowyGlowLightsTag)
+                            .group("glow_lights")
+                            .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
+                            .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.glowLightsItem().get()) + "_from_dyeing"));
+                }
+
+                /* Gumdrop Crafting */
+                if (entry.gumdrop() != null && entry.gumdrop().get() != net.minecraft.block.Blocks.AIR) {
+                    ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, entry.gumdrop().get(), 1)
+                            .input(Items.SUGAR)
+                            .input(dyeItem)
+                            .group("gumdrop")
+                            .criterion(RecipeProvider.hasItem(Items.SUGAR), RecipeProvider.conditionsFromItem(Items.SUGAR))
+                            .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
+                            .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.gumdrop().get())));
+
+                    /* Gumdrop Dyeing */
+                    ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, entry.gumdrop().get(), 1)
+                            .input(dyeItem)
+                            .input(snowyGumdropsTag)
+                            .group("gumdrop")
+                            .criterion(RecipeProvider.hasItem(dyeItem), RecipeProvider.conditionsFromItem(dyeItem))
+                            .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(entry.gumdrop().get()) + "_from_dyeing"));
+                }
             }
         }
     }
