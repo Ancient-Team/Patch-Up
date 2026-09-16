@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_network_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_network_transmitter",
+      "required": false
+    }
+  ]
+}

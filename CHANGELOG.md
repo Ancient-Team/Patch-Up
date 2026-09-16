@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.0-beta.9.1+1.21.1]
+
+### Fixes & Improvements
+* **Pickaxe & Mod Tags (Mining Fix)**:
+  * Fixed an issue where `minecraft:mineable/pickaxe` broke for players running the mod without Refined Storage installed due to unconditioned tag entries in resources.
+  * Moved Refined Storage pickaxe mineable block tags into Fabric Data Generation (`ModBlockTagProvider`) so all 336 blocks are marked optional (`"required": false`), preventing Minecraft from failing tag loading when Refined Storage is absent.
+  * Moved all 21 Refined Storage item tags into Fabric Data Generation (`ModItemTagProvider`) with optional entries (`"required": false`), eliminating missing tag reference warnings when Refined Storage is absent.
+  * Removed static unconditioned tag JSON files from resources.
+
 ## [1.0.0-beta.9+1.21.1]
 
 ### Features & Additions

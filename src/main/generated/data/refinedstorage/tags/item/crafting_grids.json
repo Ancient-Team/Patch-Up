@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_crafting_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_crafting_grid",
+      "required": false
+    }
+  ]
+}

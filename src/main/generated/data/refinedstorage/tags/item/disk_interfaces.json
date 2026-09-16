@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_disk_interface",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_disk_interface",
+      "required": false
+    }
+  ]
+}

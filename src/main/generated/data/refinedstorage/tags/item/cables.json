@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_cable",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_cable",
+      "required": false
+    }
+  ]
+}

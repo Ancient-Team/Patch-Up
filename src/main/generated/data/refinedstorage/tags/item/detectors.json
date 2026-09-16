@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_detector",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_detector",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_autocrafting_monitor",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_autocrafting_monitor",
+      "required": false
+    }
+  ]
+}

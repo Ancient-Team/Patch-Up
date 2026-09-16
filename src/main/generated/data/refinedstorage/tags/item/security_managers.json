@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_security_manager",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_security_manager",
+      "required": false
+    }
+  ]
+}

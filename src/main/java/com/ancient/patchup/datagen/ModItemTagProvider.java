@@ -2,6 +2,7 @@ package com.ancient.patchup.datagen;
 
 import com.ancient.patchup.block.another_furniture.*;
 import com.ancient.patchup.block.farmers_delight.CanvasSigns;
+import com.ninni.dye_depot.registry.DDDyes;
 import com.starfish_studios.another_furniture.registry.AFItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -173,6 +174,22 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                     addOptional(snowyGumdropsItems, entry.gumdrop().get());
                     addOptional(itemButtons, entry.gumdrop().get());
                 }
+            }
+        }
+
+        /* Refined Storage */
+        String[] rsItemTypes = {
+                "autocrafter", "autocrafter_manager", "autocrafting_monitor",
+                "cable", "constructor", "controller", "crafting_grid",
+                "creative_controller", "destructor", "detector", "disk_interface",
+                "exporter", "external_storage", "grid", "importer",
+                "network_receiver", "network_transmitter", "pattern_grid",
+                "relay", "security_manager", "wireless_transmitter"
+        };
+        for (String type : rsItemTypes) {
+            var tagBuilder = this.getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of("refinedstorage", type + "s")));
+            for (DDDyes dye : DDDyes.values()) {
+                tagBuilder.addOptional(Identifier.of("refinedstorage", dye.asString() + "_" + type));
             }
         }
     }

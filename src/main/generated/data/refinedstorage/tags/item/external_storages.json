@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_external_storage",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_external_storage",
+      "required": false
+    }
+  ]
+}

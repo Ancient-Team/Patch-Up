@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_pattern_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_pattern_grid",
+      "required": false
+    }
+  ]
+}

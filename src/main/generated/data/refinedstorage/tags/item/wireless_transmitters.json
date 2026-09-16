@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_wireless_transmitter",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_wireless_transmitter",
+      "required": false
+    }
+  ]
+}

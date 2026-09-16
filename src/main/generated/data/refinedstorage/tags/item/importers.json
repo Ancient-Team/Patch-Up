@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_importer",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_importer",
+      "required": false
+    }
+  ]
+}

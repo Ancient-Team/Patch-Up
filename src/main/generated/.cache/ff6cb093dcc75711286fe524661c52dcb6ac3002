@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-14T17:26:24.6552109	Patch Up/Tags for minecraft:block
+// 1.21.1	2026-09-16T18:53:49.8942127	Patch Up/Tags for minecraft:block
 f6f67789d5a1b3eece681bf1ba0bbad477002c7f data\minecraft\tags\block\stairs.json
 f1b44359ea748cda87946f1a26b612e1f692fa20 data\minecraft\tags\block\ceiling_hanging_signs.json
 8897e976197059d3d86fa40d2e8b1371e1162249 data\minecraft\tags\block\mineable\axe.json
@@ -26,6 +26,6 @@ b9d6d424b402758e2dd9b88bd81f47f424c0cc47 data\minecraft\tags\block\buttons.json
 8666932c09a0208222227f0f028dbe1b0e1cb7d4 data\another_furniture\tags\block\stools.json
 918f587bc65b818d700d9241a4119fc6ad95996e data\another_furniture\tags\block\tall_stools.json
 0137c95ea75a0ab3d948215d4ca7317dc6829792 data\sleep_tight\tags\block\hammocks.json
-d637c2218d1df50b88b6d608b7bf989ec660fc5b data\minecraft\tags\block\mineable\pickaxe.json
+cd28963d3595acca1f43af3eed11c265934266b2 data\minecraft\tags\block\mineable\pickaxe.json
 1668820fcb9c388e42ad7472096f78242bed303a data\suppsquared\tags\block\golden_candle_holders.json
 3f4d36fc83f1b634a8e4a9d5043338550d33f295 data\supplementaries\tags\block\flags.json

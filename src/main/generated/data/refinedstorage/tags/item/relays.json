@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_relay",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_relay",
+      "required": false
+    }
+  ]
+}

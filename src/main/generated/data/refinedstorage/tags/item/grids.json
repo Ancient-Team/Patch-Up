@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_grid",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_grid",
+      "required": false
+    }
+  ]
+}

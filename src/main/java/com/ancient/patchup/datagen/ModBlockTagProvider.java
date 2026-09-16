@@ -13,6 +13,8 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
+import com.ninni.dye_depot.registry.DDDyes;
+
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
@@ -207,6 +209,22 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     addOptional(snowyGumdrops, entry.gumdrop().get());
                     addOptional(buttons, entry.gumdrop().get());
                 }
+            }
+        }
+
+        /* Refined Storage */
+        String[] rsBlocks = {
+                "autocrafter", "autocrafter_manager", "autocrafting_monitor",
+                "cable", "constructor", "controller", "crafting_grid",
+                "creative_controller", "destructor", "detector", "disk_interface",
+                "exporter", "external_storage", "grid", "importer",
+                "network_receiver", "network_transmitter", "pattern_grid",
+                "relay", "security_manager", "wireless_transmitter"
+        };
+        for (DDDyes dye : DDDyes.values()) {
+            String color = dye.asString();
+            for (String block : rsBlocks) {
+                pickaxeMineable.addOptional(Identifier.of("refinedstorage", color + "_" + block));
             }
         }
     }

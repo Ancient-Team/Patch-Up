@@ -1,0 +1,68 @@
+{
+  "values": [
+    {
+      "id": "refinedstorage:maroon_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:rose_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:coral_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:indigo_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:navy_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:slate_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:olive_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:amber_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:beige_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:teal_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:mint_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:aqua_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:verdant_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:forest_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:ginger_creative_controller",
+      "required": false
+    },
+    {
+      "id": "refinedstorage:tan_creative_controller",
+      "required": false
+    }
+  ]
+}

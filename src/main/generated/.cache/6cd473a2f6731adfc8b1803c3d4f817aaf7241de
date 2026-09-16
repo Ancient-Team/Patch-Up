@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-14T17:26:24.6699627	Patch Up/Block Loot Tables
+// 1.21.1	2026-09-16T18:53:49.9045791	Patch Up/Block Loot Tables
 44d88f27edf0dad71bf4331a77c0027b6e1c41e9 data\comforts\loot_table\blocks\sleeping_bag_ginger.json
 8bd68858d11c0b87790bfe619478c60cb147556c data\patchup\loot_table\blocks\rose_hanging_canvas_sign.json
 137782ede92aaa81ea1617c64af0727b447475b5 data\another_furniture\loot_table\blocks\slate_lamp_connector.json
