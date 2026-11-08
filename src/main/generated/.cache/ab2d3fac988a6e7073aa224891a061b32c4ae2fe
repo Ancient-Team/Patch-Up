@@ -1,8 +1,8 @@
-// 1.21.1	2026-09-16T18:53:49.8952161	Patch Up/Tags for minecraft:item
+// 1.21.1	2026-11-08T14:23:31.073944	Patch Up/Tags for minecraft:item
 4eee03e3e497503528ccf7a71074bc9e8e496b87 data\minecraft\tags\item\banners.json
 a90e4744a9cfb36a5cf3a22e14ff6849478b51c3 data\supplementaries\tags\item\presents.json
-25046a9b6a0d61f1146727acd9720b6629c68df6 data\supplementaries\tags\item\candle_holders.json
 29466727a8b50c7481a57650b566a505858a7a4d data\minecraft\tags\item\walls.json
+25046a9b6a0d61f1146727acd9720b6629c68df6 data\supplementaries\tags\item\candle_holders.json
 3f4d36fc83f1b634a8e4a9d5043338550d33f295 data\supplementaries\tags\item\flags.json
 b9d6d424b402758e2dd9b88bd81f47f424c0cc47 data\snowyspirit\tags\item\gumdrops.json
 43c98ed4e1dc5db11b8a883d0f7ebdf1f7a28c3d data\refinedstorage\tags\item\grids.json
@@ -14,8 +14,8 @@ f611742a143485cbf4e476f8fd7b6043d9702b13 data\supplementaries\tags\item\buntings
 f1b44359ea748cda87946f1a26b612e1f692fa20 data\minecraft\tags\item\hanging_signs.json
 e3ed6c698d3f4787d24605cc3a5ba731c73a93ec data\refinedstorage\tags\item\cables.json
 af2951c1f4e111ba5b1a2c64d25facea5eba045b data\refinedstorage\tags\item\disk_interfaces.json
-558e644b19232ceeca86d58ea63093749170c2b0 data\refinedstorage\tags\item\network_transmitters.json
 6d79c062d974d5ebefd3310cb6660d20d5995f64 data\refinedstorage\tags\item\network_receivers.json
+558e644b19232ceeca86d58ea63093749170c2b0 data\refinedstorage\tags\item\network_transmitters.json
 2cbebba16046627c20eddc66da8da230a9a19800 data\refinedstorage\tags\item\crafting_grids.json
 1668820fcb9c388e42ad7472096f78242bed303a data\suppsquared\tags\item\golden_candle_holders.json
 b960723b55ac5f1f16320fe2670ede26f4acf5b9 data\supplementaries\tags\item\sacks.json
@@ -25,8 +25,8 @@ b960723b55ac5f1f16320fe2670ede26f4acf5b9 data\supplementaries\tags\item\sacks.js
 b9d6d424b402758e2dd9b88bd81f47f424c0cc47 data\minecraft\tags\item\buttons.json
 5df6bb6e8c5f77f8b801c24a3e2e5da7cc9516a1 data\arts_and_crafts\tags\item\chalk_sticks.json
 9f85ab5258c261d98564956a4d500c3dc2e6daa8 data\refinedstorage\tags\item\autocrafting_monitors.json
-2213df0eb586af0a5f5a628d4a42eaee4c9db71b data\refinedstorage\tags\item\constructors.json
 0d0c7c32d1b29a577573787391a395f1a69fc30b data\refinedstorage\tags\item\autocrafters.json
+2213df0eb586af0a5f5a628d4a42eaee4c9db71b data\refinedstorage\tags\item\constructors.json
 ffdf2dfd046f7dcc41ba5eb525a4056d51b3d5c3 data\refinedstorage\tags\item\exporters.json
 12c9170fe4f3efd62bc7ca41243287c3f562797d data\refinedstorage\tags\item\autocrafter_managers.json
 1b8cc3cb45daf38f701a3bd63f28942a32673ecd data\another_furniture\tags\item\sofas.json

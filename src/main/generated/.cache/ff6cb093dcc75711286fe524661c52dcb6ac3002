@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-16T18:53:49.8942127	Patch Up/Tags for minecraft:block
+// 1.21.1	2026-11-08T14:23:31.0729328	Patch Up/Tags for minecraft:block
 f6f67789d5a1b3eece681bf1ba0bbad477002c7f data\minecraft\tags\block\stairs.json
 f1b44359ea748cda87946f1a26b612e1f692fa20 data\minecraft\tags\block\ceiling_hanging_signs.json
 8897e976197059d3d86fa40d2e8b1371e1162249 data\minecraft\tags\block\mineable\axe.json
@@ -11,8 +11,8 @@ daadc7c8559349ceff67b1203573d9a94309a410 data\snowyspirit\tags\block\glow_lights
 8c241a13a623491e1eade8e1416b56d105c87909 data\supplementaries\tags\block\trapped_presents.json
 b6767c0b2194f73f1d9d80312b0dbaee5071c987 data\minecraft\tags\block\wall_hanging_signs.json
 b9d6d424b402758e2dd9b88bd81f47f424c0cc47 data\snowyspirit\tags\block\gumdrops.json
-1be292176af677734b9760b92442b8049898dead data\another_furniture\tags\block\curtains.json
 ca42840dc3cd5a17c3be0cbc5bc9435a24e2d0f0 data\minecraft\tags\block\standing_signs.json
+1be292176af677734b9760b92442b8049898dead data\another_furniture\tags\block\curtains.json
 29466727a8b50c7481a57650b566a505858a7a4d data\minecraft\tags\block\walls.json
 a90e4744a9cfb36a5cf3a22e14ff6849478b51c3 data\supplementaries\tags\block\presents.json
 25046a9b6a0d61f1146727acd9720b6629c68df6 data\supplementaries\tags\block\candle_holders.json

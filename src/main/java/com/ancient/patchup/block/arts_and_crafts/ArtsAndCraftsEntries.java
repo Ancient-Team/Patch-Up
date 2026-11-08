@@ -1,7 +1,9 @@
 package com.ancient.patchup.block.arts_and_crafts;
 
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
+import com.kekecreations.arts_and_crafts.common.block.DyedFlowerPotBlock;
 import com.kekecreations.arts_and_crafts.common.item.DyedDecoratedPotBlockItem;
+import com.kekecreations.arts_and_crafts.common.item.DyedFlowerPotBlockItem;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
@@ -84,17 +86,39 @@ public class ArtsAndCraftsEntries {
             Block plaster = ACBlocks.DYED_PLASTER.get(color).get();
 
             // 4. Pots
-            Block flowerPot = ACBlocks.DYED_FLOWER_POTS.get(color).get();
-            Item flowerPotItem = ACItems.FLOWER_POTS.get(dyeId).get();
+            java.util.function.Supplier<Block> potSupplier = ACBlocks.DYED_FLOWER_POTS.get(color);
+            Block flowerPot;
+            Item flowerPotItem;
+            if (potSupplier != null) {
+                flowerPot = potSupplier.get();
+                flowerPotItem = ACItems.FLOWER_POTS.get(dyeId).get();
+            } else {
+                flowerPot = Registry.register(Registries.BLOCK, Identifier.of("arts_and_crafts", name + "_flower_pot"),
+                        new DyedFlowerPotBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)));
+                flowerPotItem = Registry.register(Registries.ITEM, Identifier.of("arts_and_crafts", name + "_flower_pot"),
+                        new DyedFlowerPotBlockItem(flowerPot, new Item.Settings()));
 
-            Block decoratedPot = Registry.register(Registries.BLOCK, Identifier.of("arts_and_crafts", name + "_decorated_pot"),
-                    new DyedDecoratedPotBlock(color, AbstractBlock.Settings.copy(Blocks.DECORATED_POT)));
-            Item decoratedPotItem = Registry.register(Registries.ITEM, Identifier.of("arts_and_crafts", name + "_decorated_pot"),
-                    new DyedDecoratedPotBlockItem(decoratedPot, new Item.Settings().maxCount(1)));
+                ACBlocks.DYED_FLOWER_POTS.put(color, () -> flowerPot);
+                ACItems.FLOWER_POTS.put(dyeId, () -> (DyedFlowerPotBlockItem) flowerPotItem);
+                ACEntityTypes.CUSTOM_FLOWER_POT_BLOCK_ENTITY.get().addSupportedBlock(flowerPot);
+            }
 
-            ACBlocks.DYED_DECORATED_POTS.put(color, () -> decoratedPot);
-            ACItems.DYED_DECORATED_POT_BLOCK_ITEMS.put(color, () -> (DyedDecoratedPotBlockItem) decoratedPotItem);
-            ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get().addSupportedBlock(decoratedPot);
+            java.util.function.Supplier<Block> decPotSupplier = ACBlocks.DYED_DECORATED_POTS.get(color);
+            Block decoratedPot;
+            Item decoratedPotItem;
+            if (decPotSupplier != null) {
+                decoratedPot = decPotSupplier.get();
+                decoratedPotItem = ACItems.DYED_DECORATED_POT_BLOCK_ITEMS.get(color).get();
+            } else {
+                decoratedPot = Registry.register(Registries.BLOCK, Identifier.of("arts_and_crafts", name + "_decorated_pot"),
+                        new DyedDecoratedPotBlock(color, AbstractBlock.Settings.copy(Blocks.DECORATED_POT)));
+                decoratedPotItem = Registry.register(Registries.ITEM, Identifier.of("arts_and_crafts", name + "_decorated_pot"),
+                        new DyedDecoratedPotBlockItem(decoratedPot, new Item.Settings().maxCount(1)));
+
+                ACBlocks.DYED_DECORATED_POTS.put(color, () -> decoratedPot);
+                ACItems.DYED_DECORATED_POT_BLOCK_ITEMS.put(color, () -> (DyedDecoratedPotBlockItem) decoratedPotItem);
+                ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get().addSupportedBlock(decoratedPot);
+            }
 
             // 5. Mud Bricks
             Block mudBricks = ACBlocks.DYED_MUD_BRICKS.get(color).get();

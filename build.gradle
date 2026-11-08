@@ -58,7 +58,7 @@ dependencies {
 	modImplementation "maven.modrinth:another-furniture:8xUs6Teu"
 	modImplementation "maven.modrinth:farmers-delight-refabricated:NCLOIK5z"
 	modImplementation "maven.modrinth:comforts:LUPOTXbk"
-	modImplementation "maven.modrinth:artsandcrafts:9uKP9W23"
+	modImplementation "maven.modrinth:artsandcrafts:cvTUXGqW"
 	modImplementation "maven.modrinth:jinxedlib:2g3AsqOQ"
 	modImplementation "blue.endless:jankson:1.2.3"
 	modImplementation "com.illusivesoulworks.spectrelib:spectrelib-fabric:0.17.2+1.21"
