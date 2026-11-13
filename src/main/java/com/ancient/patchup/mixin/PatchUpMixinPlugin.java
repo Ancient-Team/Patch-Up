@@ -19,7 +19,8 @@ public class PatchUpMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        if (mixinClassName.contains("GlowLightParticleMixin")) {
+        if (mixinClassName.endsWith(".GlowLightParticleMixin")
+                || mixinClassName.endsWith(".BillboardParticleAccessor")) {
             return FabricLoader.getInstance().isModLoaded("snowyspirit");
         }
         return true;

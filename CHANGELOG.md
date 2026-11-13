@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.0.0-beta.10+1.21.1]
+
+### Fixes & Improvements
+* **Arts & Crafts Compatibility**:
+  * Updated Arts & Crafts integration for v1.6.1, reusing upstream dyed flower pots and decorated pots when present and adding null-safe registry map lookups (`ArtsAndCraftsEntries`).
+  * Guarded `BuiltinItemRendererRegistry` registration in `PatchUpClient` to prevent conflicts with existing item renderers.
+* **Refined Storage Loot Tables**:
+  * Added `fabric:load_conditions` (`fabric:all_mods_loaded` for `refinedstorage`) to all 336 Refined Storage block loot tables so they do not fail parsing when Refined Storage is not installed.
+* **Language & Translations**:
+  * Fixed `EnglishLangProvider` overwriting Dye Depot banner names (`block.dye_depot.<color>_banner`) with Amendments ceiling banner names, and added `Compats.SNOWY_SPIRIT.isLoaded()` + `Blocks.AIR` guards.
+* **Another Furniture Lamps & Refactoring**:
+  * Preserved `POWERED` state when converting between `LampBlock` and `LampConnectorBlock` and avoided redundant `setBlockState` calls in `neighborUpdate`.
+  * Consolidated duplicated registration and flammable logic in `block/another_furniture/` via `AFCompatRegistry` and `DDDyes` loops.
+* **Creative Tabs & Registry Lookups**:
+  * Added `null`, `Items.AIR`, and empty-list guards in `ModItemGroups`, and cached lazy registry lookups in `SleepTightEntries` and `SnowySpiritEntries`.
+* **Mixins & Documentation**:
+  * Removed unused template `PatchUpMixin`, updated Mixin compatibility level to `JAVA_21`, gated `BillboardParticleAccessor` behind `snowyspirit` mod presence, added `remap = false` to `GlowLightParticleMixin` mod field shadows, and set `require = 0` on `AttachmentChangeMixin`.
+  * Updated `README.md` with requirements, Supplementaries Squared, Discord link, and license info.
+
 ## [1.0.0-beta.9.1+1.21.1]
 
 ### Fixes & Improvements

@@ -26,5 +26,13 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "refinedstorage:blocks/amber_importer"
+  "random_sequence": "refinedstorage:blocks/amber_importer",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
 }

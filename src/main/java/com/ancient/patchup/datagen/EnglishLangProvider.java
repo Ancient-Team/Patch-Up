@@ -1,9 +1,12 @@
 package com.ancient.patchup.datagen;
 
+import com.ancient.patchup.Compats;
 import com.ancient.patchup.block.farmers_delight.CanvasSigns;
 import com.ninni.dye_depot.registry.DDDyes;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -104,13 +107,6 @@ public class EnglishLangProvider extends FabricLanguageProvider {
             if (entry.goldenCandleHolder() != null) translationBuilder.add(entry.goldenCandleHolder().get(), color + " Gold Candle Holder");
         }
 
-        /* Amendments */
-        com.ancient.patchup.block.amendments.AmendmentsEntries.init();
-        for (com.ancient.patchup.block.amendments.AmendmentsEntries.Entry entry : com.ancient.patchup.block.amendments.AmendmentsEntries.ENTRIES) {
-            String color = formatColorName(entry.dye().asString());
-            if (entry.ceilingBanner() != null) translationBuilder.add(entry.ceilingBanner().get(), color + " Ceiling Banner");
-        }
-
         /* Sleep Tight */
         for (DDDyes dye : DDDyes.values()) {
             String color = formatColorName(dye.asString());
@@ -118,11 +114,23 @@ public class EnglishLangProvider extends FabricLanguageProvider {
         }
 
         /* Snowy Spirit */
-        com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.init();
-        for (com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.Entry entry : com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.ENTRIES) {
-            String color = formatColorName(entry.dye().asString());
-            if (entry.glowLightsBlock() != null) translationBuilder.add(entry.glowLightsBlock().get(), color + " Glow Lights");
-            if (entry.gumdrop() != null) translationBuilder.add(entry.gumdrop().get(), color + " Gumdrop");
+        if (Compats.SNOWY_SPIRIT.isLoaded()) {
+            com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.init();
+            for (com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.Entry entry : com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries.ENTRIES) {
+                String color = formatColorName(entry.dye().asString());
+                if (entry.glowLightsBlock() != null) {
+                    Block glowLights = entry.glowLightsBlock().get();
+                    if (glowLights != Blocks.AIR) {
+                        translationBuilder.add(glowLights, color + " Glow Lights");
+                    }
+                }
+                if (entry.gumdrop() != null) {
+                    Block gumdrop = entry.gumdrop().get();
+                    if (gumdrop != Blocks.AIR) {
+                        translationBuilder.add(gumdrop, color + " Gumdrop");
+                    }
+                }
+            }
         }
     }
 }

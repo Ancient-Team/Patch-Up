@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(value = AttachmentChange.class, remap = false)
 public class AttachmentChangeMixin {
 
-    @Inject(method = "tryApply", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "tryApply", at = @At("HEAD"), cancellable = true, require = 0)
     private void patchup$preventUnknownTargetDisconnect(World world, CallbackInfo ci) {
         AttachmentChange change = (AttachmentChange) (Object) this;
         AttachmentTarget target = change.targetInfo().getTarget(world);

@@ -1,6 +1,5 @@
 package com.ancient.patchup.block.another_furniture.custom;
 
-import com.ancient.patchup.block.another_furniture.Lamp;
 import com.ninni.dye_depot.registry.DDDyes;
 import com.starfish_studios.another_furniture.block.properties.ModBlockStateProperties;
 import com.starfish_studios.another_furniture.registry.AFItemTags;
@@ -80,10 +79,6 @@ public class LampBlock extends Block implements Waterloggable {
                 .with(BASE, true));
     }
 
-    public LampBlock(DDDyes color, AbstractBlock.Settings properties) {
-        this(color, () -> Lamp.getLampConnectorByColor(color), properties);
-    }
-
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView level, BlockPos pos, ShapeContext context) {
         return switch (state.get(FACING)) {
@@ -132,13 +127,14 @@ public class LampBlock extends Block implements Waterloggable {
             boolean bConnect = canConnect(level.getBlockState(currentPos.down()));
             Block connector = this.connectorSupplier.get();
             boolean waterlogged = state.get(WATERLOGGED);
+            boolean powered = state.get(POWERED);
 
             if (aConnect && !bConnect) {
-                return connector.getDefaultState().with(BASE, true).with(WATERLOGGED, waterlogged);
+                return connector.getDefaultState().with(BASE, true).with(WATERLOGGED, waterlogged).with(POWERED, powered);
             } else if (!aConnect && bConnect) {
                 return state.with(BASE, false);
             } else if (aConnect) {
-                return connector.getDefaultState().with(BASE, false).with(WATERLOGGED, waterlogged);
+                return connector.getDefaultState().with(BASE, false).with(WATERLOGGED, waterlogged).with(POWERED, powered);
             } else {
                 return state.with(BASE, true);
             }
@@ -173,10 +169,8 @@ public class LampBlock extends Block implements Waterloggable {
                     state = state.with(LIT, powered);
                     level.playSound(null, pos, SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 1.0F, 1.0F);
                 }
-                state = state.with(POWERED, powered);
+                level.setBlockState(pos, state.with(POWERED, powered), Block.NOTIFY_ALL);
             }
-
-            level.setBlockState(pos, state, Block.NOTIFY_ALL);
         }
     }
 
@@ -221,9 +215,5 @@ public class LampBlock extends Block implements Waterloggable {
 
     public DDDyes getColor() {
         return this.color;
-    }
-
-    public static Block getLampConnectorByColor(DDDyes color) {
-        return Lamp.getLampConnectorByColor(color);
     }
 }

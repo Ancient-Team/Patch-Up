@@ -1,8 +1,8 @@
-// 1.21.1	2026-11-08T14:23:31.073944	Patch Up/Tags for minecraft:item
+// 1.21.1	2026-11-13T12:50:00.2014897	Patch Up/Tags for minecraft:item
 4eee03e3e497503528ccf7a71074bc9e8e496b87 data\minecraft\tags\item\banners.json
 a90e4744a9cfb36a5cf3a22e14ff6849478b51c3 data\supplementaries\tags\item\presents.json
-29466727a8b50c7481a57650b566a505858a7a4d data\minecraft\tags\item\walls.json
 25046a9b6a0d61f1146727acd9720b6629c68df6 data\supplementaries\tags\item\candle_holders.json
+29466727a8b50c7481a57650b566a505858a7a4d data\minecraft\tags\item\walls.json
 3f4d36fc83f1b634a8e4a9d5043338550d33f295 data\supplementaries\tags\item\flags.json
 b9d6d424b402758e2dd9b88bd81f47f424c0cc47 data\snowyspirit\tags\item\gumdrops.json
 43c98ed4e1dc5db11b8a883d0f7ebdf1f7a28c3d data\refinedstorage\tags\item\grids.json

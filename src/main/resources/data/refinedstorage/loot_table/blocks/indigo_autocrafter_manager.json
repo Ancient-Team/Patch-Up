@@ -26,5 +26,13 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "refinedstorage:blocks/indigo_autocrafter_manager"
+  "random_sequence": "refinedstorage:blocks/indigo_autocrafter_manager",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
 }

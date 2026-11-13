@@ -19,6 +19,9 @@ import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.function.Supplier;
 
 public class ArtsAndCraftsEntries {
 
@@ -66,6 +69,11 @@ public class ArtsAndCraftsEntries {
 
     public static final List<Entry> ENTRIES = new ArrayList<>();
 
+    private static <K, V> V requireEntry(Map<K, ? extends Supplier<? extends V>> map, K key, String name) {
+        Supplier<? extends V> supplier = map.get(key);
+        return Objects.requireNonNull(supplier, "Missing Arts & Crafts registry entry for " + name + " (" + key + ")").get();
+    }
+
     public static void init() {
         if (!ENTRIES.isEmpty()) return;
 
@@ -75,80 +83,88 @@ public class ArtsAndCraftsEntries {
             int dyeId = dye.getId();
 
             // 1. Chalk & Chalk Dust & Chalk Stick
-            Block chalk = ACBlocks.CHALK.get(dyeId).get();
-            Block chalkDust = ACBlocks.CHALK_DUST.get(dyeId).get();
-            Item chalkStick = ACItems.CHALK_STICKS.get(dyeId).get();
+            Block chalk = requireEntry(ACBlocks.CHALK, dyeId, "chalk");
+            Block chalkDust = requireEntry(ACBlocks.CHALK_DUST, dyeId, "chalk_dust");
+            Item chalkStick = requireEntry(ACItems.CHALK_STICKS, dyeId, "chalk_stick");
 
             // 2. Paintbrush
-            Item paintbrush = ACItems.PAINT_BRUSHES.get(color).get();
+            Item paintbrush = requireEntry(ACItems.PAINT_BRUSHES, color, "paintbrush");
 
             // 3. Plaster
-            Block plaster = ACBlocks.DYED_PLASTER.get(color).get();
+            Block plaster = requireEntry(ACBlocks.DYED_PLASTER, color, "plaster");
 
             // 4. Pots
-            java.util.function.Supplier<Block> potSupplier = ACBlocks.DYED_FLOWER_POTS.get(color);
+            Supplier<Block> potSupplier = ACBlocks.DYED_FLOWER_POTS.get(color);
+            Supplier<DyedFlowerPotBlockItem> potItemSupplier = ACItems.FLOWER_POTS.get(dyeId);
             Block flowerPot;
             Item flowerPotItem;
-            if (potSupplier != null) {
+            if (potSupplier != null && potItemSupplier != null) {
                 flowerPot = potSupplier.get();
-                flowerPotItem = ACItems.FLOWER_POTS.get(dyeId).get();
+                flowerPotItem = potItemSupplier.get();
             } else {
-                flowerPot = Registry.register(Registries.BLOCK, Identifier.of("arts_and_crafts", name + "_flower_pot"),
-                        new DyedFlowerPotBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)));
+                flowerPot = potSupplier != null ? potSupplier.get()
+                        : Registry.register(Registries.BLOCK, Identifier.of("arts_and_crafts", name + "_flower_pot"),
+                                new DyedFlowerPotBlock(AbstractBlock.Settings.copy(Blocks.FLOWER_POT)));
                 flowerPotItem = Registry.register(Registries.ITEM, Identifier.of("arts_and_crafts", name + "_flower_pot"),
                         new DyedFlowerPotBlockItem(flowerPot, new Item.Settings()));
 
-                ACBlocks.DYED_FLOWER_POTS.put(color, () -> flowerPot);
+                if (potSupplier == null) {
+                    ACBlocks.DYED_FLOWER_POTS.put(color, () -> flowerPot);
+                    ACEntityTypes.CUSTOM_FLOWER_POT_BLOCK_ENTITY.get().addSupportedBlock(flowerPot);
+                }
                 ACItems.FLOWER_POTS.put(dyeId, () -> (DyedFlowerPotBlockItem) flowerPotItem);
-                ACEntityTypes.CUSTOM_FLOWER_POT_BLOCK_ENTITY.get().addSupportedBlock(flowerPot);
             }
 
-            java.util.function.Supplier<Block> decPotSupplier = ACBlocks.DYED_DECORATED_POTS.get(color);
+            Supplier<Block> decPotSupplier = ACBlocks.DYED_DECORATED_POTS.get(color);
+            Supplier<DyedDecoratedPotBlockItem> decPotItemSupplier = ACItems.DYED_DECORATED_POT_BLOCK_ITEMS.get(color);
             Block decoratedPot;
             Item decoratedPotItem;
-            if (decPotSupplier != null) {
+            if (decPotSupplier != null && decPotItemSupplier != null) {
                 decoratedPot = decPotSupplier.get();
-                decoratedPotItem = ACItems.DYED_DECORATED_POT_BLOCK_ITEMS.get(color).get();
+                decoratedPotItem = decPotItemSupplier.get();
             } else {
-                decoratedPot = Registry.register(Registries.BLOCK, Identifier.of("arts_and_crafts", name + "_decorated_pot"),
-                        new DyedDecoratedPotBlock(color, AbstractBlock.Settings.copy(Blocks.DECORATED_POT)));
+                decoratedPot = decPotSupplier != null ? decPotSupplier.get()
+                        : Registry.register(Registries.BLOCK, Identifier.of("arts_and_crafts", name + "_decorated_pot"),
+                                new DyedDecoratedPotBlock(color, AbstractBlock.Settings.copy(Blocks.DECORATED_POT)));
                 decoratedPotItem = Registry.register(Registries.ITEM, Identifier.of("arts_and_crafts", name + "_decorated_pot"),
                         new DyedDecoratedPotBlockItem(decoratedPot, new Item.Settings().maxCount(1)));
 
-                ACBlocks.DYED_DECORATED_POTS.put(color, () -> decoratedPot);
+                if (decPotSupplier == null) {
+                    ACBlocks.DYED_DECORATED_POTS.put(color, () -> decoratedPot);
+                    ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get().addSupportedBlock(decoratedPot);
+                }
                 ACItems.DYED_DECORATED_POT_BLOCK_ITEMS.put(color, () -> (DyedDecoratedPotBlockItem) decoratedPotItem);
-                ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get().addSupportedBlock(decoratedPot);
             }
 
             // 5. Mud Bricks
-            Block mudBricks = ACBlocks.DYED_MUD_BRICKS.get(color).get();
-            Block mudBrickSlab = ACBlocks.DYED_MUD_BRICK_SLAB.get(color).get();
-            Block mudBrickStairs = ACBlocks.DYED_MUD_BRICK_STAIRS.get(color).get();
-            Block mudBrickWall = ACBlocks.DYED_MUD_BRICK_WALL.get(color).get();
+            Block mudBricks = requireEntry(ACBlocks.DYED_MUD_BRICKS, color, "mud_bricks");
+            Block mudBrickSlab = requireEntry(ACBlocks.DYED_MUD_BRICK_SLAB, color, "mud_brick_slab");
+            Block mudBrickStairs = requireEntry(ACBlocks.DYED_MUD_BRICK_STAIRS, color, "mud_brick_stairs");
+            Block mudBrickWall = requireEntry(ACBlocks.DYED_MUD_BRICK_WALL, color, "mud_brick_wall");
 
             // 6. Terracotta Shingles
-            Block terracottaShingles = ACBlocks.DYED_TERRACOTTA_SHINGLES.get(color).get();
-            Block terracottaShingleSlab = ACBlocks.DYED_TERRACOTTA_SHINGLE_SLAB.get(color).get();
-            Block terracottaShingleStairs = ACBlocks.DYED_TERRACOTTA_SHINGLE_STAIRS.get(color).get();
-            Block terracottaShingleWall = ACBlocks.DYED_TERRACOTTA_SHINGLE_WALL.get(color).get();
+            Block terracottaShingles = requireEntry(ACBlocks.DYED_TERRACOTTA_SHINGLES, color, "terracotta_shingles");
+            Block terracottaShingleSlab = requireEntry(ACBlocks.DYED_TERRACOTTA_SHINGLE_SLAB, color, "terracotta_shingle_slab");
+            Block terracottaShingleStairs = requireEntry(ACBlocks.DYED_TERRACOTTA_SHINGLE_STAIRS, color, "terracotta_shingle_stairs");
+            Block terracottaShingleWall = requireEntry(ACBlocks.DYED_TERRACOTTA_SHINGLE_WALL, color, "terracotta_shingle_wall");
 
             // 7. Soapstone
-            Block soapstone = ACBlocks.DYED_SOAPSTONE.get(color).get();
-            Block soapstoneSlab = ACBlocks.DYED_SOAPSTONE_SLAB.get(color).get();
-            Block soapstoneStairs = ACBlocks.DYED_SOAPSTONE_STAIRS.get(color).get();
-            Block soapstoneWall = ACBlocks.DYED_SOAPSTONE_WALL.get(color).get();
+            Block soapstone = requireEntry(ACBlocks.DYED_SOAPSTONE, color, "soapstone");
+            Block soapstoneSlab = requireEntry(ACBlocks.DYED_SOAPSTONE_SLAB, color, "soapstone_slab");
+            Block soapstoneStairs = requireEntry(ACBlocks.DYED_SOAPSTONE_STAIRS, color, "soapstone_stairs");
+            Block soapstoneWall = requireEntry(ACBlocks.DYED_SOAPSTONE_WALL, color, "soapstone_wall");
 
             // 8. Polished Soapstone
-            Block polishedSoapstone = ACBlocks.DYED_POLISHED_SOAPSTONE.get(color).get();
-            Block polishedSoapstoneSlab = ACBlocks.DYED_POLISHED_SOAPSTONE_SLAB.get(color).get();
-            Block polishedSoapstoneStairs = ACBlocks.DYED_POLISHED_SOAPSTONE_STAIRS.get(color).get();
-            Block polishedSoapstoneWall = ACBlocks.DYED_POLISHED_SOAPSTONE_WALL.get(color).get();
+            Block polishedSoapstone = requireEntry(ACBlocks.DYED_POLISHED_SOAPSTONE, color, "polished_soapstone");
+            Block polishedSoapstoneSlab = requireEntry(ACBlocks.DYED_POLISHED_SOAPSTONE_SLAB, color, "polished_soapstone_slab");
+            Block polishedSoapstoneStairs = requireEntry(ACBlocks.DYED_POLISHED_SOAPSTONE_STAIRS, color, "polished_soapstone_stairs");
+            Block polishedSoapstoneWall = requireEntry(ACBlocks.DYED_POLISHED_SOAPSTONE_WALL, color, "polished_soapstone_wall");
 
             // 9. Soapstone Bricks
-            Block soapstoneBricks = ACBlocks.DYED_SOAPSTONE_BRICKS.get(color).get();
-            Block soapstoneBrickSlab = ACBlocks.DYED_SOAPSTONE_BRICK_SLAB.get(color).get();
-            Block soapstoneBrickStairs = ACBlocks.DYED_SOAPSTONE_BRICK_STAIRS.get(color).get();
-            Block soapstoneBrickWall = ACBlocks.DYED_SOAPSTONE_BRICK_WALL.get(color).get();
+            Block soapstoneBricks = requireEntry(ACBlocks.DYED_SOAPSTONE_BRICKS, color, "soapstone_bricks");
+            Block soapstoneBrickSlab = requireEntry(ACBlocks.DYED_SOAPSTONE_BRICK_SLAB, color, "soapstone_brick_slab");
+            Block soapstoneBrickStairs = requireEntry(ACBlocks.DYED_SOAPSTONE_BRICK_STAIRS, color, "soapstone_brick_stairs");
+            Block soapstoneBrickWall = requireEntry(ACBlocks.DYED_SOAPSTONE_BRICK_WALL, color, "soapstone_brick_wall");
 
             ENTRIES.add(new Entry(
                     dye, chalk, chalkDust, chalkStick, paintbrush, plaster,

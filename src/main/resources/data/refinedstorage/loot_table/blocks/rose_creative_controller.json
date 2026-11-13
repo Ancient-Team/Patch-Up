@@ -26,5 +26,13 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "refinedstorage:blocks/rose_creative_controller"
+  "random_sequence": "refinedstorage:blocks/rose_creative_controller",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "refinedstorage"
+      ]
+    }
+  ]
 }

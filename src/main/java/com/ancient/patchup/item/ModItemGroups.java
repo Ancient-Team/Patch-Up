@@ -2,20 +2,23 @@ package com.ancient.patchup.item;
 
 import com.ancient.patchup.Compats;
 import com.ancient.patchup.PatchUp;
-import com.ancient.patchup.block.another_furniture.*;
-import com.ancient.patchup.block.farmers_delight.CanvasSigns;
-import com.ancient.patchup.block.comforts.ComfortsItems;
-import com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries;
-import com.ancient.patchup.block.supplementaries.SupplementariesEntries;
-import com.ancient.patchup.block.suppsquared.SuppSquaredEntries;
 import com.ancient.patchup.block.amendments.AmendmentsEntries;
+import com.ancient.patchup.block.another_furniture.*;
+import com.ancient.patchup.block.arts_and_crafts.ArtsAndCraftsEntries;
+import com.ancient.patchup.block.comforts.ComfortsItems;
+import com.ancient.patchup.block.farmers_delight.CanvasSigns;
+import com.ancient.patchup.block.refined_storage.RefinedStorageEntries;
 import com.ancient.patchup.block.sleep_tight.SleepTightEntries;
 import com.ancient.patchup.block.snowy_spirit.SnowySpiritEntries;
-import com.ancient.patchup.block.refined_storage.RefinedStorageEntries;
+import com.ancient.patchup.block.supplementaries.SupplementariesEntries;
+import com.ancient.patchup.block.suppsquared.SuppSquaredEntries;
+import com.ninni.dye_depot.registry.DDDyes;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Block;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -36,6 +39,24 @@ public class ModItemGroups {
     public static ItemGroup SNOWY_SPIRIT_GROUP;
     public static ItemGroup REFINED_STORAGE_GROUP;
 
+    private static void addIfPresent(ItemGroup.Entries entries, Supplier<? extends ItemConvertible> supplier) {
+        if (supplier == null) return;
+        ItemConvertible item = supplier.get();
+        if (item != null && item.asItem() != Items.AIR) {
+            entries.add(item);
+        }
+    }
+
+    private static ItemStack iconOrBarrier(Supplier<? extends ItemConvertible> supplier) {
+        if (supplier != null) {
+            ItemConvertible item = supplier.get();
+            if (item != null && item.asItem() != Items.AIR) {
+                return new ItemStack(item);
+            }
+        }
+        return new ItemStack(Items.BARRIER);
+    }
+
     public static void registerItemGroups() {
         PatchUp.LOGGER.info("Registering Item Groups for " + PatchUp.MOD_ID);
 
@@ -44,28 +65,27 @@ public class ModItemGroups {
                     Identifier.of(PatchUp.MOD_ID, "another_furniture"),
                     FabricItemGroup.builder()
                             .displayName(Text.translatable("itemgroup.patchup.another_furniture"))
-                            .icon(() -> new ItemStack(Sofa.FOREST_SOFA.get()))
+                            .icon(() -> iconOrBarrier(Sofa.SOFAS.get(DDDyes.FOREST)))
                             .entries((displayContext, entries) -> {
                                 for (Supplier<Block> stool : Stool.STOOLS.values()) {
-                                    entries.add(stool.get());
+                                    addIfPresent(entries, stool);
                                 }
                                 for (Supplier<Block> tallStool : TallStool.TALL_STOOLS.values()) {
-                                    entries.add(tallStool.get());
+                                    addIfPresent(entries, tallStool);
                                 }
                                 for (Supplier<Block> sofa : Sofa.SOFAS.values()) {
-                                    entries.add(sofa.get());
+                                    addIfPresent(entries, sofa);
                                 }
                                 for (Supplier<Block> lamp : Lamp.LAMPS.values()) {
-                                    entries.add(lamp.get());
+                                    addIfPresent(entries, lamp);
                                 }
                                 for (Supplier<Block> curtain : Curtain.CURTAINS.values()) {
-                                    entries.add(curtain.get());
+                                    addIfPresent(entries, curtain);
                                 }
                             }).build());
         }
 
-        if (Compats.FARMERS_DELIGHT.isLoaded()) {
-            CanvasSigns.init();
+        if (Compats.FARMERS_DELIGHT.isLoaded() && !CanvasSigns.ENTRIES.isEmpty()) {
             FARMERS_DELIGHT_GROUP = Registry.register(Registries.ITEM_GROUP,
                     Identifier.of(PatchUp.MOD_ID, "farmers_delight"),
                     FabricItemGroup.builder()
@@ -79,23 +99,21 @@ public class ModItemGroups {
                             }).build());
         }
 
-        if (Compats.COMFORTS.isLoaded()) {
-            ComfortsItems.init();
+        if (Compats.COMFORTS.isLoaded() && !ComfortsItems.ENTRIES.isEmpty()) {
             COMFORTS_GROUP = Registry.register(Registries.ITEM_GROUP,
                     Identifier.of(PatchUp.MOD_ID, "comforts"),
                     FabricItemGroup.builder()
                             .displayName(Text.translatable("itemgroup.patchup.comforts"))
-                            .icon(() -> new ItemStack(ComfortsItems.ENTRIES.get(0).sleepingBagItem().get()))
+                            .icon(() -> iconOrBarrier(ComfortsItems.ENTRIES.get(0).sleepingBagItem()))
                             .entries((displayContext, entries) -> {
                                 for (ComfortsItems.ComfortsEntry entry : ComfortsItems.ENTRIES) {
-                                    entries.add(entry.hammockItem().get());
-                                    entries.add(entry.sleepingBagItem().get());
+                                    addIfPresent(entries, entry.hammockItem());
+                                    addIfPresent(entries, entry.sleepingBagItem());
                                 }
                             }).build());
         }
 
-        if (Compats.ARTS_AND_CRAFTS.isLoaded()) {
-            ArtsAndCraftsEntries.init();
+        if (Compats.ARTS_AND_CRAFTS.isLoaded() && !ArtsAndCraftsEntries.ENTRIES.isEmpty()) {
             ARTS_AND_CRAFTS_GROUP = Registry.register(Registries.ITEM_GROUP,
                     Identifier.of(PatchUp.MOD_ID, "arts_and_crafts"),
                     FabricItemGroup.builder()
@@ -133,96 +151,88 @@ public class ModItemGroups {
                             }).build());
         }
 
-        if (Compats.SUPPLEMENTARIES.isLoaded()) {
-            SupplementariesEntries.init();
+        if (Compats.SUPPLEMENTARIES.isLoaded() && !SupplementariesEntries.ENTRIES.isEmpty()) {
             SUPPLEMENTARIES_GROUP = Registry.register(Registries.ITEM_GROUP,
                     Identifier.of(PatchUp.MOD_ID, "supplementaries"),
                     FabricItemGroup.builder()
                             .displayName(Text.translatable("itemgroup.patchup.supplementaries"))
-                            .icon(() -> new ItemStack(SupplementariesEntries.ENTRIES.get(0).present().get()))
+                            .icon(() -> iconOrBarrier(SupplementariesEntries.ENTRIES.get(0).present()))
                             .entries((displayContext, entries) -> {
                                 for (SupplementariesEntries.Entry entry : SupplementariesEntries.ENTRIES) {
-                                    if (entry.flag() != null) entries.add(entry.flag().get());
-                                    if (entry.present() != null) entries.add(entry.present().get());
-                                    if (entry.trappedPresent() != null) entries.add(entry.trappedPresent().get());
-                                    if (entry.awning() != null) entries.add(entry.awning().get());
-                                    if (entry.candleHolder() != null) entries.add(entry.candleHolder().get());
-                                    if (entry.buntingItem() != null) entries.add(entry.buntingItem().get());
+                                    addIfPresent(entries, entry.flag());
+                                    addIfPresent(entries, entry.present());
+                                    addIfPresent(entries, entry.trappedPresent());
+                                    addIfPresent(entries, entry.awning());
+                                    addIfPresent(entries, entry.candleHolder());
+                                    addIfPresent(entries, entry.buntingItem());
                                 }
                             }).build());
         }
 
-        if (Compats.SUPP_SQUARED.isLoaded()) {
-            SuppSquaredEntries.init();
+        if (Compats.SUPP_SQUARED.isLoaded() && !SuppSquaredEntries.ENTRIES.isEmpty()) {
             SUPP_SQUARED_GROUP = Registry.register(Registries.ITEM_GROUP,
                     Identifier.of(PatchUp.MOD_ID, "suppsquared"),
                     FabricItemGroup.builder()
                             .displayName(Text.translatable("itemgroup.patchup.suppsquared"))
-                            .icon(() -> new ItemStack(SuppSquaredEntries.ENTRIES.get(0).sackItem().get()))
+                            .icon(() -> iconOrBarrier(SuppSquaredEntries.ENTRIES.get(0).sackItem()))
                             .entries((displayContext, entries) -> {
                                 for (SuppSquaredEntries.Entry entry : SuppSquaredEntries.ENTRIES) {
-                                    if (entry.sackItem() != null) entries.add(entry.sackItem().get());
-                                    if (entry.goldenCandleHolder() != null) entries.add(entry.goldenCandleHolder().get());
+                                    addIfPresent(entries, entry.sackItem());
+                                    addIfPresent(entries, entry.goldenCandleHolder());
                                 }
                             }).build());
         }
 
-        if (Compats.AMENDMENTS.isLoaded()) {
-            AmendmentsEntries.init();
+        if (Compats.AMENDMENTS.isLoaded() && !AmendmentsEntries.ENTRIES.isEmpty()) {
             AMENDMENTS_GROUP = Registry.register(Registries.ITEM_GROUP,
                     Identifier.of(PatchUp.MOD_ID, "amendments"),
                     FabricItemGroup.builder()
                             .displayName(Text.translatable("itemgroup.patchup.amendments"))
-                            .icon(() -> new ItemStack(AmendmentsEntries.ENTRIES.get(0).ceilingBanner().get()))
+                            .icon(() -> iconOrBarrier(AmendmentsEntries.ENTRIES.get(0).ceilingBanner()))
                             .entries((displayContext, entries) -> {
                                 for (AmendmentsEntries.Entry entry : AmendmentsEntries.ENTRIES) {
-                                    if (entry.ceilingBanner() != null) entries.add(entry.ceilingBanner().get());
+                                    addIfPresent(entries, entry.ceilingBanner());
                                 }
                             }).build());
         }
 
-        if (Compats.SLEEP_TIGHT.isLoaded()) {
-            SleepTightEntries.init();
+        if (Compats.SLEEP_TIGHT.isLoaded() && !SleepTightEntries.ENTRIES.isEmpty()) {
             SLEEP_TIGHT_GROUP = Registry.register(Registries.ITEM_GROUP,
                     Identifier.of(PatchUp.MOD_ID, "sleep_tight"),
                     FabricItemGroup.builder()
                             .displayName(Text.translatable("itemgroup.patchup.sleep_tight"))
-                            .icon(() -> new ItemStack(SleepTightEntries.ENTRIES.get(0).hammock().get()))
+                            .icon(() -> iconOrBarrier(SleepTightEntries.ENTRIES.get(0).hammock()))
                             .entries((displayContext, entries) -> {
                                 for (SleepTightEntries.Entry entry : SleepTightEntries.ENTRIES) {
-                                    if (entry.hammock() != null) entries.add(entry.hammock().get());
+                                    addIfPresent(entries, entry.hammock());
                                 }
                             }).build());
         }
 
-        if (Compats.SNOWY_SPIRIT.isLoaded()) {
-            SnowySpiritEntries.init();
+        if (Compats.SNOWY_SPIRIT.isLoaded() && !SnowySpiritEntries.ENTRIES.isEmpty()) {
             SNOWY_SPIRIT_GROUP = Registry.register(Registries.ITEM_GROUP,
                     Identifier.of(PatchUp.MOD_ID, "snowy_spirit"),
                     FabricItemGroup.builder()
                             .displayName(Text.translatable("itemgroup.patchup.snowy_spirit"))
-                            .icon(() -> new ItemStack(SnowySpiritEntries.ENTRIES.get(0).glowLightsItem().get()))
+                            .icon(() -> iconOrBarrier(SnowySpiritEntries.ENTRIES.get(0).glowLightsItem()))
                             .entries((displayContext, entries) -> {
                                 for (SnowySpiritEntries.Entry entry : SnowySpiritEntries.ENTRIES) {
-                                    if (entry.glowLightsItem() != null) entries.add(entry.glowLightsItem().get());
-                                    if (entry.gumdrop() != null) entries.add(entry.gumdrop().get());
+                                    addIfPresent(entries, entry.glowLightsItem());
+                                    addIfPresent(entries, entry.gumdrop());
                                 }
                             }).build());
         }
 
-        if (Compats.REFINED_STORAGE.isLoaded()) {
-            RefinedStorageEntries.init();
+        if (Compats.REFINED_STORAGE.isLoaded() && !RefinedStorageEntries.ENTRIES.isEmpty()) {
             REFINED_STORAGE_GROUP = Registry.register(Registries.ITEM_GROUP,
                     Identifier.of(PatchUp.MOD_ID, "refined_storage"),
                     FabricItemGroup.builder()
                             .displayName(Text.translatable("itemgroup.patchup.refined_storage"))
-                            .icon(() -> new ItemStack(RefinedStorageEntries.ENTRIES.get(0).controller().get()))
+                            .icon(() -> iconOrBarrier(RefinedStorageEntries.ENTRIES.get(0).controller()))
                             .entries((displayContext, entries) -> {
                                 for (RefinedStorageEntries.Entry entry : RefinedStorageEntries.ENTRIES) {
                                     for (Supplier<? extends Block> blockSupplier : entry.getAllBlocks()) {
-                                        if (blockSupplier != null && blockSupplier.get() != null) {
-                                            entries.add(blockSupplier.get());
-                                        }
+                                        addIfPresent(entries, blockSupplier);
                                     }
                                 }
                             }).build());

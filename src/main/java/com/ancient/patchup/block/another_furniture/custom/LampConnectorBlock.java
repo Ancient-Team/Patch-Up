@@ -1,6 +1,5 @@
 package com.ancient.patchup.block.another_furniture.custom;
 
-import com.ancient.patchup.block.another_furniture.Lamp;
 import com.ninni.dye_depot.registry.DDDyes;
 import com.starfish_studios.another_furniture.block.properties.ModBlockStateProperties;
 import net.minecraft.block.AbstractBlock;
@@ -8,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
+import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
@@ -49,10 +49,6 @@ public class LampConnectorBlock extends Block implements Waterloggable {
                 .with(BASE, true));
     }
 
-    public LampConnectorBlock(DDDyes color, AbstractBlock.Settings properties) {
-        this(color, () -> Lamp.getLampByColor(color), properties);
-    }
-
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView level, BlockPos pos, ShapeContext context) {
         return state.get(BASE) ? AABB_BASE : AABB_NOT_BASE;
@@ -90,15 +86,16 @@ public class LampConnectorBlock extends Block implements Waterloggable {
             boolean bConnect = canConnect(level.getBlockState(currentPos.down()));
             Block lamp = this.lampSupplier.get();
             boolean waterlogged = state.get(WATERLOGGED);
+            boolean powered = state.get(POWERED);
 
             if (aConnect && !bConnect) {
                 return state.with(BASE, true);
             } else if (!aConnect && bConnect) {
-                return lamp.getDefaultState().with(BASE, false).with(WATERLOGGED, waterlogged);
+                return lamp.getDefaultState().with(BASE, false).with(WATERLOGGED, waterlogged).with(POWERED, powered);
             } else if (aConnect) {
                 return state.with(BASE, false);
             } else {
-                return lamp.getDefaultState().with(BASE, true).with(WATERLOGGED, waterlogged);
+                return lamp.getDefaultState().with(BASE, true).with(WATERLOGGED, waterlogged).with(POWERED, powered);
             }
         }
 
@@ -119,10 +116,8 @@ public class LampConnectorBlock extends Block implements Waterloggable {
             boolean powered = level.isReceivingRedstonePower(pos) || belowPowered;
 
             if (powered != state.get(POWERED)) {
-                state = state.with(POWERED, powered);
+                level.setBlockState(pos, state.with(POWERED, powered), Block.NOTIFY_ALL);
             }
-
-            level.setBlockState(pos, state, Block.NOTIFY_ALL);
         }
     }
 
@@ -131,11 +126,12 @@ public class LampConnectorBlock extends Block implements Waterloggable {
         builder.add(WATERLOGGED, POWERED, BASE);
     }
 
-    public DDDyes getColor() {
-        return this.color;
+    @Override
+    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
+        return false;
     }
 
-    public static Block getLampByColor(DDDyes color) {
-        return Lamp.getLampByColor(color);
+    public DDDyes getColor() {
+        return this.color;
     }
 }

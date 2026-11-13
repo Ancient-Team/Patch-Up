@@ -11,9 +11,9 @@ import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(GlowLightParticle.class)
 public abstract class GlowLightParticleMixin extends SpriteBillboardParticle {
-    @Shadow @Final private float scale;
-    @Shadow private float oldQuadSize;
-    @Shadow @Final private float deltaRot;
+    @Shadow(remap = false) @Final private float scale;
+    @Shadow(remap = false) private float oldQuadSize;
+    @Shadow(remap = false) @Final private float deltaRot;
 
     protected GlowLightParticleMixin(ClientWorld clientWorld, double d, double e, double f) {
         super(clientWorld, d, e, f);
